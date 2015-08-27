@@ -6,7 +6,9 @@
         <img id="main-image" style="max-width: 700px;" src="https://graph.facebook.com/{{$user->facebook_user_id}}/picture??width=500&height=500">
     </div>
 
-    <form id="canvasForm">
+    <form id="canvasForm" method="post" >
+
+      {{  csrf_field() }}
       <label>First Word</label>
       <select name="first">
         <option value="Dork">Dork</option>
@@ -24,6 +26,7 @@
         <option value="Hungry">Hungry</option>
       </select>
       <input type="hidden" name="imgPath" id="selected-image" value="https://graph.facebook.com/{{$user->facebook_user_id}}/picture??width=500&height=500">
+      <input type="hidden" name="updatedImage" id="updated-image" value="">
       <label>Color</label>
       <input type="color" name="color">
       <input type="Submit" value="Submit">
@@ -59,11 +62,14 @@ $(function() {
     $('#canvasForm').on('submit',function(e){
       e.preventDefault();
 
+    var $form = $(this);
+
     var imagePath = this.imgPath.value;
     var firstWord = this.first.value;
     var secondWord = this.second.value;
     var boxColor = this.color.value;
-
+    var $targetImage = $('#targetImage');
+    var $updatedImage = $('#updated-image');
 
     var canvas = document.createElement("canvas");
     var context = canvas.getContext('2d');
@@ -71,7 +77,6 @@ $(function() {
     imageObj.crossOrigin = "Anonymous";
     imageObj.src = imagePath;
     
-
     imageObj.onload = function() {
         canvas.width = this.width;
         canvas.height = this.height;
@@ -99,12 +104,27 @@ $(function() {
         context.fillText(secondWord, -(this.width + secondWidth) / 2, -(this.height / 2 + 10));
         context.restore();
 
-        console.log(canvas.toDataURL());
+        var imageData = canvas.toDataURL();
+        
+        // $targetImage.src = imageData;
+        $updatedImage.val(imageData);
 
-        var targetImage = document.getElementById('targetImage');
-        targetImage.src = canvas.toDataURL();
-    };
+        $.ajax({
+          type: 'POST',
+          url: '/build',
+          data: $form.serialize(),
+          dataType: 'text',
+          success:function(data){
+            console.log(data);
+            $targetImage.src = data;
+          },
+          error:function(){
+            // failed request; give feedback to user
+            console.log("error data");
+          }
+        });
 
+    };    
 
   });
 

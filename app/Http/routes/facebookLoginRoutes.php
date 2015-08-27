@@ -76,6 +76,6 @@ Route::get('/facebook/callback', function(SammyK\LaravelFacebookSdk\LaravelFaceb
     Auth::login($user);
 
     
-    return redirect('session-get')->with('message', 'Successfully logged in with Facebook');
+    return redirect('build')->with('message', 'Successfully logged in with Facebook');
      // return Session::get('fb_user_access_token');
 });

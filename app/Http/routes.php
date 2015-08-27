@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -16,27 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users' ,function(){
+Route::get('build', 'ImageBuildController@build');
 
-    
-});
+Route::post('build', 'ImageBuildController@proccessImage');
 
-
-
-Route::get('session-get', function(SammyK\LaravelFacebookSdk\LaravelFacebookSdk $fb){
-
-    $user = Auth::user();
-
-
-
-    $token = Session::get('fb_user_access_token');
-    $fb->setDefaultAccessToken((string) $token);
-    
-    $response = $fb->get('/me/photos?fields=images')->getDecodedBody();
-    // $response = $fb->get('/me/photos?fields=images');
-
-    return view('data-return')->with(compact('response', 'user'));
-});
 
 
 require('routes/facebookLoginRoutes.php');
