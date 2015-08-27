@@ -11,10 +11,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-
-    return view('welcome');
-});
+Route::get('/', 'PagesController@showGallery');
 
 Route::get('build', 'ImageBuildController@build');
 Route::post('build', 'ImageBuildController@proccessImage');

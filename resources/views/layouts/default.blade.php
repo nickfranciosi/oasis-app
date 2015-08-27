@@ -5,7 +5,7 @@
     <title>Oasis</title>
 </head>
 <body>
-
+    @include('partials.nav')
     @yield('content')
 
 
