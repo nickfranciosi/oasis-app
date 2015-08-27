@@ -1,14 +1,7 @@
 <?php 
 
 // Generate a login URL
-Route::get('/facebook/login', function(SammyK\LaravelFacebookSdk\LaravelFacebookSdk $fb)
-{
-    // Send an array of permissions to request
-    $login_url = $fb->getLoginUrl(['email', 'user_photos']);
-
-    // Obviously you'd do this in blade :)
-    echo '<a href="' . $login_url . '">Login with Facebook</a>';
-});
+Route::get('/auth/login', 'LoginController@login');
 
 // Endpoint that is redirected to after an authentication attempt
 Route::get('/facebook/callback', function(SammyK\LaravelFacebookSdk\LaravelFacebookSdk $fb)

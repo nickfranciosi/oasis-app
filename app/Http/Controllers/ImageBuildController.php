@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use Auth;
 use Session;
 use App\Http\Requests;
@@ -12,6 +11,10 @@ use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class ImageBuildController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function build(LaravelFacebookSdk $fb)
     {
 

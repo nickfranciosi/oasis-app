@@ -8,7 +8,7 @@
 
     <form id="canvasForm" method="post" >
 
-      {{  csrf_field() }}
+      {!!  csrf_field() !!}
       <label>First Word</label>
       <select name="first">
         <option value="Dork">Dork</option>
@@ -117,7 +117,7 @@
           success:function(data){
             setTimeout(function(){
               window.location.href = "gallery";
-            }, 100)
+            }, 500)
           },
           error:function(){
             // failed request; give feedback to user
