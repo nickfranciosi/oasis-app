@@ -49,35 +49,35 @@
 @section('scripts')
 
 <script>
-$(function() {
+  $(function() {
 
     $('#photo-gallery img').on('click', function(e){
-        e.preventDefault();
-        console.log(this.src);
-        $('#selected-image').val(this.src);
-        $('#main-image').attr('src',this.src);
+      e.preventDefault();
+      console.log(this.src);
+      $('#selected-image').val(this.src);
+      $('#main-image').attr('src',this.src);
 
     });
 
     $('#canvasForm').on('submit',function(e){
       e.preventDefault();
 
-    var $form = $(this);
+      var $form = $(this);
 
-    var imagePath = this.imgPath.value;
-    var firstWord = this.first.value;
-    var secondWord = this.second.value;
-    var boxColor = this.color.value;
-    var $targetImage = $('#targetImage');
-    var $updatedImage = $('#updated-image');
+      var imagePath = this.imgPath.value;
+      var firstWord = this.first.value;
+      var secondWord = this.second.value;
+      var boxColor = this.color.value;
+      var $targetImage = $('#targetImage');
+      var $updatedImage = $('#updated-image');
 
-    var canvas = document.createElement("canvas");
-    var context = canvas.getContext('2d');
-    var imageObj = new Image();
-    imageObj.crossOrigin = "Anonymous";
-    imageObj.src = imagePath;
-    
-    imageObj.onload = function() {
+      var canvas = document.createElement("canvas");
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+      imageObj.crossOrigin = "Anonymous";
+      imageObj.src = imagePath;
+
+      imageObj.onload = function() {
         canvas.width = this.width;
         canvas.height = this.height;
         context.drawImage(imageObj, 0, 0);
@@ -115,8 +115,9 @@ $(function() {
           data: $form.serialize(),
           dataType: 'text',
           success:function(data){
-            console.log(data);
-            $targetImage.src = data;
+            setTimeout(function(){
+              window.location.href = "gallery";
+            }, 100)
           },
           error:function(){
             // failed request; give feedback to user
@@ -124,9 +125,9 @@ $(function() {
           }
         });
 
-    };    
+      };    
 
-  });
+    });
 
 });
 

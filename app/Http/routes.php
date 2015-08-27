@@ -17,8 +17,11 @@ Route::get('/', function () {
 });
 
 Route::get('build', 'ImageBuildController@build');
-
 Route::post('build', 'ImageBuildController@proccessImage');
+
+Route::get('gallery', 'PagesController@showGallery');
+Route::get('gallery/{id}', 'PagesController@showStory');
+
 
 
 
