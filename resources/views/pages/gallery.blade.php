@@ -3,7 +3,7 @@
 
 
 @section('content')
-    <h2>Gallery Page</h2>    
+    <h2>Gallery Page You MOther F Word</h2>    
 
 
     @foreach ($users as $user)
