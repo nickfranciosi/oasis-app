@@ -13,7 +13,7 @@
     <span class='st_twitter_large' displayText='Tweet'></span>
     <span class='st_email_large' displayText='Email'></span> --}}
     <div class="fb-share-button" 
-        data-href="http://oasis.app:8000" >
+        data-href="http://oasis-app.xyz/" >
     </div>
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="nickfranciosi" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
     
