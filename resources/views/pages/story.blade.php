@@ -15,11 +15,7 @@
     <div class="fb-share-button" 
         data-href="http://oasis-app.xyz/" >
     </div>
-    <a href="https://www.facebook.com/dialog/share?
-  app_id=145634995501895
-  &display=page
-  &href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F
-  &redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer">try this</a>
+    <button id="fbTest">Try This Test</button>
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="nickfranciosi" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
     
 @stop
@@ -43,11 +39,14 @@
                  fjs.parentNode.insertBefore(js, fjs);
                }(document, 'script', 'facebook-jssdk'));
 
+              $('#fbTest').on('click',function(){
               FB.ui({
                 method: 'share',
                 link: 'https://developers.facebook.com/docs/',
                 caption: 'An example caption',
               }, function(response){});
+
+              });
         </script>
 
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
