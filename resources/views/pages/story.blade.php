@@ -37,13 +37,16 @@
                  js.src = "//connect.facebook.net/en_US/sdk.js";
                  fjs.parentNode.insertBefore(js, fjs);
                }(document, 'script', 'facebook-jssdk'));
+
+              FB.ui({
+                method: 'share',
+                link: 'https://developers.facebook.com/docs/',
+                caption: 'An example caption',
+              }, function(response){});
         </script>
 
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         
-        <!-- Your like button code -->
-        <script type="text/javascript">var switchTo5x=true;</script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "f91606b7-b3d8-43b6-9f8d-8a966e286647", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+      
 
 @stop
