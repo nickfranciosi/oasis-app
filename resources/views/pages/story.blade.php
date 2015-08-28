@@ -17,7 +17,7 @@
     </div>
     <a href="https://www.facebook.com/dialog/share?
   app_id=145634995501895
-  &display=popup
+  &display=page
   &href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F
   &redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer">try this</a>
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="nickfranciosi" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
