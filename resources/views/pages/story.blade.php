@@ -44,6 +44,7 @@
                 method: 'share',
                 link: 'https://developers.facebook.com/docs/',
                 caption: 'An example caption',
+                href: 'https://developers.facebook.com/docs/'
               }, function(response){});
 
               });
