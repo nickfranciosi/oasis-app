@@ -44,7 +44,7 @@
                 method: 'share',
                 link: 'https://developers.facebook.com/docs/',
                 caption: 'An example caption',
-                href: 'https://developers.facebook.com/docs/'
+                href: 'https://oasis-app.xyz'
               }, function(response){});
 
               });
