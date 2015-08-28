@@ -12,7 +12,6 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', 'PagesController@showGallery');
-
 Route::get('build', 'ImageBuildController@build');
 Route::post('build', 'ImageBuildController@proccessImage');
 

@@ -47,12 +47,10 @@ class ImageBuildController extends Controller
     private function decodeImage($rawData)
     {
         return $decodedData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $rawData));
-
     }
 
     private function buildFilePath($fileName)
     {
-
         return $filePath = 'images/' . $fileName . '.png';
     }
 }
