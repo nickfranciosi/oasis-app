@@ -12,11 +12,10 @@
     {{-- <span class='st_facebook_large' displayText='Facebook'></span>
     <span class='st_twitter_large' displayText='Tweet'></span>
     <span class='st_email_large' displayText='Email'></span> --}}
-    <div class="fb-share-button" 
-        data-href="http://oasis-app.xyz/" >
-    </div>
-    <button id="fbTest">Try This Test</button>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="nickfranciosi" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
+    
+    <button id="fbTest">Share On Facebook</button>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
+    <a href="//{{ $user->image_path }}" id="downloadLink">Download</a>
     
 @stop
 
@@ -48,6 +47,12 @@
                 picture: 'http://oasis-app.xyz/{{ $user->image_path }}'
               }, function(response){});
 
+              });
+
+
+              $('#downloadLink').on('click', function(){
+                var url = $(this).attr('href');
+                window.open(url);
               });
         </script>
 
