@@ -19,7 +19,10 @@
 <body>
     @include('partials.nav')
     @yield('content')
-
+    @if (isset($user))
+     {{ var_dump($user) }}
+      {{ $user->image_path }}
+    @endif
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
