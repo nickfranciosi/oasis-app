@@ -10,7 +10,7 @@
 
     <div id="fb-root"></div>
     
-    @if ($user == Auth::user)
+    @if ($user == Auth::user())
      <p>You are logged in</p>
     @endif
     <button id="fbTest">Share On Facebook</button>
