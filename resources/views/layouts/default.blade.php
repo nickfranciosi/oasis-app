@@ -10,7 +10,6 @@
    This needs to be at lest two sentences long and describe what the site is about." />
    <meta property="fb:app_id" content="1477990922522983" />
    @if (isset($user))
-    {{ dd($user) }}
     <meta property="og:image" content="/{{ $user->image_path }}" />
    @endif
    
