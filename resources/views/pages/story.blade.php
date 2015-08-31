@@ -52,7 +52,7 @@
 
               $('#downloadLink').on('click', function(){
                 var url = $(this).attr('href');
-                window.open(url);
+                window.location(url);
               });
         </script>
 
