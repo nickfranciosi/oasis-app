@@ -9,9 +9,6 @@
     <img id="mainImage" src="/{{ $user->image_path }}">
 
     <div id="fb-root"></div>
-    {{-- <span class='st_facebook_large' displayText='Facebook'></span>
-    <span class='st_twitter_large' displayText='Tweet'></span>
-    <span class='st_email_large' displayText='Email'></span> --}}
     
     <button id="fbTest">Share On Facebook</button>
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
@@ -24,7 +21,7 @@
         <script>
               window.fbAsyncInit = function() {
                 FB.init({
-                  appId      : '1477990922522983',
+                  appId      : '{{ env(FACEBOOK_APP_ID) }}',
                   xfbml      : true,
                   version    : 'v2.4'
                 });

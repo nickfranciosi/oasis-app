@@ -8,7 +8,7 @@
    <meta property="og:url" content="http://oasis.app:8000" />
    <meta property="og:description" content="This is the description of the awerness campaign.
    This needs to be at lest two sentences long and describe what the site is about." />
-   <meta property="fb:app_id" content="1477990922522983" />
+   <meta property="fb:app_id" content="{{ env(FACEBOOK_APP_ID) }}" />
    @if (isset($user))
     <meta property="og:image" content="/{{ $user->image_path }}" />
    @endif
