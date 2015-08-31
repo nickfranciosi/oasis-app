@@ -50,7 +50,8 @@
               });
 
 
-              $('#downloadLink').on('click', function(){
+              $('#downloadLink').on('click', function(e){
+                e.preventDefault();
                 var img = $('#mainImage');
                 var url = img.src.replace(/^data:image\/[^;]/, 'data:application/octet-stream');
                 window.location(url);
