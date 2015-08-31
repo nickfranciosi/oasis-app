@@ -10,6 +10,9 @@
 
     <div id="fb-root"></div>
     
+    @if ($user == Auth::user)
+     <p>You are logged in</p>
+    @endif
     <button id="fbTest">Share On Facebook</button>
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
     <a href="/{{ $user->image_path }}" id="downloadLink" download>Download</a>
@@ -21,7 +24,7 @@
         <script>
               window.fbAsyncInit = function() {
                 FB.init({
-                  appId      : '{{ config("FACEBOOK_APP_ID") }}',
+                  appId      : '1477990922522983',
                   xfbml      : true,
                   version    : 'v2.4'
                 });
