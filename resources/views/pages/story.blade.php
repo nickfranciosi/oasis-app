@@ -44,8 +44,8 @@
                 method: 'share',
                 link: 'https://developers.facebook.com/docs/',
                 caption: 'A new Caption',
-                href: 'https://oasis-app.xyz',
-                picture: 'https://oasis-app.xyz/{{ $user->image_path }}'
+                href: '//oasis-app.xyz',
+                picture: '//oasis-app.xyz/{{ $user->image_path }}'
               }, function(response){});
 
               });
