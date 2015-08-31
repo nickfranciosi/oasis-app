@@ -43,7 +43,7 @@
               FB.ui({
                 method: 'share',
                 link: 'https://developers.facebook.com/docs/',
-                caption: 'An example caption',
+                caption: 'A new Caption',
                 href: 'https://oasis-app.xyz',
                 picture: 'https://oasis-app.xyz/{{ $user->image_path }}'
               }, function(response){});
