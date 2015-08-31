@@ -45,7 +45,7 @@
                 link: 'https://developers.facebook.com/docs/',
                 caption: 'An example caption',
                 href: 'https://oasis-app.xyz',
-                image: 'https://oasis-app.xyz/{{ $user->image_path }}'
+                picture: 'https://oasis-app.xyz/{{ $user->image_path }}'
               }, function(response){});
 
               });
