@@ -6,7 +6,7 @@
 @section('content')
     <h2>Single Story</h2>
 
-    <img src="/{{ $user->image_path }}">
+    <img id="mainImage" src="/{{ $user->image_path }}">
 
     <div id="fb-root"></div>
     {{-- <span class='st_facebook_large' displayText='Facebook'></span>
@@ -51,7 +51,8 @@
 
 
               $('#downloadLink').on('click', function(){
-                var url = $(this).attr('href');
+                var img = $('#mainImage');
+                var url = img.src.replace(/^data:image\/[^;]/, 'data:application/octet-stream');
                 window.location(url);
               });
         </script>
