@@ -15,7 +15,7 @@
     
     <button id="fbTest">Share On Facebook</button>
     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
-    <a href="/{{ $user->image_path }}" id="downloadLink">Download</a>
+    <a href="/{{ $user->image_path }}" id="downloadLink" download>Download</a>
     
 @stop
 
@@ -49,13 +49,6 @@
 
               });
 
-
-              $('#downloadLink').on('click', function(e){
-                e.preventDefault();
-                var img = $('#mainImage');
-                var url = img.src.replace(/^data:image\/[^;]/, 'data:application/octet-stream');
-                window.location(url);
-              });
         </script>
 
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
