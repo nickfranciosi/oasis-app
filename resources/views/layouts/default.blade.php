@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta property="og:title" content="This is the title for Oasis" />
+  {{--  <meta property="og:title" content="This is the title for Oasis" />
    <meta property="og:type" content="website" />
    <meta property="og:site_name" content="Oasis Awareness Campaign"/>
    <meta property="og:url" content="http://oasis-app.xyz" />
@@ -11,7 +11,7 @@
    <meta property="fb:app_id" content="1477990922522983" />
    @if (Auth::check())
     <meta property="og:image" content="/{{ Auth::user()->image_path }}" />
-   @endif
+   @endif --}}
    
     <title>Oasis</title>
 
