@@ -9,21 +9,25 @@
 
       var $form         = $(this);
       var imagePath     = this.imgPath.value;
-      var firstWord     = this.first.value;
-      var secondWord    = this.second.value;
+      var firstWord     = this.first.value.toUpperCase();
+      var secondWord    = this.second.value.toUpperCase();
       var boxColor      = this.color.value;
       var $targetImage  = $('#targetImage');
       var $updatedImage = $('#updated-image');
+
+      //determines how far down the image/canvas to place the words and colorbox
+      var overlayPlacementModifier = 3;
 
       
 
       initiateCanvas();
 
       imageObj.onload = function() {
-        
+
         setDimensionsOfCanvasToImageSize(this);
+        convertTograyScale();
         drawOverlayBox(this);
-        setUpFont('40pt Arial', 'blue');
+        setUpFont('160px league-gothic', 'white');
 
         var firstWidth = getTextWidth(firstWord);
         addWordToCanvas(firstWord, firstWidth, this);
@@ -64,7 +68,8 @@
         context.save();
         context.globalAlpha = 0.4;
         context.fillStyle = boxColor;
-        context.fillRect(0, imgRef.height / 2, imgRef.width, imgRef.height / 2);
+        var intendedBoxPosition = imgRef.height / overlayPlacementModifier;
+        context.fillRect(0, imgRef.height - intendedBoxPosition, imgRef.width, imgRef.height / 2);
         context.restore();
       }  
 
@@ -79,26 +84,33 @@
 
       function addWordToCanvas(word, wordWidth, imgRef, reverse){
         reverse = typeof reverse !== 'undefined' ? reverse : false;
-
+        var intendedWordPosition = imgRef.height / overlayPlacementModifier;
         if(reverse){
-          context.fillText(word, -(imgRef.width + wordWidth) / 2, -(imgRef.height / 2 + 10));
+          context.fillText(word, -(imgRef.width + wordWidth) / 2, -(imgRef.height - intendedWordPosition + 5));
         }else{
-          context.fillText(word, (imgRef.width - wordWidth) / 2, imgRef.height / 2 - 10);  
+          context.fillText(word, (imgRef.width - wordWidth) / 2, imgRef.height - intendedWordPosition - 5);  
         }
-      }
-
-      function setGradient(){
-        var gradient = context.createLinearGradient(0, 0, 0, canvas.height);
-
-        gradient.addColorStop(0, 'rgba(255,255,255,0)');
-        gradient.addColorStop(1, 'rgba(255,255,255,1)');
-        
       }
 
       function updateImgToUserGeneratedImage(){
         var imageData = canvas.toDataURL();
         $updatedImage.val(imageData);
       }
+
+      function convertTograyScale() {
+        var imgData = context.getImageData(0, 0, canvas.width, canvas.height);
+        var pixels  = imgData.data;
+        for (var i = 0, n = pixels.length; i < n; i += 4) {
+          var grayscale = pixels[i] * .3 + pixels[i+1] * .59 + pixels[i+2] * .11;
+            pixels[i  ] = grayscale;        // red
+            pixels[i+1] = grayscale;        // green
+            pixels[i+2] = grayscale;        // blue
+            //pixels[i+3]              is alpha
+          }
+        //redraw the image in black & white
+        context.putImageData(imgData, 0, 0);
+      }
+
 
       function sendAjaxRequest(data){
         $.ajax({
