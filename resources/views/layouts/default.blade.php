@@ -5,12 +5,12 @@
    <meta property="og:title" content="This is the title for Oasis" />
    <meta property="og:type" content="website" />
    <meta property="og:site_name" content="Oasis Awareness Campaign"/>
-   <meta property="og:url" content="http://oasis.app:8000" />
+   <meta property="og:url" content="http://oasis-app.xyz" />
    <meta property="og:description" content="This is the description of the awerness campaign.
    This needs to be at lest two sentences long and describe what the site is about." />
    <meta property="fb:app_id" content="1477990922522983" />
-   @if (isset($user))
-    <meta property="og:image" content="/{{ $user->image_path }}" />
+   @if (Auth::check())
+    <meta property="og:image" content="/{{ Auth::user()->image_path }}" />
    @endif
    
     <title>Oasis</title>

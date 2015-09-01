@@ -10,12 +10,7 @@
 
     <div id="fb-root"></div>
     
-    @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
-     <button id="fbTest">Share On Facebook</button>
-     <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
-     <a href="/{{ $user->image_path }}" id="downloadLink" download>Download</a>
-    @endif
-
+    @include('partials.shareButtons')
     
 @stop
 
@@ -44,7 +39,7 @@
                 link: 'https://developers.facebook.com/docs/',
                 caption: 'A new Caption',
                 href: 'http://oasis-app.xyz',
-                picture: 'http://oasis-app.xyz/{{ $user->image_path }}'
+                picture: 'http://oasis.app.xyz/{{ $user->image_path }}'
               }, function(response){});
 
               });

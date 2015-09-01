@@ -35,7 +35,9 @@ class ImageBuildController extends Controller
 
         $data = $this->decodeImage($data);
         $user = Auth::user();
-        $filePath = $this->buildFilePath($user->facebook_user_id);
+
+        //use facebook id and timestamp to prevent caching by facebook
+        $filePath = $this->buildFilePath($user->facebook_user_id . '-' . strval(time()));
         $user->update(['image_path' => $filePath]);
         file_put_contents($filePath, $data);
 
