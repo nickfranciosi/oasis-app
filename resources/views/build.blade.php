@@ -16,6 +16,7 @@
         <option value="Brat">Brat</option>
         <option value="Stupid">Stupid</option>
         <option value="Hungry">Hungry</option>
+        <option value="Goody-Two-Shoes">Goody-Two-Shoes</option>
       </select>
       <label>Second Word</label>
       <select name="second">
