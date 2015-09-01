@@ -39,7 +39,7 @@
                 link: 'https://developers.facebook.com/docs/',
                 caption: 'A new Caption',
                 href: 'http://oasis-app.xyz',
-                picture: 'http://oasis.app.xyz/{{ $user->image_path }}'
+                picture: 'http://oasis-app.xyz/{{ $user->image_path }}'
               }, function(response){});
 
               });
