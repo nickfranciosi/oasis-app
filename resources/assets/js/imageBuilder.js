@@ -66,7 +66,7 @@
 
       function drawOverlayBox(imgRef){
         context.save();
-        context.globalAlpha = 0.4;
+        context.globalAlpha = 0.5;
         context.fillStyle = boxColor;
         var intendedBoxPosition = imgRef.height / overlayPlacementModifier;
         context.fillRect(0, imgRef.height - intendedBoxPosition, imgRef.width, imgRef.height / 2);
