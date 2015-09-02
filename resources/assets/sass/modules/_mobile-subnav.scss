@@ -1,0 +1,63 @@
+.subnav{}
+.subnav--work {
+  position: relative;
+  @include bp-at-least($bp__md) {
+    display: none;
+  }
+}
+.subnav--work__header {
+  display: block;
+  @include font-size(18px);
+  font-family: $serif;
+  padding: 0.5*$unit 1*$unit;
+  background: $gray-blue-dark;
+  color: $white;
+}
+
+.subnav__trigger {
+  @include font-size(13px);
+  font-family: $sans-serif;
+  float: right;
+  &:after {
+    font-family: FontAwesome;
+    content: '\f078';
+    font-size: 10px;
+    padding-left: 5px;
+  }
+}
+.subnav--work__header.open .subnav__trigger {
+  &:after {
+    content: '\f077';
+  }
+}
+
+.subnav--work__body {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  max-height: 0;
+  background-color: $gray-blue-dark;
+  overflow: hidden;
+  z-index: $zIndex-2;
+  transition: max-height 500ms ease;
+  padding: 0;
+}
+.subnav--work__body li {
+  padding: 0 1*$unit;
+}
+.subnav--work__body li a {
+  border-top: 1px solid $white;
+  display: block;
+  color: $white;
+  letter-spacing: 1px;
+  padding: 0.5*$unit 0;
+  font-family: $sans-serif-bold;
+  text-transform: uppercase;
+  @include font-size(14px);
+}
+.subnav--work__body li a:hover{
+  background-color: $gray-blue-dark;
+}
+.subnav--work__body.open {
+  max-height: 1000px;
+}

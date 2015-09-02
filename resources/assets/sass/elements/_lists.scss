@@ -1,0 +1,55 @@
+// ul{
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// ul.dept{
+//   float: left;
+//   width: 100%;
+//   @include bp-at-least($bp__sm) {
+//     width: 45%;
+//     min-height: 100px;
+//   }
+//   margin-top: 1*$unit;
+// }
+// ul.dept:nth-of-type(1n+3) {
+//   @include bp-at-least($bp__md) {
+//     margin-top: 0*$unit;
+//   }
+// }
+
+// ul.client-list li{
+//   @include col(1/2, $cycle: 2);
+//   @include bp-at-least($bp__md) {
+//     @include col(1/5, $cycle: 5, $uncycle: 2);
+//   }
+//   padding:15px 0;
+//   height: 120px;
+//   background: url('../img/about/sprite-client-list.png') no-repeat;
+//   &.aos {background-position: 50% 55px;}
+//   &.applebees {background-position: 50% -513px;}
+//   &.argent {background-position: 50% -1060px;}
+//   &.asurion {background-position: 50% -1614px;}
+//   &.bridgestone {background-position: 50% -85px;}
+//   &.carrier {background-position: 50% -657px;}
+//   &.clinixMd {background-position: 50% -1196px;}
+//   &.comdata {background-position: 50% -1731px;}
+//   &.firestone {background-position: 50% -219px;}
+//   &.halton {background-position: 50% -793px;}
+//   &.hbp {background-position: 50% -1329px;}
+//   &.icp {background-position: 50% -1877px;}
+//   &.preds {background-position: 50% -358px;}
+//   &.titans {background-position: 50% -930px;}
+//   &.thrive {background-position: 50% -1464px;}
+//   &.utmc {background-position: 50% -2014px;}
+//   &.avenue {background-position: 50% -2190px;}
+//   &.delta {background-position: 50% -2320px;}
+//   &.lp {background-position: 50% -2490px;}
+//   &.ult {background-position: 50% -2615px;}
+// }
+
+// .job-details{
+//   list-style: circle;
+//   margin-left: 1*$unit;
+// }

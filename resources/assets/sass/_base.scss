@@ -1,0 +1,262 @@
+// base.scss
+// Colors
+$color-primary: #E3EEDE;
+$color-dark:    #333333;
+$color-medium:  #999999;
+$color-light:   #CCCCCC;
+$color-text:    #BABABA;
+
+
+$brand-color1: #78B5CA;
+$brand-color2: #CA767F;
+$brand-color3: #29ADA8;
+$brand-color4: #F9D085;
+$brand-color5: #6B81B2;
+
+// Oasis old colors
+$brand-color7: #415A68;
+$brand-color8: #778D1D;
+$brand-accent: #50E3C2;
+
+// Text
+$text-base: 16px;
+$text-small: 0.8rem;
+
+// Screens
+$screen-sm: 768px;
+$screen-md: 960px;
+$screen-lg: 1100px;
+$screen-xl: 1400px;
+
+
+// Typography
+$font-family-sans-serif:          "League Gothic", "league-gothic", Helvetica, Arial, sans-serif;
+$font-family-serif:               "Museo Slab", "museo-slab", "Georgia", "Times New Roman", Times, serif;
+$font-family-monospace:            Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:                 $font-family-serif;
+
+
+// Media queers
+// @include screen-xs { }
+@mixin screen-xs {
+	@media (max-width: #{$screen-sm - 1}) {
+		@content;
+	}
+}
+
+// @include screen-sm { }
+@mixin screen-sm {
+	@media (min-width: #{$screen-sm}) {
+		@content;
+	}
+}
+// @include screen-md { }
+@mixin screen-md {
+	@media (min-width: #{$screen-md}) {
+		@content;
+	}
+}
+// @include screen-lg { }
+@mixin screen-lg {
+	@media (min-width: #{$screen-lg}) {
+		@content;
+	}
+}
+
+// @include screen-lg { }
+@mixin screen-xl {
+	@media (min-width: #{$screen-xl}) {
+		@content;
+	}
+}
+
+
+
+// Vertically align items
+// @include vertical-align()
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+// Generic transition
+// @include transition(0.2s)
+@mixin transition($time) {
+	-webkit-transition: all $time ease-in-out;
+	   -moz-transition: all $time ease-in-out;
+	        transition: all $time ease-in-out;
+}
+
+// Opacity mixin
+// @include opacity(0.2s)
+@mixin opacity($time) {
+	-webkit-transition: opacity $time ease-in-out,visibility 0s 0s linear,top $time ease-in-out;
+	   -moz-transition: opacity $time ease-in-out,visibility 0s 0s linear,top $time ease-in-out;
+	    -ms-transition: opacity $time ease-in-out,visibility 0s 0s linear,top $time ease-in-out;
+	     -o-transition: opacity $time ease-in-out,visibility 0s 0s linear,top $time ease-in-out;
+	        transition: opacity $time ease-in-out,visibility 0s 0s linear,top $time ease-in-out;
+}
+
+
+// Generic transform
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+// Skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+
+.space-top {
+	margin-top: 1em;
+}
+.space-btm {
+	margin-bottom: 1em;
+}
+
+.color-accent {
+	color: $brand-accent !important;
+}
+
+
+
+html {
+	height: 100%;
+	width: 100%;
+	background: #ccc;
+}
+
+body {
+	font-family: $font-family-serif;
+	font-size: 16px;
+	overflow-x: hidden;
+	color: #2a3237;
+	height: 100%;
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+}
+
+section {
+	position: relative;
+}
+
+
+
+.content-block {
+	padding-top: 6em;
+	padding-bottom: 6em;
+}
+
+
+#info .content-block {
+	padding-top: 0;
+
+	@include screen-sm {
+		padding-top: 2em;
+		padding-bottom: 10em
+	}
+}
+
+
+.blink {
+	position: relative;
+	top: 4px;
+	display: inline-block;
+	width: 4px;
+	height: 50px;
+	height: 5vh;
+	margin: 0 10px;
+}
+
+
+// _animation.scss
+
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -ms-animation-name: $name;
+  animation-name: $name;
+}
+
+@mixin animation-duration($name) {
+  -webkit-animation-duration: $name;
+  -moz-animation-duration: $name;
+  -ms-animation-duration: $name;
+  animation-duration: $name;
+}
+
+@mixin animation-timing-function($name) {
+  -webkit-animation-timing-function: $name;
+  -moz-animation-timing-function: $name;
+  -ms-animation-timing-function: $name;
+  animation-timing-function: $name;
+}
+
+@mixin animation-iteration-count($name) {
+  -webkit-animation-iteration-count: $name;
+  -moz-animation-iteration-count: $name;
+  -ms-animation-iteration-count: $name;
+  animation-iteration-count: $name;
+}
+
+@mixin animation-direction($name) {
+  -webkit-animation-direction: $name;
+  -moz-animation-direction: $name;
+  -ms-animation-direction: $name;
+  animation-direction: $name;
+}
+
+@mixin animation-delay($name) {
+  -webkit-animation-delay: $name;
+  -moz-animation-delay: $name;
+  -ms-animation-delay: $name;
+  animation-delay: $name;
+}
+
+@mixin animation-play-state($name) {
+  -webkit-animation-play-state: $name;
+  -moz-animation-play-state: $name;
+  -ms-animation-play-state: $name;
+  animation-play-state: $name;
+}
+
+@mixin animation-fill-mode($name) {
+  -webkit-animation-fill-mode: $name;
+  -moz-animation-fill-mode: $name;
+  -ms-animation-fill-mode: $name;
+  animation-fill-mode: $name;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes $name { @content; }
+  @-moz-keyframes $name { @content; }
+  @-ms-keyframes $name { @content; }
+  @keyframes $name { @content; }
+ }
+
+

@@ -1,0 +1,30 @@
+@import "mixins/background";
+
+$gray-blue-dark: rgb(69, 85, 95);
+$gray-blue-light: rgb(241, 242, 244);
+$red-vivid: rgb(229, 27, 36);
+$orange-vivid: rgb(240, 179, 16);
+
+// Aux Colors
+$white: rgb(255, 255, 255);
+$black: rgb(34, 34, 34);
+$gray-dark: lighten($black, 26.5%);
+$green-dark: rgb(92, 135, 39);
+
+$colors:(
+  "gray-blue-dark": $gray-blue-dark,
+  "gray-blue-light": $gray-blue-light,
+  "red-vivid": $red-vivid,
+  "orange-vivid": $orange-vivid,
+  "white": $white,
+  "black": $black,
+  "gray-dark": $gray-dark
+);
+@each $key, $value in $colors {
+  .u-bg-#{$key} {
+    @include background($value);
+  }
+  .u-text-#{$key} {
+    color: $value;
+  }
+}

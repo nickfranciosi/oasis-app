@@ -13,8 +13,7 @@
    
     <title>Oasis</title>
 
-    <script src="https://use.typekit.net/gro7xnj.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+   
 </head>
 <body>
     @include('partials.nav')

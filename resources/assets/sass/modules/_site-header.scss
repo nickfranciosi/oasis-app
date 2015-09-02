@@ -1,0 +1,7 @@
+header.header{
+  position: relative;
+  @include background($white);
+  @include bp-at-least($bp__md) {
+	  padding-bottom: 10px;
+  }
+}

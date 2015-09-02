@@ -1,0 +1,129 @@
+.callout{
+  padding: 2em 0;
+  color: $white;
+  text-align: center;
+}
+
+.callout--project .btn{
+  float: left;
+  width: 100%;
+  margin-top: 1*$unit;
+  @include bp-at-least($bp__sm) {
+    float: none;
+    width: auto;
+  }
+  @include bp-between($bp__sm, $bp__md) {
+    width: 40%;
+  }
+  @include bp-between($bp__md, $bp__lg) {
+    width: 30%;
+  }
+  @include bp-at-least($bp__lg) {
+    width: 20%;
+  }
+}
+.callout--project .btn + .btn{
+  @include bp-at-least($bp__sm) {
+    margin-left: 1*$unit;
+  }
+}
+
+.callout__heading{
+  padding-bottom: 2em;
+}
+.callout__heading p{
+  line-height: 1.2;
+  margin: 0;
+}
+.callout__heading p + p{
+  margin: 0;
+}
+.callout__stat{
+  @include bp-at-least($bp__sm) {
+    width: 34%;
+  }
+}
+.callout__stat:nth-child(even){
+  @include bp-at-least($bp__sm) {
+    float: left;
+  }
+}
+.callout__stat:nth-child(odd){
+  @include bp-at-least($bp__sm) {
+    float: right;
+  }
+}
+.callout__stat p{
+  clear: both;
+  margin-bottom: 13px;
+  &:last-child{
+    @include stylish-underline($white);
+  }
+}
+.callout__stat p + p{
+  margin-bottom: 3em;
+}
+
+.callout__image{
+  display: none;
+  @include bp-at-least($bp__sm) {
+    display: inline-block;
+    margin-top: -19em;
+    width: 40%;
+  }
+}
+
+.callout__image.bridgestone-motorsports {
+  margin-top: -9em;
+  max-width: 600px;
+  margin-bottom: 0;
+}
+.callout__image.tennessee-titans {
+  margin-top: -19em;
+  width: 35%;
+}
+.callout__image.tractor-supply-company {
+  margin-top: -8em;
+  margin-bottom: 3em;
+  width: 35%;
+}
+
+.callout--work{
+  padding: 2em 0 0;
+}
+.callout--contact{
+
+}
+.callout--contact h3{
+  margin-bottom: 15px;
+}
+.callout--contact p{
+  @include stylish-underline();
+}
+.callout--contact section{
+  max-width: 550px;
+  margin: 0 auto;
+}
+.callout--contact .btn{
+  margin-top: 1.5em;
+}
+
+.callout--careers {
+  padding: 0em 0 4em;
+}
+.callout--careers section{
+  max-width: 550px;
+  margin: 0 auto;
+}
+.callout--careers .btn{
+  margin-top: 1.5em;
+}
+
+.callout--project{
+  color: $gray-blue-dark;
+  padding: 0 0 2*$unit;
+}
+.callout--project h2{
+  font-family: $serif;
+  margin-bottom: 10px;
+}

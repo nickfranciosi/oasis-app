@@ -1,0 +1,14 @@
+main.main{
+
+}
+.recent-projects{
+  padding: .5em 0;
+  display: table;
+  margin: 0 auto;
+}
+.recent-projects p{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include font-size(14px);
+}

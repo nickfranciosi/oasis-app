@@ -1,0 +1,183 @@
+//- specify layout here
+extends ./layouts/layout.jade
+
+//- specifiy page title here
+block title
+ title More to Youth - Make Yours
+
+//- page content here
+block content
+  // Preloader
+  .preloader
+    img(src='img/loader.gif', alt='Preloader image')
+
+
+  div#picture-steps
+
+    // First Step
+    h2.sr-only Choose a word
+    section.step#step-1
+
+      // Step half top
+      .step-half.step-top
+        header
+          h2.header People saw me <br/> as a #[span.selected-word Choose a positive]
+          i.fa.fa-times.close
+          a.link-area(href="#") Please choose a word
+
+        // Step content
+        .step-content
+          .step-list
+            p Choose a word that best describes how you feel on the inside of your soul
+            ul
+              li
+                a(href="#") Nerd
+              li
+                a(href="#") Freak
+              li
+                a(href="#") Deuchebag
+              li
+                a(href="#") Shithead
+              li
+                a(href="#") Fart Sniffer
+              li
+                a(href="#") Indignant
+              li
+                a(href="#") Dork
+              li
+                a(href="#") Bully
+              li
+                a(href="#") Goody-two-shoes
+              li
+                a(href="#") Arrogant
+              li
+                a(href="#") Nerd
+              li
+                a(href="#") Freak
+              li
+                a(href="#") Deuchebag
+              li
+                a(href="#") Shithead
+              li
+                a(href="#") Fart Sniffer
+              li
+                a(href="#") Indignant
+              li
+                a(href="#") Dork
+              li
+                a(href="#") Bully
+              li
+                a(href="#") Goody-two-shoes
+              li
+                a(href="#") Arrogant
+              li
+                a(href="#") Nerd
+              li
+                a(href="#") Freak
+              li
+                a(href="#") Deuchebag
+              li
+                a(href="#") Shithead
+              li
+                a(href="#") Fart Sniffer
+              li
+                a(href="#") Indignant
+              li
+                a(href="#") Dork
+              li
+                a(href="#") Bully
+              li
+                a(href="#") Goody-two-shoes
+              li
+                a(href="#") Arrogant
+
+      // Step half bottom
+      .step-half.step-bottom
+        header
+          h2.header But actually I <br/> was #[span.selected-word Choose a negative]
+          i.fa.fa-times.close
+          a.link-area(href="#") Please choose a word
+
+        .step-content
+          .step-list
+            p Choose a word that best describes how you feel on the inside of your soul
+            ul
+              li
+                a(href="#") Nerd
+              li
+                a(href="#") Freak
+              li
+                a(href="#") Deuchebag
+              li
+                a(href="#") Shithead
+              li
+                a(href="#") Fart Sniffer
+              li
+                a(href="#") Indignant
+              li
+                a(href="#") Dork
+              li
+                a(href="#") Bully
+              li
+                a(href="#") Goody-two-shoes
+              li
+                a(href="#") Arrogant
+              li
+                a(href="#") Nerd
+              li
+                a(href="#") Freak
+              li
+                a(href="#") Deuchebag
+              li
+                a(href="#") Shithead
+              li
+                a(href="#") Fart Sniffer
+              li
+                a(href="#") Indignant
+              li
+                a(href="#") Dork
+              li
+                a(href="#") Bully
+              li
+                a(href="#") Goody-two-shoes
+              li
+                a(href="#") Arrogant
+
+    // Second step
+    h2.sr-only Choose a photo
+    section.step#step-2
+
+      // Step half top
+      .step-half.step-top
+        header
+          h2.header Choose a Photo
+          p We would like to use your Facebook profile picture and no other information
+
+      .step-half.step-bottom
+        .persons
+          img(src="../img/persons.png")
+        .connect.text-center
+          a(href="{{ $login_url }}") Connect with Facebook
+
+    // Third step
+    h2.sr-only Choose a color
+    section.step#step-3
+
+      // Image step
+      header
+        h2.header Choose a Color
+      .img-color
+        img(src="../img/conspiracy-keanu.jpg")
+        a.color-overlay.cp-fullscreen(alt="Choose a fucking color")
+        span Please click here to choose a color
+
+    // Fourth step
+    h2.sr-only Confirmation
+    section.step#step-4
+
+      // Image step
+      header
+        h2.header Confirmation
+      .img-color
+        img(src="../img/conspiracy-keanu.jpg")
+

@@ -1,0 +1,35 @@
+$dev__bg-opacity: .65;
+
+.dev--show-breakpoint {
+  body:before {
+    content: "-";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: .4em .5em;
+    border: 1px solid $black;
+    background: rgba($black, $dev__bg-opacity);
+    font-size: 1em;
+    line-height: 1;
+    color: $white;
+    z-index: $zIndex-9;
+    @include bp-at-least($bp__xs) {
+      content: "XS";
+    }
+    @include bp-at-least($bp__sm) {
+      content: "SM";
+    }
+    @include bp-at-least($bp__md) {
+      content: "MD";
+    }
+    @include bp-at-least($bp__lg) {
+      content: "LG";
+    }
+    @include bp-at-least($bp__xl) {
+      content: "XL";
+    }
+    @include bp-at-least($bp__xxl) {
+      content: "XXL";
+    }
+  }
+}

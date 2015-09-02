@@ -1,0 +1,43 @@
+blockquote{
+  p{
+    font-family: $serif;
+    @include font-size(30px);
+    &:before{
+      content:"\“";
+    }
+    &:after{
+      content:"\”";
+    }
+  }
+}
+
+
+.quote--image{
+  background-color: $gray-blue-dark;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
+  padding: 3*$unit 0;
+}
+.quote--image h1{
+  @include font-size(20px, 1.5);
+  @include bp-at-least($bp__md) {
+    @include font-size(30px, 1.5);
+    margin: 0 auto;
+  }
+  font-family: $serif-italic;
+  max-width: 900px;
+  margin: 0 auto;
+  color: $white;
+}
+.quote--image p{
+  @include font-size(20px, 1.5);
+  @include bp-at-least($bp__md) {
+    @include font-size(30px, 1.5);
+    margin: 0 auto;
+  }
+  font-family: $serif-italic;
+  max-width: 900px;
+  margin: 0 auto;
+  color: $white;
+}

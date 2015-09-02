@@ -1,0 +1,50 @@
+#logo{
+  // padding: 0.6*$unit 0;
+  // width: 200px;
+  // position: absolute;
+  // bottom: 30px;
+  // left: 0;
+  .letters{
+    fill: $gray-blue-dark;
+  }
+  .amper{
+    fill: $red-vivid;
+  }
+}
+// @for $i from 1 through 4 {
+//   .logo--animating .logo--animate:nth-child(#{$i}) {
+//     @include bounce($duration: 1.2s, $delay: 0.12s * $i );
+//   }
+// }
+// .logo--animating .logo--animate{
+//   @include bounce();
+// }
+.logo{
+  position: relative;
+  z-index: $zIndex-1;
+  display: block;
+  width: 100px;
+  margin-top: 0.3*$unit;
+  @include bp-at-least($bp__md) {
+    margin-top: 0.6*$unit;
+    width: 160px;
+  }
+  float: left;
+  span{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 50px;
+  }
+  svg{
+    max-height: 100%;
+  }
+  object{
+    position: relative;
+    overflow: visible;
+    z-index: -1;
+  }
+  &:hover{
+    border-bottom: 1px solid transparent;
+  }
+}

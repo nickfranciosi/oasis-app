@@ -1,0 +1,153 @@
+/****
+  MAIN STYLESHEET
+------------------------------------------------------
+  TABLE OF CONTENTS
+  - Base ............ foundations, mixins, functions, vars
+  - Elements ........ single elements
+  - Layout .......... layout objects like grids, containers
+  - Modules ......... objects created by combining elements
+  - Vendor .......... vender style includes
+---------------------------------------------------------  */
+
+/***
+BASE
+---------------------------------------------------------
+  Your CSS begins with some global variables, a reset which
+  is basically Normalize, some mixins, and a print stylesheet.
+-----------------------------------------------------  */
+
+
+  // Colors
+  @import 'base/colors';
+
+  // Breakpoint
+  @import 'base/breakpoints';
+
+  // z-index scale
+  @import 'base/z-index';
+
+  // Reset (Normalize)
+  @import '../../bower_components/normalize-scss/normalize';
+
+  // Mixins
+  @import "mixins/font-size";
+  @import "mixins/font-face";
+  @import "mixins/stylish-underline";
+  @import "mixins/truncate-text";
+  @import "mixins/breakpoints";
+
+  // Animations
+
+
+  // Global
+  @import "base/fonts";
+
+  // Development Helpers
+  @import "base/dev-helpers";
+  @import "base/site-helpers";
+
+  // Print
+  @import "base/print";
+
+
+/***
+ELEMENTS
+---------------------------------------------------------
+  Global styling of elements.
+---------------------------------------------------------  */
+
+  @import "elements/banner";
+
+  @import "elements/body";
+
+  @import "elements/buttons";
+
+  @import "elements/code";
+
+  @import "elements/facts";
+
+  @import "elements/forms";
+
+  @import "elements/headings";
+
+  @import "elements/hr";
+
+  @import "elements/html";
+
+  @import "elements/images";
+
+  @import "elements/links";
+
+  @import "elements/lists";
+
+  @import "elements/quotes";
+
+  @import "elements/type";
+
+/***
+LAYOUT
+---------------------------------------------------------
+  A large portion of CSS is structural layout. You will use
+  these helpers to create the scaffolding that will support
+  the elements that make up your site.
+--------------------------------------------------------- */
+
+  @import "layout/container";
+
+  @import "layout/hide";
+
+  @import "layout/media";
+
+  @import "layout/blocks";
+
+/***
+MODULES
+---------------------------------------------------------
+  Reusable objects that are combinations
+  of elements and other modules.
+  When you create a new module, make sure the partial is
+  in the modules directory, and you import it below
+  Comment out any partial you don't need.
+---------------------------------------------------------  */
+
+  @import "modules/site";
+
+  @import "modules/site-header";
+
+  @import "modules/site-logo";
+
+  @import "modules/site-nav";
+
+  @import "modules/site-main";
+
+  @import "modules/site-footer";
+
+
+  // Page Template Modules
+
+  @import "modules/callouts";
+
+  @import "modules/heroes";
+
+  @import "modules/modals";
+
+  @import "modules/thumbnails";
+
+  @import "modules/video-embeds";
+
+  @import "modules/mobile-subnav";
+
+/***
+VENDOR
+---------------------------------------------------------
+  Vendor styles from included libraries.
+---------------------------------------------------------  */
+
+  @import "vendor/slick-carousel";
+
+  @import "vendor/rome";
+
+
+
+
+

@@ -1,0 +1,44 @@
+// section-about.
+
+#about {
+	position: relative;
+	background-image: url('../img/bg-graduates.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 1em 0 3em;
+	@include screen-sm {
+		padding: 14em 0;
+	}
+
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: #4A4A4A;
+		opacity: 0.64;
+	}
+
+	header {
+		text-align: center;
+		padding: 4em 0;
+	}
+
+	.header {
+		color: #fff;
+		margin-bottom: 0;
+	}
+
+	.sub-heading {
+		color: #fff;
+	}
+
+	p { color: #fff; }
+
+	.btn-link { margin-top: 2em; }
+
+}

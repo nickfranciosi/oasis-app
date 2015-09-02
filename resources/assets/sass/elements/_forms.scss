@@ -1,0 +1,67 @@
+address{
+  font-style: normal;
+}
+
+form{
+  display: table;
+  width: 100%;
+  @include font-size(14px);
+  font-family: $sans-serif;
+  padding: 1*$unit 0;
+}
+
+fieldset{
+  display: table-cell;
+  float: left;
+  width: 100%;
+  @include bp-at-least($bp__lg) {
+    width: 50%;
+    padding-right: 1*$unit;
+  }
+  margin: 0;
+  padding: 0;
+  border: 0 solid $black;
+}
+
+input.text,
+input.email,
+textarea{
+  width: 100%;
+  padding: 0.5*$unit;
+  margin-bottom: 1*$unit;
+  outline: 0;
+  border: 1px solid darken($gray-blue-light, 15%);
+}
+textarea{
+  height: 4.2*$unit;
+}
+
+fieldset .btn{
+  @include bp-until($bp__lg) {
+    width: 100%;
+  }
+}
+
+/* Tropical Smoothie Form Styles */
+.checkbox{
+  margin-right: 0.5*$unit;
+  display: block;
+}
+
+.range-of-dates{
+  margin-bottom: 0.5*$unit;
+}
+
+label {
+  display: block;
+}
+
+ select {
+  width: 100%;
+  background-color: $white;
+  height : 2*$unit;
+  font-family: $sans-serif;
+  margin-bottom: 1*$unit;
+  outline:0;
+  border: 1px solid darken($gray-blue-light, 15%);
+ }

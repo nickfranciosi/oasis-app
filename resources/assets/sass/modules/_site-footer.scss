@@ -1,0 +1,109 @@
+// .footer{
+//   opacity: 1;
+//   background: $gray-blue-dark;
+//   color: $white;
+//   p + a,
+//   ul + a,
+//   address{
+//     @include bp-at-least($bp__md) {
+//       display: inline-block;
+//       margin-top: 1*$unit;
+//     }
+//   }
+// }
+// .footer a{
+//   color: $white;
+//   &:hover{
+//     border-bottom: 1px solid $white;
+//   }
+// }
+// .footer section{
+//   width: 100%;
+//   padding: 0.5*$unit 0;
+//   clear: both;
+//   text-align: center;
+//   @include bp-at-least($bp__md) {
+//     @include col(1/4);
+//     padding: 2em 0;
+//   }
+// }
+// .footer section:nth-of-type(2),
+// .footer section:nth-of-type(3){
+//   @include bp-until($bp__md) {
+//     @include span(1);
+//     text-align: center;
+//     padding: 0.5*$unit 0;
+//   }
+// }
+// .footer section > p{
+//   @include bp-at-least($bp__md) {
+//     margin-top: 1.5*$unit;
+//   }
+// }
+
+// .footer h6{
+//   margin: 0 0 0.5*$unit 0;
+//   color: $gray-blue-light;
+// }
+
+// .footer .social-media li{
+//   display: inline-block;
+// }
+// .footer .social-media li + li{
+//   margin-left: 1em;
+// }
+// .footer .social-media a{
+//   @include bp-until($bp__md) {
+//     @include font-size(24px);
+//   }
+//   transition: 0.01s ease;
+//   @include font-size(18px);
+//   &:hover{
+//     border: 0;
+//   }
+// }
+
+// .footer__subfooter{
+//   background: $gray-blue-light;
+//   color: $gray-blue-dark;
+//   font-family: $sans-serif;
+//   @include font-size(12px);
+//   text-transform: uppercase;
+//   .container{
+//     padding: .5em 1em;
+//   }
+//   a{
+//     display: none;
+//     color: $gray-blue-dark;
+//     margin-left: 1em;
+//     @include bp-at-least($bp__md) {
+//       display: inline;
+//       float: right;
+//     }
+//     &:hover{
+//       border-bottom: 1px solid $gray-blue-dark;
+//     }
+//   }
+// }
+
+// .footer .scroll-to-top {
+//   position: fixed;
+//   background-color: $black;
+//   opacity: .5;
+//   border-radius: 50%;
+//   cursor: pointer;
+//   width:55px;
+//   height: 55px;
+//   bottom: .75em;
+//   right: 1em;
+//   display: none;
+//   z-index: $zIndex-9;
+//   text-align: center;
+//   padding-top: .15em;
+//   &:before {
+//     content: "\f106";
+//     font-family: FontAwesome;
+//     color: $white;
+//     @include font-size(28px)
+//   }
+// }

@@ -1,0 +1,7 @@
+body{
+  height: 100%;
+  background: $white;
+  @include font-size(18px);
+  color: $gray-blue-dark;
+  font-family: $sans-serif;
+}

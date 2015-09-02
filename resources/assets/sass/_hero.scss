@@ -1,0 +1,147 @@
+// hero.scss
+
+#intro {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	color: white;
+	height: 100%;
+	max-height: 800px;
+
+	&:before {
+		display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+		background: url('../img/bg-dork.jpg');
+		background-size: cover;
+		background-position: center 100%;
+		background-repeat: no-repeat;
+	}
+
+	&:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    background-color:	$brand-color1;
+
+    // Not sure why but need all keyfraes declaration seperate for sarafi to work right
+    -webkit-animation-name: color;
+		-webkit-animation-duration: 8s;
+		-webkit-animation-timing-function: ease-in-out;
+		-webkit-animation-delay: 1s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;
+		-webkit-animation-fill-mode: both;
+		-webkit-animation-play-state: running;
+
+     -moz-animation: color 8s ease-in-out 1s infinite alternate both running;
+     animation: color 8s ease-in-out 1s infinite alternate both running;
+	}
+
+}
+
+@-webkit-keyframes color {
+  0%   { background-color: $brand-color1; }
+  25%  { background-color: $brand-color2; }
+  50%  { background-color: $brand-color3; }
+  75%  { background-color: $brand-color4; }
+  100% { background-color: $brand-color5; }
+}
+@-moz-keyframes color {
+  0%   { background-color: $brand-color1; }
+  25%  { background-color: $brand-color2; }
+  50%  { background-color: $brand-color3; }
+  75%  { background-color: $brand-color4; }
+  100% { background-color: $brand-color5; }
+}
+@keyframes color {
+  0%   { background-color: $brand-color1; }
+  25%  { background-color: $brand-color2; }
+  50%  { background-color: $brand-color3; }
+  75%  { background-color: $brand-color4; }
+  100% { background-color: $brand-color5; }
+}
+
+
+#intro .table {
+	display: table;
+	height: 100%;
+}
+
+#intro .container { height: 100%; }
+
+#intro .header-text {
+	display: table-cell;
+	text-align: center;
+	color: white;
+
+	vertical-align: middle;
+	padding-top: 120px;
+
+	@include screen-sm {
+		vertical-align: middle;
+		padding-top: 160px;
+		padding-bottom: 0;
+	}
+
+
+	.tagline {
+		margin-bottom: 0;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-size: 50px;
+
+		@include screen-sm {
+			font-size: 64px;
+		}
+
+	}
+
+
+	// Headline desciptive text
+	.tagline-text {
+		color: #ffffff;
+		display: none;
+		@include screen-sm {
+			display: block;
+			max-width: 420px;
+			margin: 0 auto;
+		}
+	}
+
+	.learn-more {
+		margin-top: 10px;
+		@include screen-sm { margin-top: 30px; }
+	}
+
+
+}
+
+
+// Typed text
+// header .typed {
+// 	display: inline-block;
+// 	margin: 0;
+// }
+
+// header .typed-cursor {
+// 	font-size: 60px;
+// 	display: inline-block;
+// 	margin: 0 10px;
+// 	color: #00a8ff;
+// 	-webkit-animation-name: flash;
+// 	animation-name: flash;
+// 	-webkit-animation-duration: 1s;
+// 	animation-duration: 1s;
+// 	-webkit-animation-iteration-count: infinite;
+// 	animation-iteration-count: infinite;
+// }

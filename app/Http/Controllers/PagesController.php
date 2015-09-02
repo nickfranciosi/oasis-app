@@ -12,19 +12,37 @@ use Session;
 
 class PagesController extends Controller
 {
+
+    protected $fb;
+
+    public function __construct(LaravelFacebookSdk $fb)
+    {
+        $this->fb = $fb;
+    }
     
 
-    public function build(LaravelFacebookSdk $fb)
+    public function build()
     {
 
         $user = Auth::user();
         $token = Session::get('fb_user_access_token');
-        $fb->setDefaultAccessToken((string) $token);
+        $this->fb->setDefaultAccessToken((string) $token);
         
-        $response = $fb->get('/me/photos?fields=images')->getDecodedBody();
+        $response = $this->fb->get('/me/photos?fields=images')->getDecodedBody();
 
         return view('build')->with(compact('response', 'user'));
 
+    }
+
+    public function showIndex()
+    {
+        return view('index');
+    }
+
+    public function showPictureCreator()
+    {
+        $login_url = $this->fb->getLoginUrl(['email', 'user_photos']);
+        return view('picture')->with(compact('login_url'));
     }
 
     public function showGallery()

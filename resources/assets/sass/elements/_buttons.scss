@@ -1,0 +1,62 @@
+.btn,
+button{
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: 0.5em 3em;
+  width: auto;
+  background: $gray-blue-dark;
+  color: $white;
+  outline: 0;
+  border: 1px solid $gray-blue-dark;
+  font-family: $sans-serif;
+  text-decoration: none;
+  text-align: center;
+  transition: background 400ms;
+  @include font-size(16px);
+  &:visited{
+    color: $white;
+  }
+  &:hover{
+    background: mix($gray-blue-dark, $white, 85%);
+    border: 1px solid mix($gray-blue-dark, $white, 85%);
+  }
+  &:disabled,
+  &[disabled=disabled]{}
+  &:active{
+    background: mix($gray-blue-dark, $black, 85%);
+  }
+}
+.btn--ghost{
+  background: transparent;
+  border: 1px solid $gray-blue-dark;
+  color: $gray-blue-dark;
+  &:visited{
+    color: $gray-blue-dark;
+  }
+  &:hover{
+    color: $white;
+    border: 1px solid mix($gray-blue-dark, $white, 85%);
+  }
+  &:disabled,
+  &[disabled=disabled]{}
+  &:active{
+
+  }
+}
+.btn--invert-ghost{
+  background: transparent;
+  border: 1px solid $white;
+  color: $white;
+  &:visited{
+    color: $white;
+  }
+  &:hover{
+    color: $white;
+    border: 1px solid mix($gray-blue-dark, $white, 85%);
+  }
+  &:disabled,
+  &[disabled=disabled]{}
+  &:active{
+  }
+}

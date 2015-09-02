@@ -1,0 +1,33 @@
+// section-help.scss
+
+#help {
+	position: relative;
+	overflow: hidden;
+	padding: 4em 0;
+
+	&:before {
+		display: none;
+
+		@include screen-sm {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 100%;
+
+			background-position: -120px 10px;
+			background-image: url('../img/bg-girl-700.jpg');
+			background-repeat: no-repeat;
+		}
+
+		@include screen-md {
+			background-position: 20% 30px;
+		}
+	}
+
+	@include screen-sm {
+		padding: 14em 0;
+	}
+
+}

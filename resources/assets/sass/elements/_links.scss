@@ -1,0 +1,18 @@
+a{
+  color: $gray-blue-dark;
+  text-decoration: none;
+  transition: 0.3s ease;
+  border-bottom: 1px solid transparent;
+  &:visited{}
+  &:hover{
+    transition: 0.3s ease;
+    border-bottom: 1px solid $gray-blue-dark;
+  }
+}
+
+p a{
+  color: $red-vivid;
+  &:hover{
+    border-bottom: 1px solid $red-vivid;
+  }
+}

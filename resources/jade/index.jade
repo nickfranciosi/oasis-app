@@ -1,0 +1,67 @@
+//- specify layout here
+extends ./layouts/layout.jade
+
+//- specifiy page title here
+block title
+ title Oasis - More to Youth
+
+//- page content here
+block content
+  // Preloader
+  .preloader
+    img(src='img/loader.gif', alt='Preloader image')
+
+  // Intro
+  section#intro
+    .container
+      .table
+        .header-text
+          .row
+            .col-md-12.text-center
+              h1.tagline There's more to youth
+              p.tagline-text
+                | Teens are often judged unfairly—by their peers, by their parents and by other adults. As a result, they often get stuck with labels that do not reflect who they really are. Did this happen to you?
+              a.btn-main-white.learn-more(href='picture')
+                | Learn More at oasiscenter.org
+                i.icon-arrow
+                  include ./layouts/partials/svg-arrow-right.html
+
+  // Intro info
+  section#info
+    // Diagnol cut
+    .cut.cut-top
+    .container
+      .row.intro-tables
+        .col-sm-12
+          .intro-table.intro-table-first
+            #video-controls
+            video#video-promo(width='500', height='auto', poster='vid/poster.jpg')
+              source(src='vid/oasis-promo-small.mp4', type='video/mp4')
+              source(src='vid/oasis-promo.webm', type='video/webm')
+              | Your browser does not support the video tag.
+      .row.content-block
+          header.col-sm-6
+            h2.header Help Us Make a Stand
+          .col-sm-5
+            p
+              | Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.
+            a.btn.btn-main.space-top Get Started
+
+  // About Oasis
+  section#about
+    .container
+      header
+        h2.header About Oasis Center
+        span.sub-header Where Youth Grow, Thrive and Create Positive Change
+      .row
+        .col-sm-6
+          p
+            | The teen years are a difficult time for anyone. Challenges posed by peer pressure, drugs, academic demands and even sexual orientation force many young people to make difficult choices that can complicate their lives even more.
+        .col-sm-6
+          p
+            | Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential, turning them into happy, well-adjusted adults.
+          a.btn-link(href='https://www.oasiscenter.org/#about', targer='_blank')
+            | Learn More at oasiscenter.org
+            i.icon-arrow
+            // @import ../includes/svg-arrow-right.html
+

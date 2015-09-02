@@ -1,0 +1,32 @@
+{
+  "name": "framework",
+  "version": "1.0.0",
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "jquery": "^2.0.0",
+    "normalize-scss": "~3.0.1",
+    "selectivizr": "~1.0.2",
+    "animate.css": "~3.4.0"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "modernizr.js"
+    },
+    "jquery": {
+      "main": "dist/jquery.js"
+    },
+    "normalize-scss": {
+      "ignore": true
+    }
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.5",
+    "brim": "~1.0.11",
+    "font-awesome": "fontawesome#~4.4.0",
+    "jquery.steps": "jquery-steps#~1.1.0",
+    "media-match": "~2.0.2",
+    "scream": "~2.0.8",
+    "velocity": "~1.2.2",
+    "wow": "wow.js#~1.1.2"
+  }
+}

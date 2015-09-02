@@ -1,0 +1,62 @@
+// nav.scss
+
+
+// Nav
+nav.navbar {
+	position: absolute;
+	top: 0;
+	z-index: 9500;
+	width: 100%;
+	min-height: 60px;
+	margin: 0;
+
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+
+
+	background: $brand-accent;
+	border-radius: 0;
+
+	// @include screen-sm { top: 25px; }
+	// @include screen-md { top: 50px;	}
+
+	.navbar-header { width: 100%; }
+
+}
+
+
+// Logo
+.navbar-brand {
+	width: 100px;
+  padding: 14px 15px;
+	&:hover,&:focus,&:active {
+		.st0 { fill: darken($brand-accent, 30%); }
+	}
+
+	svg .st0 {
+		@include transition(0.2s);
+		fill: #ffffff;
+	}
+
+}
+
+// Donate
+.navbar .btn-donate {
+	width: 32px;
+	height: 32px;
+	margin-top: 14px;
+	@include transition(0.2s);
+
+	&:hover,&:focus,&:active {
+		@include scale(1.1);
+		.st0 { fill: darken($brand-accent, 30%); }
+	}
+
+	svg .st0 {
+		@include transition(0.3s);
+		fill: #ffffff;
+	}
+}
+
+
+

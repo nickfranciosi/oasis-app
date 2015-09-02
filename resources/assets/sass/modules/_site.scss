@@ -1,0 +1,57 @@
+// .site{}
+
+// .placeholder { color: #aaa; }
+
+// .js-job__trigger{
+//   cursor: pointer;
+//   overflow: hidden;
+// }
+
+//  .scene_element{
+//   @include fadeIn($duration: 1s);
+// }
+//  .hero,
+//  .slab{
+//   @include fadeIn($duration: 1s, $delay: 200ms);
+// }
+//  .callout--project,
+//  .slab:nth-child(2n){
+//   @include fadeIn($duration: 1s, $delay: 400ms);
+// }
+
+// @for $i from 1 through 9 {
+//    .square--recent-project:nth-child(#{$i}) {
+//     @include fadeIn($duration: 1s, $delay: 200ms * $i);
+//   }
+// }
+//  .callout--contact{
+//   @include fadeIn($duration: 1s, $delay: 600ms);
+// }
+// .is-exiting{
+//   @include fadeOut($duration: 750ms, $delay: 100ms);
+// }
+
+// .alert--success{
+//   background-color: $gray-blue-dark;
+//   padding: 0.5*$unit;
+//   text-align: center;
+//   color: $white;
+//   margin-bottom: 1*$unit;
+// }
+
+// .browse-happy-bg {
+//   position: fixed;
+//   z-index: $zIndex-3;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background: $white;
+// }
+// .browse-happy-bg strong{
+//   color: $red-vivid;
+// }
+// .browse-happy-bg p{
+//   @include font-size(30px);
+//   text-align: center;
+// }

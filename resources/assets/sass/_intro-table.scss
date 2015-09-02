@@ -1,0 +1,140 @@
+// intro-table.scss
+
+.intro-tables {
+	opacity: 0;
+
+	top: -70px;
+
+	@include screen-sm {
+		top: -100px;
+	}
+
+	position: relative;
+
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+
+	-webkit-animation-timing-function:  ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.intro-tables img {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+
+// Left first photos
+.intro-table-hover img {
+	width: 150px;
+	margin-top: -11px;
+	transform: translateX(-30px);
+	-webkit-transform: translateX(-30px);
+
+	@include screen-sm {
+		width: 305px;
+		margin-top: 41px;
+		transform: translateX(365px);
+		-webkit-transform: translateX(365px);
+	}
+
+}
+
+.loaded .intro-table-hover img {
+	transform: translateX(-30px);
+	-webkit-transform: translateX(-30px);
+	@include transition(0.3s);
+
+	@include screen-sm {
+		transform: translateX(70);
+		-webkit-transform: translateX(70px);
+	}
+}
+
+
+
+
+// Middle photo
+.intro-table-first img {
+	width: 200px;
+  margin-top: -50px;
+  margin-left: -50px;
+  z-index: 1;
+
+	@include screen-sm {
+		width: 100%;
+		margin: 0;
+	}
+
+}
+
+
+.intro-table-first video {
+	width: 100%;
+	margin: 0 auto;
+}
+
+// Third photo
+.intro-table-third img {
+	position: relative;
+	transform: translateX(-365px);
+	-webkit-transform: translateX(-365px);
+	max-width: 305px;
+	margin-top: 41px;
+	z-index: -1;
+}
+
+
+
+.loaded .intro-table-third img {
+	transform: translateX(-70);
+	-webkit-transform: translateX(-70px);
+	@include transition(0.3s);
+}
+
+
+
+.intro-table {
+	position: relative;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: 0% 0%;
+}
+
+
+// Video controls
+#video-controls {
+	position: absolute;
+	height: 99%;
+	width: 100%;
+	border-radius: 3px;
+	background-color: darken($brand-color7, 7%);
+	opacity: 0.6;
+
+	@include screen-sm {
+		z-index: 10000;
+	}
+
+
+	&:hover { cursor: pointer; }
+
+	&:before {
+		display: none;
+
+		@include screen-sm {
+			display: block;
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-image: url('../img/btn-play.png');
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+	}
+
+}
+

@@ -1,0 +1,50 @@
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.img--natural {
+  width: auto;
+}
+
+.img--title {
+  height: 1em;
+  width: auto;
+  vertical-align: top;
+}
+
+.img--right {
+    width: auto;
+    float: right;
+    margin-bottom: 1*$unit;
+    margin-left: 1*$unit;
+}
+
+.img--left {
+    width: auto;
+    float:left;
+    margin-right: 1*$unit;
+    margin-bottom: 1*$unit;
+}
+
+.img--center {
+    width: auto;
+    display:block;
+    margin-right:auto;
+    margin-bottom: 1*$unit;
+    margin-left:auto;
+}
+
+.img--right,
+.img--left,
+.img--center {
+  img {
+    width: auto;
+  }
+}
+
+.img--circle {
+  border-radius: 50%;
+}
