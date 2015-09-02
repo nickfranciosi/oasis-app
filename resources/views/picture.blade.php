@@ -182,7 +182,7 @@
             <div class="step-list">
               <p>Choose a word that best describes how you feel on the inside of your soul</p>
               <ul>
-                <li><a href="#">Nerd</a></li>
+                <li><a href="#" id="fbLogin">Nerd</a></li>
                 <li><a href="#">Freak</a></li>
                 <li><a href="#">Deuchebag</a></li>
                 <li><a href="#">Shithead</a></li>
@@ -219,7 +219,9 @@
         </div>
         <div class="step-half step-bottom">
           <div class="persons"><img src="../img/persons.png"></div>
-          <div class="connect text-center"><a href="{{ $login_url }}">Connect with Facebook</a></div>
+          <div class="connect text-center"><a href="#" id="fbLogin">Connect with Facebook</a><a href="#" id="fbLogout">Logout of Facebook</a>
+            <div id="status"></div>
+          </div>
         </div>
       </section>
       <!-- Third step-->

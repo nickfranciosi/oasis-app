@@ -103,7 +103,7 @@ block content
             p Choose a word that best describes how you feel on the inside of your soul
             ul
               li
-                a(href="#") Nerd
+                a(href="#", id="fbLogin") Nerd
               li
                 a(href="#") Freak
               li
@@ -157,7 +157,10 @@ block content
         .persons
           img(src="../img/persons.png")
         .connect.text-center
-          a(href="{{ $login_url }}") Connect with Facebook
+          a(href="#", id="fbLogin") Connect with Facebook
+          //- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+          a(href="#" id="fbLogout") Logout of Facebook
+          div(id="status")
 
     // Third step
     h2.sr-only Choose a color

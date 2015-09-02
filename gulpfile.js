@@ -27,7 +27,7 @@ require('laravel-elixir-imagemin');
         './bower_components/jquery.steps/build/jquery.steps.min.js',
         'colorPicker.js',
         'imageBuilder.js'], 'public/js/libs.js')
-    .scripts(['app.js'], 'public/js/app.js')
+    .scripts(['fb.js','app.js'], 'public/js/app.js')
     .jade({
         search: '**/*.jade',
         src: '/jade/'
