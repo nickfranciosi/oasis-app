@@ -53,6 +53,6 @@ class ImageBuildController extends Controller
 
     private function buildFilePath($fileName)
     {
-        return $filePath = 'images/' . $fileName . '.png';
+        return $filePath = 'img/generated/' . $fileName . '.png';
     }
 }
