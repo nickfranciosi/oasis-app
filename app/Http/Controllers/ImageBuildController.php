@@ -21,7 +21,7 @@ class ImageBuildController extends Controller
        $user = Auth::user();
        $token = Session::get('fb_user_access_token');
        $fb->setDefaultAccessToken((string) $token);
-       
+
        $response = $fb->get('/me/photos?fields=images')->getDecodedBody();
 
        return view('build')->with(compact('response', 'user'));
@@ -53,6 +53,7 @@ class ImageBuildController extends Controller
 
     private function buildFilePath($fileName)
     {
-        return $filePath = 'img/' . $fileName . '.png';
+
+       return $filePath = 'img/generated/' . $fileName . '.png';
     }
 }
