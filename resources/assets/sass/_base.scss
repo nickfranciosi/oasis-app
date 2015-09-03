@@ -34,6 +34,7 @@ $font-family-sans-serif:          "League Gothic", "league-gothic", Helvetica, A
 $font-family-serif:               "Museo Slab", "museo-slab", "Georgia", "Times New Roman", Times, serif;
 $font-family-monospace:            Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:                 $font-family-serif;
+$font-base-color: 								#8a8e91;
 
 
 // Media queers
@@ -152,8 +153,9 @@ body {
 	font-family: $font-family-serif;
 	font-size: 16px;
 	overflow-x: hidden;
-	color: #2a3237;
+	color: $font-base-color;
 	height: 100%;
+	overflow: initial !important;
 }
 
 .container {
@@ -166,6 +168,10 @@ section {
 }
 
 
+.img-max {
+	width: 100%;
+	max-width: 100%;
+}
 
 .content-block {
 	padding-top: 6em;
@@ -173,6 +179,9 @@ section {
 }
 
 
+
+// infp section
+#info { background: #fff; }
 #info .content-block {
 	padding-top: 0;
 

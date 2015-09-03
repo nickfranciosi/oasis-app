@@ -27,8 +27,10 @@ nav.navbar {
 
 // Logo
 .navbar-brand {
-	width: 100px;
-  padding: 14px 15px;
+	width: 70px;
+  padding: 15px 0;
+  // Bootstrap override
+  margin: 0 !important;
 	&:hover,&:focus,&:active {
 		.st0 { fill: darken($brand-accent, 30%); }
 	}
@@ -42,9 +44,9 @@ nav.navbar {
 
 // Donate
 .navbar .btn-donate {
-	width: 32px;
-	height: 32px;
-	margin-top: 14px;
+	width: 28px;
+	height: 28px;
+	margin-top: 16px;
 	@include transition(0.2s);
 
 	&:hover,&:focus,&:active {

@@ -45,7 +45,7 @@
   <body>
     <!-- Navbar-->
     <nav class="navbar">
-      <div class="container"><a href="index.html" class="navbar-brand"><?xml version="1.0" encoding="utf-8"?>
+      <div class="container"><a href="/" class="navbar-brand"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="76 -66 189.8 84.5" style="enable-background:new 76 -66 189.8 84.5;" xml:space="preserve">

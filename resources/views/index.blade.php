@@ -45,7 +45,7 @@
   <body>
     <!-- Navbar-->
     <nav class="navbar">
-      <div class="container"><a href="index.html" class="navbar-brand"><?xml version="1.0" encoding="utf-8"?>
+      <div class="container"><a href="/" class="navbar-brand"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="76 -66 189.8 84.5" style="enable-background:new 76 -66 189.8 84.5;" xml:space="preserve">
@@ -180,7 +180,7 @@
       </div>
     </section>
     <!-- About Oasis-->
-    <section id="about">
+    <section class="about">
       <div class="container">
         <header>
           <h2 class="header">About Oasis Center</h2><span class="sub-header">Where Youth Grow, Thrive and Create Positive Change</span>
@@ -190,8 +190,49 @@
             <p>The teen years are a difficult time for anyone. Challenges posed by peer pressure, drugs, academic demands and even sexual orientation force many young people to make difficult choices that can complicate their lives even more.</p>
           </div>
           <div class="col-sm-6">
-            <p>Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential, turning them into happy, well-adjusted adults.</p><a href="https://www.oasiscenter.org/#about" targer="_blank" class="btn-link">Learn More at oasiscenter.org<i class="icon-arrow"></i>
+            <p>Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential, turning them into happy, well-adjusted adults.</p><a href="https://www.oasiscenter.org/#about" target="_blank" class="btn-link">Learn More at oasiscenter.org<i class="icon-arrow"></i>
               <!-- @import ../includes/svg-arrow-right.html--></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Instagram feed-->
+    <section class="instragram-grid">
+      <div class="container">
+        <h2 class="header text-center">Instagram</h2>
+        <div class="row">
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
+        </div>
+        <div class="view-more"><a class="btn-main veiw-more">View More</a></div>
+      </div>
+    </section>
+    <!-- Social band-->
+    <section class="social-band">
+      <div class="container">
+        <p>Share <span class="hashtag">#MoreToYouth</span> with &amp; your friends</p>
+        <ul class="social-links">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- How you can help-->
+    <section class="help">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-offset-6 col-sm-6">
+            <h2 class="header">How you can help</h2>
+            <p>You have the power to make a difference in a teen’s life. At Oasis, we value each relationship we have with every supporter and count on you to help us get the job done. To find out how you can donate click on the button below.</p><a href="https://www.oasiscenter.org" target="_blank" class="btn btn-main space-top">Make a Donation</a>
           </div>
         </div>
       </div>

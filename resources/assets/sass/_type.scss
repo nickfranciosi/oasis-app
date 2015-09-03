@@ -28,9 +28,13 @@ h6 { font-size: 16px; }
 	text-transform: uppercase;
 	color: $brand-color7;
 	margin-bottom: 0.3em;
-	font-size: 44px;
+	font-size: 38px;
 
 	@include screen-sm {
+		font-size: 51px;
+	}
+
+	@include screen-md {
 		font-size: 60px;
 	}
 }
@@ -73,6 +77,16 @@ ul.white-list li:before {
 	height: 6px;
 	margin-right: 15px;
 	background: white;
+}
+
+
+.hashtag {
+	font-family: $font-family-sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	// Smooth it out
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 

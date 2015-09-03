@@ -45,7 +45,7 @@
   <body>
     <!-- Navbar-->
     <nav class="navbar">
-      <div class="container"><a href="index.html" class="navbar-brand"><?xml version="1.0" encoding="utf-8"?>
+      <div class="container"><a href="/" class="navbar-brand"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="76 -66 189.8 84.5" style="enable-background:new 76 -66 189.8 84.5;" xml:space="preserve">
@@ -128,117 +128,118 @@
     <div id="picture-steps">
       <!-- First Step-->
       <h2 class="sr-only">Choose a word</h2>
-      <section id="step-1" class="step">
+      <section class="step">
         <!-- Step half top-->
         <div class="step-half step-top">
-          <header>
-            <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a positive</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
-          </header>
-          <!-- Step content-->
-          <div class="step-content">
-            <div class="step-list">
-              <p>Choose a word that best describes how you feel on the inside of your soul</p>
-              <ul>
-                <li><a href="#">Nerd</a></li>
-                <li><a href="#">Freak</a></li>
-                <li><a href="#">Deuchebag</a></li>
-                <li><a href="#">Shithead</a></li>
-                <li><a href="#">Fart Sniffer</a></li>
-                <li><a href="#">Indignant</a></li>
-                <li><a href="#">Dork</a></li>
-                <li><a href="#">Bully</a></li>
-                <li><a href="#">Goody-two-shoes</a></li>
-                <li><a href="#">Arrogant</a></li>
-                <li><a href="#">Nerd</a></li>
-                <li><a href="#">Freak</a></li>
-                <li><a href="#">Deuchebag</a></li>
-                <li><a href="#">Shithead</a></li>
-                <li><a href="#">Fart Sniffer</a></li>
-                <li><a href="#">Indignant</a></li>
-                <li><a href="#">Dork</a></li>
-                <li><a href="#">Bully</a></li>
-                <li><a href="#">Goody-two-shoes</a></li>
-                <li><a href="#">Arrogant</a></li>
-                <li><a href="#">Nerd</a></li>
-                <li><a href="#">Freak</a></li>
-                <li><a href="#">Deuchebag</a></li>
-                <li><a href="#">Shithead</a></li>
-                <li><a href="#">Fart Sniffer</a></li>
-                <li><a href="#">Indignant</a></li>
-                <li><a href="#">Dork</a></li>
-                <li><a href="#">Bully</a></li>
-                <li><a href="#">Goody-two-shoes</a></li>
-                <li><a href="#">Arrogant</a></li>
-              </ul>
+          <div class="container">
+            <header>
+              <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a positive</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+            </header>
+            <div class="step-content">
+              <div class="step-list">
+                <p>Choose a word that best describes how you feel on the inside</p>
+                <ul>
+                  <li><a href="#">Nerd</a></li>
+                  <li><a href="#">Freak</a></li>
+                  <li><a href="#">Deuchebag</a></li>
+                  <li><a href="#">Shithead</a></li>
+                  <li><a href="#">Fart Sniffer</a></li>
+                  <li><a href="#">Indignant</a></li>
+                  <li><a href="#">Dork</a></li>
+                  <li><a href="#">Bully</a></li>
+                  <li><a href="#">Goody-two-shoes</a></li>
+                  <li><a href="#">Arrogant</a></li>
+                  <li><a href="#">Nerd</a></li>
+                  <li><a href="#">Freak</a></li>
+                  <li><a href="#">Deuchebag</a></li>
+                  <li><a href="#">Shithead</a></li>
+                  <li><a href="#">Fart Sniffer</a></li>
+                  <li><a href="#">Indignant</a></li>
+                  <li><a href="#">Dork</a></li>
+                  <li><a href="#">Bully</a></li>
+                  <li><a href="#">Goody-two-shoes</a></li>
+                  <li><a href="#">Arrogant</a></li>
+                  <li><a href="#">Nerd</a></li>
+                  <li><a href="#">Freak</a></li>
+                  <li><a href="#">Deuchebag</a></li>
+                  <li><a href="#">Shithead</a></li>
+                  <li><a href="#">Fart Sniffer</a></li>
+                  <li><a href="#">Indignant</a></li>
+                  <li><a href="#">Dork</a></li>
+                  <li><a href="#">Bully</a></li>
+                  <li><a href="#">Goody-two-shoes</a></li>
+                  <li><a href="#">Arrogant</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <!-- Step half bottom-->
         <div class="step-half step-bottom">
-          <header>
-            <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a negative</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
-          </header>
-          <div class="step-content">
-            <div class="step-list">
-              <p>Choose a word that best describes how you feel on the inside of your soul</p>
-              <ul>
-                <li><a href="#">Nerd</a></li>
-                <li><a href="#">Freak</a></li>
-                <li><a href="#">Deuchebag</a></li>
-                <li><a href="#">Shithead</a></li>
-                <li><a href="#">Fart Sniffer</a></li>
-                <li><a href="#">Indignant</a></li>
-                <li><a href="#">Dork</a></li>
-                <li><a href="#">Bully</a></li>
-                <li><a href="#">Goody-two-shoes</a></li>
-                <li><a href="#">Arrogant</a></li>
-                <li><a href="#">Nerd</a></li>
-                <li><a href="#">Freak</a></li>
-                <li><a href="#">Deuchebag</a></li>
-                <li><a href="#">Shithead</a></li>
-                <li><a href="#">Fart Sniffer</a></li>
-                <li><a href="#">Indignant</a></li>
-                <li><a href="#">Dork</a></li>
-                <li><a href="#">Bully</a></li>
-                <li><a href="#">Goody-two-shoes</a></li>
-                <li><a href="#">Arrogant</a></li>
-              </ul>
+          <div class="container">
+            <header>
+              <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a negative</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+            </header>
+            <div class="step-content">
+              <div class="step-list">
+                <p>Choose a word that best describes how you feel on the inside</p>
+                <ul>
+                  <li><a href="#">Nerd</a></li>
+                  <li><a href="#">Freak</a></li>
+                  <li><a href="#">Deuchebag</a></li>
+                  <li><a href="#">Shithead</a></li>
+                  <li><a href="#">Fart Sniffer</a></li>
+                  <li><a href="#">Indignant</a></li>
+                  <li><a href="#">Dork</a></li>
+                  <li><a href="#">Bully</a></li>
+                  <li><a href="#">Goody-two-shoes</a></li>
+                  <li><a href="#">Arrogant</a></li>
+                  <li><a href="#">Nerd</a></li>
+                  <li><a href="#">Freak</a></li>
+                  <li><a href="#">Deuchebag</a></li>
+                  <li><a href="#">Shithead</a></li>
+                  <li><a href="#">Fart Sniffer</a></li>
+                  <li><a href="#">Indignant</a></li>
+                  <li><a href="#">Dork</a></li>
+                  <li><a href="#">Bully</a></li>
+                  <li><a href="#">Goody-two-shoes</a></li>
+                  <li><a href="#">Arrogant</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Second step-->
       <h2 class="sr-only">Choose a photo</h2>
-      <section id="step-2" class="step">
-        <!-- Step half top-->
+      <section class="step">
         <div class="step-half step-top">
-          <header>
-            <h2 class="header">Choose a Photo</h2>
-            <p>We would like to use your Facebook profile picture and no other information</p>
-          </header>
+          <div class="container">
+            <header>
+              <h2 class="header">Choose a Photo</h2>
+              <p>We would like to use your Facebook profile picture and no other information</p>
+            </header>
+          </div>
         </div>
         <div class="step-half step-bottom">
-          <div class="persons"><img src="../img/persons.png"></div>
-          <div class="connect text-center"><a href="{{ $login_url }}">Connect with Facebook</a></div>
+          <div class="persons"><a href="http://google.com" terget="blank"><img src="../img/persons.png"></a></div>
+          <div class="connect text-center"><a href="#" class="btn-main">Connect with Facebook</a></div>
         </div>
       </section>
       <!-- Third step-->
       <h2 class="sr-only">Choose a color</h2>
-      <section id="step-3" class="step">
-        <!-- Image step-->
-        <header>
-          <h2 class="header">Choose a Color</h2>
-        </header>
-        <div class="img-color"><img src="../img/conspiracy-keanu.jpg"><a alt="Choose a fucking color" class="color-overlay cp-fullscreen"></a><span>Please click here to choose a color</span></div>
-      </section>
-      <!-- Fourth step-->
-      <h2 class="sr-only">Confirmation</h2>
-      <section id="step-4" class="step">
-        <!-- Image step-->
-        <header>
-          <h2 class="header">Confirmation</h2>
-        </header>
-        <div class="img-color"><img src="../img/conspiracy-keanu.jpg"></div>
+      <section class="step">
+        <div class="container">
+          <!-- Image step-->
+          <header>
+            <h2 class="header">Choose a Color</h2>
+            <p>Click the photo to pick a different color</p>
+          </header>
+          <div class="img-color"><img src="../img/conspiracy-keanu.jpg">
+            <div class="words"><span class="word">Goody-Two-Shoes</span><span class="word">Delinquent</span></div>
+            <div class="color-overlay"></div><a href="#" alt="Choose a color for the image overlay" class="link-area cp-fullscreen"></a>
+          </div>
+        </div>
       </section>
     </div>
     <footer class="footer">

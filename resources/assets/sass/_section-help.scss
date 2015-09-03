@@ -1,9 +1,9 @@
-// section-help.scss
-
-#help {
+// Help
+.help {
 	position: relative;
 	overflow: hidden;
 	padding: 4em 0;
+	background-color: white;
 
 	&:before {
 		display: none;
@@ -15,14 +15,14 @@
 			top: 0;
 			height: 100%;
 			width: 100%;
-
+			background-color: white;
 			background-position: -120px 10px;
 			background-image: url('../img/bg-girl-700.jpg');
 			background-repeat: no-repeat;
 		}
 
 		@include screen-md {
-			background-position: 20% 30px;
+			background-position: -25%% 30px;
 		}
 	}
 

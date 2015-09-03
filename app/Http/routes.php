@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', 'PagesController@showGallery');
+// Create picture
 Route::get('/', 'PagesController@showIndex');
 Route::get('picture', 'PagesController@showPictureCreator');
 
@@ -21,7 +21,10 @@ Route::post('build', 'ImageBuildController@proccessImage');
 Route::get('gallery', 'PagesController@showGallery');
 Route::get('gallery/{id}', 'PagesController@showStory');
 
-
+// Profile page
+Route::get('profile', function(){
+	return view('profile');
+});
 
 
 require('routes/facebookLoginRoutes.php');

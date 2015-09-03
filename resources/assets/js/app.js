@@ -8,13 +8,19 @@ $("#picture-steps").steps({
 })
 
 
-// Color picker
-$(".cp-fullscreen").colorPicker({
-    onSelect: function(ui, color){
-        ui.css('background-color', color);
 
-        console.log(color);
-    }
+
+// Color picker
+// http://www.bamdaa.com/demo/color-picker/
+$(".cp-fullscreen").colorPicker({
+	// get colors from json
+	colors: 'colors.json',
+
+	// fill background overlay
+  onSelect: function(ui, color){
+    $('.color-overlay').css('background-color', color);
+    console.log(color);
+  }
 });
 
 
@@ -22,99 +28,102 @@ $(".cp-fullscreen").colorPicker({
 
 // Select sections
 var sectionHalf = $('#picture-steps-p-0 .step-half'),
-        sectionTop  = $('.step-top'),
-        sectionBottom = $('.step-bottom'),
+    sectionTop  = $('.step-top'),
+    sectionBottom = $('.step-bottom'),
+    sectionList = $('.step-list'),
+    selectedWordSpan = $(''),
+    selectedWord = $('.step-list ul > li > a');
 
-        sectionList = $('.step-list'),
-        selectedWordSpan = $(''),
-        selectedWord = $('.step-list ul > li > a');
+
+
 
 
 sectionHalf.on('click', function() {
 
-    // When section is open
-    if ( $(this).hasClass('is-open') ) {
+  // When section is open
+  if ( $(this).hasClass('is-open') ) {
+  	// Return to top of div if you have scrolled down to select something
+    sectionHalf.animate({
+    scrollTop: sectionHalf.offset().top - 100
+  }, 200);
 
-        sectionHalf.animate({
-      scrollTop: sectionHalf.offset().top - 100
-    }, 200);
+    // Remove open and animations and collapse
+    $(this).removeClass('is-open').addClass('collapsed');
+    $(this).find(sectionList).removeClass('animated fadeIn').addClass('animated fadeOut');
 
-        // Remove previous classes from other things
-        $(this).removeClass('is-open').addClass('collapsed');
-        $(this).find(sectionList).removeClass('animated fadeInUp').addClass('animated fadeOutDown');
+  } else {
+    $(this).find(sectionList).removeClass('animated fadeOut');
+    $(this).find(sectionList).addClass('animated fadeIn');
+    $(this).addClass('is-open').removeClass('collapsed');
+  }
 
-    } else {
-        $(this).find(sectionList).removeClass('animated fadeOutDown');
-        $(this).find(sectionList).addClass('animated fadeInUp');
-        $(this).addClass('is-open').removeClass('collapsed');
-    }
-
-
-    if ( $(this).hasClass('step-bottom is-open') ) {
-        console.log('bottom is open');
-        sectionTop.addClass('squish');
-    } else {
-        sectionTop.removeClass('squish');
-    }
+  // Bottom step
+  if ( $(this).hasClass('step-bottom is-open') ) {
+    console.log('bottom is open');
+    sectionTop.addClass('squish');
+  } else {
+    sectionTop.removeClass('squish');
+  }
 
 });
 
+
+
+
+
+// Word is selected from list of words
 selectedWord.on('click', function(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    var selectedWord = $(this).closest('.step-half').find('.selected-word').text();
-    console.log(selectedWord);
-    var selectedText = $(this).text();
+  var selectedWord = $(this).closest('.step-half').find('.selected-word').text();
+  		selectedText = $(this).text(),
+  		pictureWordFirst = $('.img-color .words span:first-child'),
+  		pictureWordLast = $('.img-color .words span:last-child'),
+  		closestStep = $(this).closest('.step-half');
 
-    $(this).closest('.step-half').find('.selected-word').replaceWith('<span class="selected-word color-accent animated flipInX">' + selectedText + '</span>');
+
+  // Find closest selected word and replace it
+  closestStep.find('.selected-word')
+  	.replaceWith('<span class="selected-word color-accent animated flipInX">' + selectedText + '</span>');
+
+  // Update the words on the picture screen
+  if (closestStep.hasClass('step-top')) {
+  	pictureWordFirst.text(selectedText);
+  } else {
+  	pictureWordLast.text(selectedText);
+  }
 
 });
 
 
 
 
+// Window Load
+$(window).on('load', function() {
 
-// Top
-// sectionTop.on('click', function() {
-//  $('#bottom').toggleClass('animated slideOutDown').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-//      function(){
-//          $('#top').toggleClass('is-open');
-//      });
-// });
-
-
-
-    // Window Load
-    $(window).on('load', function() {
-
-        // Preloader
-        $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $('.preloader').hide();
-            $('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
-
-                // // Wait for a sec then spread content
-                // setTimeout(function(){
-                //  $('.intro-tables').addClass('loaded');
-                // },0);
-
-        });
+  // Preloader
+  $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+    $('.preloader').hide();
+    $('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+  });
 
 
-        // Dynamic height of cut thing
-        $('#intro').height($(window).height() - 80);
-        $('section .cut').each(function() {
-            if ($(this).hasClass('cut-top'))
-                $(this).css('border-right-width', $(this).parent().width() + "px");
-            else if ($(this).hasClass('cut-bottom'))
-                $(this).css('border-left-width', $(this).parent().width() + "px");
-        });
-    });
+  // Dynamic height of cut thing
+  $('#intro').height($(window).height() - 80);
+  $('section .cut').each(function() {
+    if ($(this).hasClass('cut-top'))
+      $(this).css('border-right-width', $(this).parent().width() + "px");
+    else if ($(this).hasClass('cut-bottom'))
+      $(this).css('border-left-width', $(this).parent().width() + "px");
+  });
+
+});
 
 
 // Video controls
 $("#video-controls").click(function() {
 
-    // Play video
+  // Play video
   var video = $("#video-promo").get(0);
   video.play();
 
@@ -129,9 +138,9 @@ $("#video-controls").click(function() {
 // Allow controls on hover
 $('#video-promo').hover(function toggleControls() {
   if (this.hasAttribute("controls")) {
-      this.removeAttribute("controls")
+    this.removeAttribute("controls")
   } else {
-      this.setAttribute("controls", "controls")
+    this.setAttribute("controls", "controls")
   }
 });
 
@@ -349,6 +358,5 @@ jQuery(document).ready(function($){
     }
 
     });
-
 
 ;

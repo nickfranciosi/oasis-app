@@ -1,0 +1,18 @@
+// _section-instragram-grid.scss
+
+// Instagram grid
+.instragram-grid {
+	padding-top: 5em;
+	padding-bottom: 5em;
+	background-color: #fff;
+
+	.header { margin-bottom: 1em; }
+
+	img { margin-bottom: 1em; }
+
+	.view-more {
+		display: block;
+		margin-top: 2em;
+		text-align: center;
+	}
+}
