@@ -21,7 +21,9 @@ Route::post('build', 'ImageBuildController@proccessImage');
 Route::get('gallery', 'PagesController@showGallery');
 Route::get('gallery/{id}', 'PagesController@showStory');
 
+Route::post('/login', 'LoginController@login');
+Route::get('/logout', 'LoginController@logout');
 
-
-
-require('routes/facebookLoginRoutes.php');
+Route::get('users', function(){
+    return App\User::all();
+});

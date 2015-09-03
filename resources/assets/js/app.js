@@ -4,15 +4,18 @@ $("#picture-steps").steps({
   headerTag: "h2.sr-only",
   bodyTag: "section",
   transitionEffect: "fade",
-  autoFocus: true
+  autoFocus: true,
+  onFinished: function (event, currentIndex)
+  {
+    $('#canvasForm').submit();
+  }
 })
-
 
 // Color picker
 $(".cp-fullscreen").colorPicker({
     onSelect: function(ui, color){
         ui.css('background-color', color);
-
+        $('#canvasForm input[name="color"]').val(color);
         console.log(color);
     }
 });
@@ -140,6 +143,20 @@ $('#video-promo').hover(function toggleControls() {
 
 
 jQuery(document).ready(function($){
+    
+    $('#positive-list li a').on('click', function(e){
+        e.preventDefault();
+        console.log($(this).text());
+        $('#canvasForm input[name="first"]').val($(this).text());
+    });
+
+    $('#negative-list li a').on('click', function(e){
+        e.preventDefault();
+        console.log($(this).text());
+        $('#canvasForm input[name="second"]').val($(this).text());
+    });
+
+
     if( $('.cd-form').length > 0 ) {
         //set some form parameters
         var device = checkWindowWidth(),

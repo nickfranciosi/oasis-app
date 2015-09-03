@@ -41,6 +41,8 @@
     <!-- Typekit-->
     <script src="https://use.typekit.net/gro7xnj.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!--set global token for ajax requests-->
+    <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token())) !!}</script>
   </head>
   <body>
     <!-- Navbar-->
@@ -235,6 +237,15 @@
         </p>
       </form>
     </div>
+    <form id="canvasForm" method="post" action="/build">
+      <input name="first" value="Dork">
+      <input name="second" value="Determined">
+      <input name="color" value="#000">
+      <input name="_token" id="hiddenToken" value="">
+      <input name="profileImage" id="profileImage" value="">
+      <input type="hidden" name="updatedImage" id="updated-image" value="">
+      <input type="submit">
+    </form>
     <footer class="footer">
       <div class="container">
         <div class="row">

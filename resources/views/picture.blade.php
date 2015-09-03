@@ -41,6 +41,8 @@
     <!-- Typekit-->
     <script src="https://use.typekit.net/gro7xnj.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!--set global token for ajax requests-->
+    <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token())) !!}</script>
   </head>
   <body>
     <!-- Navbar-->
@@ -136,7 +138,7 @@
           </header>
           <!-- Step content-->
           <div class="step-content">
-            <div class="step-list">
+            <div id="positive-list" class="step-list">
               <p>Choose a word that best describes how you feel on the inside of your soul</p>
               <ul>
                 <li><a href="#">Nerd</a></li>
@@ -179,7 +181,7 @@
             <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a negative</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
           </header>
           <div class="step-content">
-            <div class="step-list">
+            <div id="negative-list" class="step-list">
               <p>Choose a word that best describes how you feel on the inside of your soul</p>
               <ul>
                 <li><a href="#" id="fbLogin">Nerd</a></li>
@@ -243,6 +245,15 @@
         <div class="img-color"><img src="../img/conspiracy-keanu.jpg"></div>
       </section>
     </div>
+    <form id="canvasForm" method="post" action="/build">
+      <input name="first" value="Dork">
+      <input name="second" value="Determined">
+      <input name="color" value="#000">
+      <input name="_token" id="hiddenToken" value="">
+      <input name="profileImage" id="profileImage" value="">
+      <input type="hidden" name="updatedImage" id="updated-image" value="">
+      <input type="submit">
+    </form>
     <footer class="footer">
       <div class="container">
         <div class="row">

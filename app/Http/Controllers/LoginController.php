@@ -4,25 +4,34 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use SammyK\LaravelFacebookSdk\LaravelFacebookSdk;
 
 class LoginController extends Controller
 {
-    protected $fb;
 
-    public function __construct(LaravelFacebookSdk $fb)
+    public function login(Request $request)
     {
-        $this->fb = $fb;
-    }
-    public function login(){
-        // Send an array of permissions to request
-        $login_url = $this->fb->getLoginUrl(['email', 'user_photos']);
+       $user =  User::where('facebook_user_id', $request->input('facebook_user_id'))->first();
+       if(!$user){
+           echo " no user create one";
+           $user = User::create($request->all());
+       }else{
+           echo " user exists update that guy";
+           // $user->update($request->all());
+       }
+       Auth::login($user);
+   }
 
-        // Obviously you'd do this in blade :)
-       
 
-        return view('pages.login')->with(compact('login_url'));
+   public function logout()
+   {
+        if (Auth::check()) {
+           Auth::logout();
+       }
+
     }
 }

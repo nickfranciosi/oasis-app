@@ -1,24 +1,6 @@
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
-  console.log('statusChangeCallback');
-  console.log(response);
-  // The response object is returned with a status field that lets the
-  // app know the current login status of the person.
-  // Full docs on the response object can be found in the documentation
-  // for FB.getLoginStatus().
-  if (response.status === 'connected') {
-    // Logged into your app and Facebook.
-    testAPI();
-  } else if (response.status === 'not_authorized') {
-    // The person is logged into Facebook, but not your app.
-    document.getElementById('status').innerHTML = 'Please log ' +
-      'into this app.';
-  } else {
-    // The person is not logged into Facebook, so we're not sure if
-    // they are logged into this app or not.
-    document.getElementById('status').innerHTML = 'Please log ' +
-      'into Facebook.';
-  }
+  statusChecker(response);
 }
 
 // This function is called when someone finishes with the Login
@@ -28,32 +10,36 @@ function checkLoginState() {
   // FB.getLoginStatus(function(response) {
   //   statusChangeCallback(response);
   // });
-  FB.login(function(response) {
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      testAPI();
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
-    }
-  });
+FB.login(function(response) {
+  statusChecker(response);
+});
+}
+
+function statusChecker(response){
+  if (response.status === 'connected') {
+    // Logged into your app and Facebook.
+    loadImage();
+    logInToBackend(response.authResponse.userID);
+  } else if (response.status === 'not_authorized') {
+    // The person is logged into Facebook, but not your app.
+    document.getElementById('status').innerHTML = 'Please log ' +
+    'into this app.';
+  } else {
+    // The person is not logged into Facebook, so we're not sure if
+    // they are logged into this app or not.
+    document.getElementById('status').innerHTML = 'Please log ' +
+    'into Facebook.';
+  }
 }
 
 window.fbAsyncInit = function() {
-FB.init({
-  appId      : '1477990922522983',
+  FB.init({
+    appId      : '1477990922522983',
   cookie     : true,  // enable cookies to allow the server to access 
                       // the session
   xfbml      : true,  // parse social plugins on this page
   version    : 'v2.2' // use version 2.2
 });
-
 // Now that we've initialized the JavaScript SDK, we call 
 // FB.getLoginStatus().  This function gets the state of the
 // person visiting this page and can return one of three states to
@@ -83,15 +69,71 @@ FB.getLoginStatus(function(response) {
 
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
-function testAPI() {
-  console.log('Welcome!  Fetching your information.... ');
+function loadImage() {
   FB.api('/me', function(response) {
-    console.log('entire response', response);
-    console.log('Successful login for: ' + response.name);
-    $('.img-color img').attr('src','https://graph.facebook.com/'+ response.id +'/picture??width=500&height=500');
+    var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture??width=500&height=500';
+    $('.img-color img').attr('src',profileImageURL);
+    $('#profileImage').val(profileImageURL);
+    $("#hiddenToken").val(_globalObj._token);
     document.getElementById('status').innerHTML =
-      'Thanks for logging in, ' + response.name + '!';
+    'Thanks for logging in, ' + response.name + '!';
   });
+}
+
+function logInToBackend(fbID){
+  console.log('log in user with fbID: ' + fbID)
+  var data = {
+    "_token" : _globalObj._token,
+    "facebook_user_id" : fbID,
+    "name" : "Nick Franciosi",
+    "email" : "fran@gmial.com"
+  }
+  sendAjaxLogInRequest(data);
+
+}
+
+function logOutOfBackend(){
+  console.log('log out user with fbID');
+  var data = {
+    "_token" : _globalObj._token
+  }
+  sendAjaxLogOutRequest();
+
+}
+
+function sendAjaxLogInRequest(data){
+  $.ajax({
+    type: 'POST',
+    url: '/login',
+    data: data,
+    dataType: 'text',
+    success:function(data){
+      console.log('You are logged in');
+      console.log('data:', data);
+    },
+    error:function(){
+        // failed request; give feedback to user
+        console.log("error data");
+      }
+    });
+
+}
+
+function sendAjaxLogOutRequest(data){
+  $.ajax({
+    type: 'GET',
+    url: '/logout',
+    dataType: 'text',
+    success:function(data){
+      console.log('You are logged out');
+      console.log('data:', data);
+    },
+    error:function(){
+        // failed request; give feedback to user
+        console.log("error data");
+      }
+    });
+
 }
 
 
@@ -99,16 +141,19 @@ function testAPI() {
 $(function(){
 
   $(document).delegate('#fbLogin','click', function(e){
-     e.preventDefault();
-     checkLoginState();
-  });
+   e.preventDefault();
+   checkLoginState();
+ });
 
   $(document).delegate('#fbLogout','click', function(e){
-     e.preventDefault();
-     console.log('you clicked the fb logout');
-     FB.logout(function(response) {
-            document.getElementById('status').innerHTML = 'Please log ' +
-                  'into Facebook.';
-    });
+   e.preventDefault();
+   console.log('you clicked the fb logout');
+   FB.logout(function(response) {
+    $('.img-color img').attr('src','');
+    $('#profileImage').val('');
+    logOutOfBackend();
+    document.getElementById('status').innerHTML = 'Please log ' +
+    'into Facebook.';
   });
+ });
 });
