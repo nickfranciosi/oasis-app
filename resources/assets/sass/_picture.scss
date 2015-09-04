@@ -468,11 +468,11 @@ $overlay-height: 30%;
 	}
 
 	span:first-child {
-		top: 0;
+		top: -7px;
 	}
 
 	span:last-child {
-		top: -15px;
+		top: -18px;
 		transform: rotate(180deg);
 		-webkit-transform: rotate(180deg);
 	}
@@ -486,7 +486,7 @@ $overlay-height: 30%;
 
 .img-color {
 	position: relative;
-	max-width: 270px;
+	max-width: 200px;
 	margin: 0 auto;
 
 	img { max-width: 100%;}

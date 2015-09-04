@@ -662,7 +662,7 @@ if( typeof Object.create !== 'function'){
       //determines how far down the image/canvas to place the words and colorbox
       var overlayPlacementModifier = 3;
 
-      
+
 
       initiateCanvas();
 
@@ -685,7 +685,7 @@ if( typeof Object.create !== 'function'){
         updateImgToUserGeneratedImage();
 
         sendAjaxRequest($form.serialize());
-      };  
+      };
 
       function flipText(){
         context.rotate(Math.PI);
@@ -700,7 +700,7 @@ if( typeof Object.create !== 'function'){
         //fires imgObj.onload
         imageObj.src = imagePath;
         console.log(imageObj);
-      }  
+      }
 
       function setDimensionsOfCanvasToImageSize(imgRef)
       {
@@ -716,7 +716,7 @@ if( typeof Object.create !== 'function'){
         var intendedBoxPosition = imgRef.height / overlayPlacementModifier;
         context.fillRect(0, imgRef.height - intendedBoxPosition, imgRef.width, imgRef.height / 2);
         context.restore();
-      }  
+      }
 
       function setUpFont(fontFace, color){
         context.font = fontFace;
@@ -733,7 +733,7 @@ if( typeof Object.create !== 'function'){
         if(reverse){
           context.fillText(word, -(imgRef.width + wordWidth) / 2, -(imgRef.height - intendedWordPosition + 5));
         }else{
-          context.fillText(word, (imgRef.width - wordWidth) / 2, imgRef.height - intendedWordPosition - 5);  
+          context.fillText(word, (imgRef.width - wordWidth) / 2, imgRef.height - intendedWordPosition - 5);
         }
       }
 
