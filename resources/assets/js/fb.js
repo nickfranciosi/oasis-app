@@ -71,7 +71,7 @@ FB.getLoginStatus(function(response) {
 // successful.  See statusChangeCallback() for when this call is made.
 function loadImage() {
   FB.api('/me', function(response) {
-    var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture??width=500&height=500';
+    var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture?width=720&height=720';
     $('.img-color img').attr('src',profileImageURL);
     $('#profileImage').val(profileImageURL);
     $("#hiddenToken").val(_globalObj._token);
