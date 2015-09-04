@@ -671,7 +671,7 @@ if( typeof Object.create !== 'function'){
         setDimensionsOfCanvasToImageSize(this);
         convertTograyScale();
         drawOverlayBox(this);
-        setUpFont('120px league-gothic', 'white');
+        setUpFont('38px league-gothic', 'white');
 
         var firstWidth = getTextWidth(firstWord);
         addWordToCanvas(firstWord, firstWidth, this);
