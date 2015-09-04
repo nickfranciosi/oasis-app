@@ -4,11 +4,12 @@ $("#picture-steps").steps({
   headerTag: "h2.sr-only",
   bodyTag: "section",
   transitionEffect: "fade",
-  autoFocus: true
+  autoFocus: true,
+  onFinished: function (event, currentIndex)
+  {
+    $('#canvasForm').submit();
+  }
 })
-
-
-
 
 // Color picker
 // http://www.bamdaa.com/demo/color-picker/
@@ -20,6 +21,9 @@ $(".cp-fullscreen").colorPicker({
   onSelect: function(ui, color){
     $('.color-overlay').css('background-color', color);
     console.log(color);
+
+    //add to the form
+    $('#canvasForm input[name="color"]').val(color);
   }
 });
 
@@ -39,6 +43,9 @@ var sectionHalf = $('#picture-steps-p-0 .step-half'),
 
 
 sectionHalf.on('click', function() {
+        sectionHalf.animate({
+          scrollTop: sectionHalf.offset().top - 100
+      }, 200);
 
   // When section is open
   if ( $(this).hasClass('is-open') ) {
@@ -107,7 +114,6 @@ $(window).on('load', function() {
     $('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
   });
 
-
   // Dynamic height of cut thing
   $('#intro').height($(window).height() - 80);
   $('section .cut').each(function() {
@@ -149,23 +155,37 @@ $('#video-promo').hover(function toggleControls() {
 
 
 jQuery(document).ready(function($){
+    
+    $('#positive-list  li > a').on('click', function(e){
+        e.preventDefault();
+        console.log($(this).text());
+        $('#canvasForm input[name="first"]').val($(this).text());
+    });
+
+    $('#negative-list  li > a').on('click', function(e){
+        e.preventDefault();
+        console.log($(this).text());
+        $('#canvasForm input[name="second"]').val($(this).text());
+    });
+
+
     if( $('.cd-form').length > 0 ) {
         //set some form parameters
         var device = checkWindowWidth(),
-            tableFinalWidth = ( device == 'mobile') ? $(window).width()*0.9 : 210,
-            tableFinalHeight = ( device == 'mobile' ) ? 93 : 255;
-            formMaxWidth = 900,
-            formMaxHeight = 650,
-            animating =  false;
+        tableFinalWidth = ( device == 'mobile') ? $(window).width()*0.9 : 210,
+        tableFinalHeight = ( device == 'mobile' ) ? 93 : 255;
+        formMaxWidth = 900,
+        formMaxHeight = 650,
+        animating =  false;
 
         //set animation duration/delay
         var animationDuration = 800,
-            delay = 200,
-            backAnimationDuration = animationDuration - delay;
+        delay = 200,
+        backAnimationDuration = animationDuration - delay;
 
         //store DOM elements
         var formPopup = $('.cd-pricing'),
-            coverLayer = $('.cd-overlay');
+        coverLayer = $('.cd-overlay');
 
         //select a plan and open the signup form
         formPopup.on('click', 'a', function(event){
@@ -196,8 +216,8 @@ jQuery(document).ready(function($){
         //show/hide credit card fields if user selected credit card as gateway
         $('.cd-payment-gateways').on('change', function(){
             ($('#card').is(':checked'))
-                ? $('.cd-credit-card').velocity("slideDown", { duration: 300 })
-                : $('.cd-credit-card').velocity("slideUp", { duration: 300 });
+            ? $('.cd-credit-card').velocity("slideDown", { duration: 300 })
+            : $('.cd-credit-card').velocity("slideUp", { duration: 300 });
         });
 
     }
@@ -214,19 +234,19 @@ jQuery(document).ready(function($){
         animating = true;
 
         var tableWidth = table.width(),
-            tableHeight = table.height(),
-            tableTop = table.offset().top - $(window).scrollTop(),
-            tableLeft = table.offset().left,
-            form = $('.cd-form'),
-            formPlan = form.find('.cd-plan-info'),
-            formFinalWidth = formWidth(),
-            formFinalHeight = formHeight(),
-            formTopValue = formTop(formFinalHeight),
-            formLeftValue = formLeft(formFinalWidth),
-            formTranslateY = tableTop - formTopValue,
-            formTranslateX = tableLeft - formLeftValue,
-            windowWidth = $(window).width(),
-            windowHeight = $(window).height();
+        tableHeight = table.height(),
+        tableTop = table.offset().top - $(window).scrollTop(),
+        tableLeft = table.offset().left,
+        form = $('.cd-form'),
+        formPlan = form.find('.cd-plan-info'),
+        formFinalWidth = formWidth(),
+        formFinalHeight = formHeight(),
+        formTopValue = formTop(formFinalHeight),
+        formLeftValue = formLeft(formFinalWidth),
+        formTranslateY = tableTop - formTopValue,
+        formTranslateX = tableLeft - formLeftValue,
+        windowWidth = $(window).width(),
+        windowHeight = $(window).height();
 
         if( animationType ) {//open the form
             //set the proper content for the .cd-plan-info inside the form
@@ -319,15 +339,15 @@ jQuery(document).ready(function($){
 
     function updateForm() {
         var device = checkWindowWidth(),
-            form = $('.cd-form');
+        form = $('.cd-form');
         tableFinalWidth = ( device == 'mobile') ? $(window).width()*0.9 : 210;
         tableFinalHeight = ( device == 'mobile' ) ? 93 : 255;
 
         if(form.hasClass('is-visible')) {
             var formFinalWidth = formWidth(),
-                formFinalHeight = formHeight(),
-                formTopValue = formTop(formFinalHeight),
-                formLeftValue = formLeft(formFinalWidth);
+            formFinalHeight = formHeight(),
+            formTopValue = formTop(formFinalHeight),
+            formLeftValue = formLeft(formFinalWidth);
 
             form.velocity(
             {
@@ -357,6 +377,4 @@ jQuery(document).ready(function($){
         return ($(window).width() - formWidth)/2;
     }
 
-    });
-
-;
+});

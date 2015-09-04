@@ -26,5 +26,10 @@ Route::get('profile', function(){
 	return view('profile');
 });
 
+Route::post('/login', 'LoginController@login');
+Route::get('/logout', 'LoginController@logout');
 
-require('routes/facebookLoginRoutes.php');
+Route::get('users', function(){
+    return App\User::all();
+});
+

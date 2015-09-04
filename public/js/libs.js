@@ -647,17 +647,16 @@ if( typeof Object.create !== 'function'){
 
     $('#canvasForm').on('submit',function(e){
       e.preventDefault();
-
+      console.log('in the form submit');
       var canvas,
       context,
       imageObj = new Image();
 
       var $form         = $(this);
-      var imagePath     = this.imgPath.value;
+      var imagePath     = this.profileImage.value;
       var firstWord     = this.first.value.toUpperCase();
       var secondWord    = this.second.value.toUpperCase();
       var boxColor      = this.color.value;
-      var $targetImage  = $('#targetImage');
       var $updatedImage = $('#updated-image');
 
       //determines how far down the image/canvas to place the words and colorbox
@@ -672,7 +671,7 @@ if( typeof Object.create !== 'function'){
         setDimensionsOfCanvasToImageSize(this);
         convertTograyScale();
         drawOverlayBox(this);
-        setUpFont('160px league-gothic', 'white');
+        setUpFont('120px league-gothic', 'white');
 
         var firstWidth = getTextWidth(firstWord);
         addWordToCanvas(firstWord, firstWidth, this);
@@ -700,6 +699,7 @@ if( typeof Object.create !== 'function'){
 
         //fires imgObj.onload
         imageObj.src = imagePath;
+        console.log(imageObj);
       }  
 
       function setDimensionsOfCanvasToImageSize(imgRef)
@@ -764,9 +764,10 @@ if( typeof Object.create !== 'function'){
           data: data,
           dataType: 'text',
           success:function(data){
-            setTimeout(function(){
-              window.location.href = "gallery";
-            }, 500)
+            console.log('success data', data);
+            // setTimeout(function(){
+            //   window.location.href = "gallery";
+            // }, 500)
           },
           error:function(){
             // failed request; give feedback to user

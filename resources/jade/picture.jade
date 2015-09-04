@@ -28,7 +28,7 @@ block content
             a.link-area(href="#") Please choose a word
 
           .step-content
-            .step-list
+            .step-list#positive-list
               p Choose a word that best describes how you feel on the inside
               ul
                 li
@@ -102,7 +102,7 @@ block content
             a.link-area(href="#") Please choose a word
 
           .step-content
-            .step-list
+            .step-list#negative-list
               p Choose a word that best describes how you feel on the inside
               ul
                 li
@@ -162,7 +162,9 @@ block content
           a(href="http://google.com", terget="blank")
             img(src="../img/persons.png")
         .connect.text-center
-          a.btn-main(href="#") Connect with Facebook
+          a.btn-main(href="#" id="fbLogin") Connect with Facebook
+          div(id="status")
+          a(href="#" id="fbLogout") Logout of Facebook
 
     // Third step
     h2.sr-only Choose a color
@@ -180,6 +182,7 @@ block content
             span.word Delinquent
           div.color-overlay
           a.link-area.cp-fullscreen(href="#", alt="Choose a color for the image overlay")
+
 
 
 

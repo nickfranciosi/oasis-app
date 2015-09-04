@@ -41,6 +41,8 @@
     <!-- Typekit-->
     <script src="https://use.typekit.net/gro7xnj.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!--set global token for ajax requests-->
+    <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token())) !!}</script>
   </head>
   <body>
     <!-- Navbar-->
@@ -136,7 +138,7 @@
               <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a positive</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
-              <div class="step-list">
+              <div id="positive-list" class="step-list">
                 <p>Choose a word that best describes how you feel on the inside</p>
                 <ul>
                   <li><a href="#">Nerd</a></li>
@@ -181,7 +183,7 @@
               <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a negative</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
-              <div class="step-list">
+              <div id="negative-list" class="step-list">
                 <p>Choose a word that best describes how you feel on the inside</p>
                 <ul>
                   <li><a href="#">Nerd</a></li>
@@ -223,7 +225,9 @@
         </div>
         <div class="step-half step-bottom">
           <div class="persons"><a href="http://google.com" terget="blank"><img src="../img/persons.png"></a></div>
-          <div class="connect text-center"><a href="#" class="btn-main">Connect with Facebook</a></div>
+          <div class="connect text-center"><a href="#" id="fbLogin" class="btn-main">Connect with Facebook</a>
+            <div id="status"></div><a href="#" id="fbLogout">Logout of Facebook</a>
+          </div>
         </div>
       </section>
       <!-- Third step-->
@@ -242,6 +246,15 @@
         </div>
       </section>
     </div>
+    <form id="canvasForm" method="post" action="/build" style="display: none;">
+      <input name="first" value="Dork">
+      <input name="second" value="Determined">
+      <input name="color" value="#000">
+      <input name="_token" id="hiddenToken" value="">
+      <input name="profileImage" id="profileImage" value="">
+      <input type="hidden" name="updatedImage" id="updated-image" value="">
+      <input type="submit">
+    </form>
     <footer class="footer">
       <div class="container">
         <div class="row">
