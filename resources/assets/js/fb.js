@@ -12,14 +12,14 @@ function checkLoginState() {
   // });
 FB.login(function(response) {
   statusChecker(response);
-});
+}, {scope: 'email'});
 }
 
 function statusChecker(response){
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
-    loadImage();
-    logInToBackend(response.authResponse.userID);
+    loginEvents();
+    // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -69,24 +69,35 @@ FB.getLoginStatus(function(response) {
 
 // Here we run a very simple test of the Graph API after login is
 // successful.  See statusChangeCallback() for when this call is made.
-function loadImage() {
+function loginEvents() {
   FB.api('/me', function(response) {
-    var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture?type=large';
-    $('.img-color img').attr('src',profileImageURL);
-    $('#profileImage').val(profileImageURL);
-    $("#hiddenToken").val(_globalObj._token);
-    document.getElementById('status').innerHTML =
-    'Thanks for logging in, ' + response.name + '!';
+    console.log('response', response);
+    logInToBackend(response);
+    loadImage(response);
+    updateResponseText(response);
   });
 }
 
-function logInToBackend(fbID){
-  console.log('log in user with fbID: ' + fbID)
+function loadImage(response){
+  var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture?type=large';
+  $('.img-color img').attr('src',profileImageURL);
+  $('#profileImage').val(profileImageURL);
+  $("#hiddenToken").val(_globalObj._token);
+}
+
+
+function updateResponseText(response){
+  document.getElementById('status').innerHTML =
+  'Thanks for logging in, ' + response.name + '!';
+}
+
+function logInToBackend(response){
+  console.log('log in user with fbID: ' + response.id)
   var data = {
     "_token" : _globalObj._token,
-    "facebook_user_id" : fbID,
-    "name" : "Nick Franciosi",
-    "email" : "fran@gmial.com"
+    "facebook_user_id" : response.id,
+    "name" : response.name,
+    "email" : "placeholder@gmail.com"
   }
   sendAjaxLogInRequest(data);
 

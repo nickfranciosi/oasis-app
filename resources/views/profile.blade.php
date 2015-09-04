@@ -132,9 +132,9 @@
         <div class="container">
           <div class="table">
             <div class="row">
-              <div class="col-sm-5"><img src="http://fillmurray.com/500/500" class="img-max"></div>
+              <div class="col-sm-5"><img src="/{{ $user['image_path'] }}" class="img-max"></div>
               <div class="col-sm-7">
-                <h2 class="header">Rebecca Ciccione</h2>
+                <h2 class="header">{{ $user->name }}</h2>
                 <p>Next level mixtape, trust fund Brooklyn lumbersexual ennui. Gluten-free fanny pack dreamcatcher cliche, sartorial lo-fi polaroid chia. Vice ennui fap salvia, fashion axe retro sriracha slow-carb asymmetrical whatever. Pickled mixtape art party lo-fi cold-pressed roof party, locavore fixie fanny pack Shoreditch. Photo booth Echo Park whatever, cronut stumptown fap bitters organic meh.</p>
               </div>
             </div>
@@ -145,17 +145,8 @@
       <section class="instragram-grid">
         <div class="container">
           <h2 class="header text-center">Instagram</h2>
-          <div class="row">
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-          </div>
+          <div class="row"></div>@foreach ($allUsers as $currentUser)
+          <div class="col-sm-4"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></div>@endforeach
           <div class="view-more"><a class="btn-main veiw-more">View More</a></div>
         </div>
       </section>
