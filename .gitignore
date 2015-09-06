@@ -6,7 +6,3 @@ Homestead.json
 .env
 storage/database.sqlite
 public/img/generated/*.png
-public/css/main.css
-public/css/main.css.map
-public/js/app.js
-public/js/app.js.map
