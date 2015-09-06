@@ -41,7 +41,7 @@ class ImageBuildController extends Controller
         $user->update(['image_path' => $filePath]);
         file_put_contents($filePath, $data);
 
-        echo $filePath;
+        echo $user->facebook_user_id;
 
         return;
     }
