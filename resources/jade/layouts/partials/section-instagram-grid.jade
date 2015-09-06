@@ -5,7 +5,8 @@ section.instragram-grid
     .row
     @foreach ($allUsers as $currentUser)
     .col-sm-4
-      img.img-max(src="/{{ $currentUser['image_path'] }}")
+      a(href="/profile/{{$currentUser['facebook_user_id']}}")
+        img.img-max(src="/{{ $currentUser['image_path'] }}")
     @endforeach
     .view-more
         a.btn-main.veiw-more View More
