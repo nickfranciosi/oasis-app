@@ -1,15 +1,43 @@
 // Step process
 // https://github.com/rstaib/jquery-steps
-$("#picture-steps").steps({
+var pictureSteps = $('#picture-steps');
+
+pictureSteps.steps({
   headerTag: "h2.sr-only",
   bodyTag: "section",
   transitionEffect: "fade",
   autoFocus: true,
-  onFinished: function (event, currentIndex)
-  {
-    $('#canvasForm').submit();
+
+  // onStepChanging: function (event, currentIndex, newIndex) {
+
+  //   // Allways allow previous action even if the current form is not valid
+  //   if (currentIndex > newIndex) {
+  //     return true;
+  //   }
+
+  //   // There is selected words on the first screen
+  //   // if () {
+  //   //   return false;
+  //   // }
+
+  //   // Needed in some cases if the user went back (clean up)
+  //   if (currentIndex < newIndex) {
+  //       // // To remove error styles
+  //       // form.find(".body:eq(" + newIndex + ") label.error").remove();
+  //       // form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+  //   }
+
+  //   // pictureSteps.validate().settings.ignore = ":disabled,:hidden";
+  //   // return pictureSteps.valid();
+  // },
+
+  onFinished: function (event, currentIndex) {
+   	$('#canvasForm').submit();
   }
 })
+
+
+
 
 // Color picker
 // http://www.bamdaa.com/demo/color-picker/
@@ -37,7 +65,6 @@ var sectionHalf = $('#picture-steps-p-0 .step-half'),
     sectionList = $('.step-list'),
     selectedWordSpan = $(''),
     selectedWord = $('.step-list ul > li > a');
-
 
 
 
@@ -73,7 +100,6 @@ sectionHalf.on('click', function() {
   }
 
 });
-
 
 
 
@@ -155,7 +181,7 @@ $('#video-promo').hover(function toggleControls() {
 
 
 jQuery(document).ready(function($){
-    
+
     $('#positive-list  li > a').on('click', function(e){
         e.preventDefault();
         console.log($(this).text());
