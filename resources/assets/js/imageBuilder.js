@@ -119,10 +119,7 @@
           data: data,
           dataType: 'text',
           success:function(data){
-            console.log('success data', data);
-            // setTimeout(function(){
-            //   window.location.href = "gallery";
-            // }, 500)
+            window.location.href = "profile/" + data;
           },
           error:function(){
             // failed request; give feedback to user

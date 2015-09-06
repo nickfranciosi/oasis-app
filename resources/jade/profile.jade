@@ -9,7 +9,7 @@ block title
 block content
   // Preloader
   .preloader
-    img(src='img/loader.gif', alt='Preloader image')
+    img(src='/img/loader.gif', alt='Preloader image')
 
   div#profile
     section.hero
@@ -21,7 +21,7 @@ block content
             div.col-sm-7
               h2.header {{ $user->name }}
               p Next level mixtape, trust fund Brooklyn lumbersexual ennui. Gluten-free fanny pack dreamcatcher cliche, sartorial lo-fi polaroid chia. Vice ennui fap salvia, fashion axe retro sriracha slow-carb asymmetrical whatever. Pickled mixtape art party lo-fi cold-pressed roof party, locavore fixie fanny pack Shoreditch. Photo booth Echo Park whatever, cronut stumptown fap bitters organic meh.
-
+              include ./layouts/partials/shareButton.jade
     // Instagram feed
     include ./layouts/partials/section-instagram-grid.jade
 
