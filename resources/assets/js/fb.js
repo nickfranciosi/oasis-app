@@ -23,16 +23,8 @@ function statusChecker(response){
 
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
-<<<<<<< HEAD
-    loadImage();
-    logInToBackend(response.authResponse.userID);
-    // Hide login button
-    buttonLogin.fadeOut();
-
-=======
     loginEvents();
     // logInToBackend(response.authResponse.userID);
->>>>>>> a70395314e1ada72c381297d75be62ff27995423
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -85,22 +77,21 @@ FB.getLoginStatus(function(response) {
 // successful.  See statusChangeCallback() for when this call is made.
 function loginEvents() {
   FB.api('/me', function(response) {
-<<<<<<< HEAD
-    var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture??width=500&height=500';
-    $('.img-color img').attr('src',profileImageURL);
-    $('#profileImage').val(profileImageURL);
-    $("#hiddenToken").val(_globalObj._token);
 
-    // hide login and give feedback
-    $('.btn-main.login').hide();
-    document.getElementById('status').innerHTML =
-    'Thanks for logging in, ' + response.name + '!';
-=======
+    // var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture??width=500&height=500';
+    // $('.img-color img').attr('src',profileImageURL);
+    // $('#profileImage').val(profileImageURL);
+    // $("#hiddenToken").val(_globalObj._token);
+
+    // // hide login and give feedback
+    // $('.btn-main.login').hide();
+    // document.getElementById('status').innerHTML =
+    // 'Thanks for logging in, ' + response.name + '!';
+
     console.log('response', response);
     logInToBackend(response);
     loadImage(response);
     updateResponseText(response);
->>>>>>> a70395314e1ada72c381297d75be62ff27995423
   });
 }
 
