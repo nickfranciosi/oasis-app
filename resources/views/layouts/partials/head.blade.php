@@ -18,6 +18,9 @@
   <meta property="og:title" content="Oasis - Theres More to Youth"/>@if(isset($user))
     <meta property='og:url' content='http://oasis-app.xyz?id={!! $user->id !!}' >
     <meta property='og:image' content='http://oasis-app.xyz/{!! $user->image_path !!}'>
+@elseif (count($records) > 1)
+    <meta property='og:url' content='http://oasis-app.xyz' >
+    <meta property='og:image' content='http://oasis-app.xyz'>
 @endif
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Oasis - Theres More to Youth"/>
