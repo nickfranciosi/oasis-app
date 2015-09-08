@@ -16,8 +16,10 @@
     <meta name="twitter:description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
     <meta name="twitter:image" content="http://placehold.it/1600x640">
     <!-- Opengraph-->
-    <meta property="og:title" content="Oasis - Theres More to Youth">
-    <meta property="og:image" content="http://www.moretoyouth.com">
+    <meta property="og:title" content="Oasis - Theres More to Youth">@if(isset($user))
+    <meta property='og:url' content='http://oasis-app.xyz?id={!! $user->id !!}' >
+    <meta property='og:image' content='http://oasis-app.xyz/{!! $user->image_path !!}'>
+@endif
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Oasis - Theres More to Youth">
     <meta property="og:description" content="Oasis Center #moretoyouth is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
