@@ -39,5 +39,5 @@
   <script src="https://use.typekit.net/gro7xnj.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <!--set global token for ajax requests-->
-  <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token())) !!}</script>
+  <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token(), '_facebook_app_id'=> env('FACEBOOK_APP_ID'), '_root_url' => env('ROOT_URL'))) !!}</script>
 </head>

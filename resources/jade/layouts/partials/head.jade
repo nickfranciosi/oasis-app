@@ -23,8 +23,6 @@ head
   // Opengraph
   meta(property='og:title', content='')
   meta(property='og:type', content='website')
-  //- meta(property='og:image', content='http://invisionapp.com/subsystems/now_ui_kit/assets/img/social-media/facebook.jpg')
-  //- meta(property='og:url', content='http://placehold.it/1200x628')
   meta(property='og:site_name', content='Oasis - Theres More to Youth')
   meta(property='og:description', content='Oasis Center #moretoyouth is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.')
   meta(property='og:locale', content='en_US')
@@ -51,5 +49,5 @@ head
   script try{Typekit.load({ async: true });}catch(e){}
 
   //set global token for ajax requests
-  script var _globalObj = {!! json_encode(array('_token'=> csrf_token())) !!}
+  script var _globalObj = {!! json_encode(array('_token'=> csrf_token(), '_facebook_app_id'=> env('FACEBOOK_APP_ID'), '_root_url' => env('ROOT_URL'))) !!}
   
