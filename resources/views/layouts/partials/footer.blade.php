@@ -16,3 +16,17 @@
     </div>
   </div>
 </footer>
+<div id="modal-error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+        <h3 id="myModalLabel" class="modal-title text-center">Please Select Some More Words</h3>
+      </div>
+      <!-- .modal-body-->
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-default">Ok!</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -54,6 +54,9 @@ section {
   height: 5vh;
   margin: 0 10px; }
 
+.modal {
+  top: 10%; }
+
 h1,
 h2,
 h3,

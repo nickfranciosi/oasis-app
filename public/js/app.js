@@ -191,6 +191,12 @@ $(function(){
 // https://github.com/rstaib/jquery-steps
 var pictureSteps = $('#picture-steps');
 
+function updateForm() {
+	var canvasFormID = '#canvasForm',
+			canvasForm = $(canvasFormID),
+  		firstWord     = $(canvasFormID + ' ' + 'input[name="first"]');
+}
+
 pictureSteps.steps({
   headerTag: "h2.sr-only",
   bodyTag: "section",
@@ -205,35 +211,24 @@ pictureSteps.steps({
       return true;
     } else {
 
-  		if ( selectedWord.length < 1 ) {
-  			console.log('one or less words selected');
+    	// First slide selected words
+  		if ( selectedWord.length > 1 ) {
+  			// console.log('all words selected');
+
+  			// Update form
+  			updateForm();
+
   			return true
+
     	} else {
-    		console.log('all words selected');
-    		return false
+    		// Fire modal
+    		$('#modal-error').modal('show');
+    		// console.log('select more words')
     	}
 
     }
 
   },
-
-
-
-  //   // There is selected words on the first screen
-  //   // if () {
-  //   //   return false;
-  //   // }
-
-  //   // Needed in some cases if the user went back (clean up)
-  //   if (currentIndex < newIndex) {
-  //       // // To remove error styles
-  //       // form.find(".body:eq(" + newIndex + ") label.error").remove();
-  //       // form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
-  //   }
-
-  //   // pictureSteps.validate().settings.ignore = ":disabled,:hidden";
-  //   // return pictureSteps.valid();
-  // },
 
   onFinished: function (event, currentIndex) {
    	$('#canvasForm').submit();
@@ -274,9 +269,9 @@ var sectionHalf = $('#picture-steps-p-0 .step-half'),
 
 
 sectionHalf.on('click', function() {
-        sectionHalf.animate({
-          scrollTop: sectionHalf.offset().top - 100
-      }, 200);
+  sectionHalf.animate({
+    scrollTop: sectionHalf.offset().top - 100
+  }, 200);
 
   // When section is open
   if ( $(this).hasClass('is-open') ) {
@@ -297,7 +292,6 @@ sectionHalf.on('click', function() {
 
   // Bottom step
   if ( $(this).hasClass('step-bottom is-open') ) {
-    console.log('bottom is open');
     sectionTop.addClass('squish');
   } else {
     sectionTop.removeClass('squish');
@@ -326,6 +320,8 @@ selectedWord.on('click', function(event) {
   // Update the words on the picture screen
   if (closestStep.hasClass('step-top')) {
   	pictureWordFirst.text(selectedText);
+  	$('#canvasForm input[name="first"]').val(selectedText);
+
   } else {
   	pictureWordLast.text(selectedText);
   }
@@ -385,6 +381,8 @@ $('#video-promo').hover(function toggleControls() {
 
 
 jQuery(document).ready(function($){
+
+		$('#canvasForm input[name="first"]').val('');
 
     $('#positive-list  li > a').on('click', function(e){
         e.preventDefault();
@@ -567,31 +565,31 @@ jQuery(document).ready(function($){
         return mq;
     }
 
-    function updateForm() {
-        var device = checkWindowWidth(),
-        form = $('.cd-form');
-        tableFinalWidth = ( device == 'mobile') ? $(window).width()*0.9 : 210;
-        tableFinalHeight = ( device == 'mobile' ) ? 93 : 255;
+    // function updateForm() {
+    //     var device = checkWindowWidth(),
+    //     form = $('.cd-form');
+    //     tableFinalWidth = ( device == 'mobile') ? $(window).width()*0.9 : 210;
+    //     tableFinalHeight = ( device == 'mobile' ) ? 93 : 255;
 
-        if(form.hasClass('is-visible')) {
-            var formFinalWidth = formWidth(),
-            formFinalHeight = formHeight(),
-            formTopValue = formTop(formFinalHeight),
-            formLeftValue = formLeft(formFinalWidth);
+    //     if(form.hasClass('is-visible')) {
+    //         var formFinalWidth = formWidth(),
+    //         formFinalHeight = formHeight(),
+    //         formTopValue = formTop(formFinalHeight),
+    //         formLeftValue = formLeft(formFinalWidth);
 
-            form.velocity(
-            {
-                'width': formFinalWidth,
-                'height': formFinalHeight,
-                'top': formTopValue,
-                'left': formLeftValue,
-            }, 0).find('.cd-plan-info').velocity(
-            {
-                'width': tableFinalWidth+'px',
-                'height': tableFinalHeight+'px',
-            }, 0);
-        }
-    }
+    //         form.velocity(
+    //         {
+    //             'width': formFinalWidth,
+    //             'height': formFinalHeight,
+    //             'top': formTopValue,
+    //             'left': formLeftValue,
+    //         }, 0).find('.cd-plan-info').velocity(
+    //         {
+    //             'width': tableFinalWidth+'px',
+    //             'height': tableFinalHeight+'px',
+    //         }, 0);
+    //     }
+    // }
 
     //evaluate form dimention/position
     function formWidth() {
