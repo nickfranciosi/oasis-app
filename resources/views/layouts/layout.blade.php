@@ -40,7 +40,7 @@
     <script src="https://use.typekit.net/gro7xnj.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <!--set global token for ajax requests-->
-    <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token(), '_facebook_app_id'=> env('FACEBOOK_APP_ID'), '_root_url' => env('ROOT_URL'))) !!}</script>
+    <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token(), '_facebook_app_id'=> env('FACEBOOK_APP_ID'), '_root_url' => env('ROOT_URL'), '_login_status' => false)) !!}</script>
   </head>
   <body>
     <!-- Navbar-->
@@ -154,11 +154,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-            <h3 id="myModalLabel" class="modal-title text-center">Please Select Some More Words</h3>
+            <h3 class="header modal-title text-center">Please Select Some More Words</h3>
           </div>
           <!-- .modal-body-->
-          <div class="modal-footer">
-            <button type="button" data-dismiss="modal" class="btn btn-default">Ok!</button>
+          <div class="modal-footer text-center">
+            <button type="button" data-dismiss="modal" class="btn btn-main">Ok, got it!</button>
           </div>
         </div>
       </div>

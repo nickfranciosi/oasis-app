@@ -85,7 +85,7 @@
 	color: white;
 
 	vertical-align: middle;
-	padding-top: 120px;
+	padding-top: 100px;
 
 	@include screen-sm {
 		vertical-align: middle;
@@ -98,7 +98,7 @@
 		margin-bottom: 0;
 		color: #ffffff;
 		text-transform: uppercase;
-		font-size: 50px;
+		font-size: 44px;
 
 		@include screen-sm {
 			font-size: 64px;
@@ -120,6 +120,8 @@
 
 	.learn-more {
 		margin-top: 10px;
+		font-size: 14px;
+		padding: 10px 15px;
 		@include screen-sm { margin-top: 30px; }
 	}
 

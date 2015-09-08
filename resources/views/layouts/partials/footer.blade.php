@@ -21,11 +21,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-        <h3 id="myModalLabel" class="modal-title text-center">Please Select Some More Words</h3>
+        <h3 class="header modal-title text-center">Please Select Some More Words</h3>
       </div>
       <!-- .modal-body-->
-      <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn btn-default">Ok!</button>
+      <div class="modal-footer text-center">
+        <button type="button" data-dismiss="modal" class="btn btn-main">Ok, got it!</button>
       </div>
     </div>
   </div>
