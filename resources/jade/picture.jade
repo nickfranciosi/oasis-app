@@ -161,10 +161,11 @@ block content
         .persons
           a(href="http://google.com", terget="blank")
             img(src="../img/persons.png")
+
+        div.clear(id="status")
         .connect.text-center
-          a.btn-main(href="#" id="fbLogin") Connect with Facebook
-          div(id="status")
-          a(href="#" id="fbLogout") Logout of Facebook
+          a.btn-main.login(href="#" id="fbLogin") Connect with Facebook
+          a.btn-main.logout(href="#" id="fbLogout") Logout of Facebook
 
     // Third step
     h2.sr-only Choose a color

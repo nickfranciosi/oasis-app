@@ -148,15 +148,8 @@
           <div class="row">
             <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
             <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-            <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
           </div>
-          <div class="view-more"><a class="btn-main veiw-more">View More</a></div>
+          <div class="view-more clearfix"><a class="btn-main veiw-more">View More</a></div>
         </div>
       </section>
       <!-- Social band-->

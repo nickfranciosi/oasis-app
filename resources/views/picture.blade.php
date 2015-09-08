@@ -225,9 +225,8 @@
         </div>
         <div class="step-half step-bottom">
           <div class="persons"><a href="http://google.com" terget="blank"><img src="../img/persons.png"></a></div>
-          <div class="connect text-center"><a href="#" id="fbLogin" class="btn-main">Connect with Facebook</a>
-            <div id="status"></div><a href="#" id="fbLogout">Logout of Facebook</a>
-          </div>
+          <div id="status" class="clear"></div>
+          <div class="connect text-center"><a href="#" id="fbLogin" class="btn-main login">Connect with Facebook</a><a href="#" id="fbLogout" class="btn-main logout">Logout of Facebook</a></div>
         </div>
       </section>
       <!-- Third step-->

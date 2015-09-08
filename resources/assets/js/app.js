@@ -8,12 +8,27 @@ pictureSteps.steps({
   transitionEffect: "fade",
   autoFocus: true,
 
-  // onStepChanging: function (event, currentIndex, newIndex) {
+  onStepChanging: function (event, currentIndex, newIndex) {
 
-  //   // Allways allow previous action even if the current form is not valid
-  //   if (currentIndex > newIndex) {
-  //     return true;
-  //   }
+  	var selectedWord = $('.selected-word.selected');
+  	// Allways allow previous action even if the current form is not valid
+    if (currentIndex > newIndex) {
+      return true;
+    } else {
+
+  		if ( selectedWord.length < 1 ) {
+  			console.log('one or less words selected');
+  			return true
+    	} else {
+    		console.log('all words selected');
+    		return false
+    	}
+
+    }
+
+  },
+
+
 
   //   // There is selected words on the first screen
   //   // if () {
@@ -33,6 +48,7 @@ pictureSteps.steps({
 
   onFinished: function (event, currentIndex) {
    	$('#canvasForm').submit();
+   	// window.location.href = profile/facebookID;
   }
 })
 
@@ -117,7 +133,7 @@ selectedWord.on('click', function(event) {
 
   // Find closest selected word and replace it
   closestStep.find('.selected-word')
-  	.replaceWith('<span class="selected-word color-accent animated flipInX">' + selectedText + '</span>');
+  	.replaceWith('<span class="selected-word selected color-accent animated flipInX">' + selectedText + '</span>');
 
   // Update the words on the picture screen
   if (closestStep.hasClass('step-top')) {

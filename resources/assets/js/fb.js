@@ -15,11 +15,19 @@ FB.login(function(response) {
 });
 }
 
+
+var buttonLogin = $('.btn-main.login');
+var buttonLogout = $('.btn-main.logout');
+
 function statusChecker(response){
+
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
     loadImage();
     logInToBackend(response.authResponse.userID);
+    // Hide login button
+    buttonLogin.fadeOut();
+
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -27,6 +35,7 @@ function statusChecker(response){
   } else {
     // The person is not logged into Facebook, so we're not sure if
     // they are logged into this app or not.
+    buttonLogin.show();
     document.getElementById('status').innerHTML = 'Please log ' +
     'into Facebook.';
   }
@@ -35,12 +44,12 @@ function statusChecker(response){
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '1477990922522983',
-  cookie     : true,  // enable cookies to allow the server to access 
+  cookie     : true,  // enable cookies to allow the server to access
                       // the session
   xfbml      : true,  // parse social plugins on this page
   version    : 'v2.2' // use version 2.2
 });
-// Now that we've initialized the JavaScript SDK, we call 
+// Now that we've initialized the JavaScript SDK, we call
 // FB.getLoginStatus().  This function gets the state of the
 // person visiting this page and can return one of three states to
 // the callback you provide.  They can be:
@@ -75,6 +84,9 @@ function loadImage() {
     $('.img-color img').attr('src',profileImageURL);
     $('#profileImage').val(profileImageURL);
     $("#hiddenToken").val(_globalObj._token);
+
+    // hide login and give feedback
+    $('.btn-main.login').hide();
     document.getElementById('status').innerHTML =
     'Thanks for logging in, ' + response.name + '!';
   });
@@ -141,10 +153,11 @@ function sendAjaxLogOutRequest(data){
 $(function(){
 
   $(document).delegate('#fbLogin','click', function(e){
-   e.preventDefault();
-   checkLoginState();
- });
+	  e.preventDefault();
+	  checkLoginState();
+	 });
 
+  // Facebook logout event
   $(document).delegate('#fbLogout','click', function(e){
    e.preventDefault();
    console.log('you clicked the fb logout');
@@ -152,6 +165,7 @@ $(function(){
     $('.img-color img').attr('src','');
     $('#profileImage').val('');
     logOutOfBackend();
+
     document.getElementById('status').innerHTML = 'Please log ' +
     'into Facebook.';
   });
