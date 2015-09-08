@@ -16,14 +16,18 @@ FB.login(function(response) {
 }
 
 
-var buttonLogin = $('.btn-main.login');
-var buttonLogout = $('.btn-main.logout');
+
 
 function statusChecker(response){
+
+  var buttonLogin = $('.btn-main.login');
+  var buttonLogout = $('.btn-main.logout');
 
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
     loginEvents();
+    buttonLogin.hide();
+    buttonLogout.show();
     // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
@@ -33,6 +37,7 @@ function statusChecker(response){
     // The person is not logged into Facebook, so we're not sure if
     // they are logged into this app or not.
     buttonLogin.show();
+    buttonLogout.hide();
     document.getElementById('status').innerHTML = 'Please log ' +
     'into Facebook.';
   }
@@ -40,7 +45,7 @@ function statusChecker(response){
 
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1477990922522983',
+    appId      : _globalObj._facebook_app_id,
   cookie     : true,  // enable cookies to allow the server to access
                       // the session
   xfbml      : true,  // parse social plugins on this page
@@ -167,6 +172,10 @@ function sendAjaxLogOutRequest(data){
 
 
 $(function(){
+  var buttonLogin = $('.btn-main.login');
+  var buttonLogout = $('.btn-main.logout');
+  buttonLogin.hide();
+  buttonLogout.hide();
 
   $(document).delegate('#fbLogin','click', function(e){
 	  e.preventDefault();
@@ -180,6 +189,8 @@ $(function(){
    FB.logout(function(response) {
     $('.img-color img').attr('src','');
     $('#profileImage').val('');
+    buttonLogin.show();
+    buttonLogout.hide();
     logOutOfBackend();
 
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -614,8 +625,8 @@ $('#fbTest').on('click',function(){
       method: 'share',
       link: 'https://developers.facebook.com/docs/',
       caption: 'A new Caption',
-      href: 'http://oasis-app.xyz',
-      picture: 'http://oasis-app.xyz/{{ $user->image_path }}'
+      href: _globalObj._root_url,
+      picture: _globalObj._root_url + '{{ $user->image_path }}'
   }, function(response){});
 });
 

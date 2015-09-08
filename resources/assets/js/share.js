@@ -5,8 +5,8 @@ $('#fbTest').on('click',function(){
       method: 'share',
       link: 'https://developers.facebook.com/docs/',
       caption: 'A new Caption',
-      href: 'http://oasis-app.xyz',
-      picture: 'http://oasis-app.xyz/{{ $user->image_path }}'
+      href: _globalObj._root_url,
+      picture: _globalObj._root_url + '{{ $user->image_path }}'
   }, function(response){});
 });
 
