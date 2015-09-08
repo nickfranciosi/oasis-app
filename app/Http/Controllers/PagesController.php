@@ -13,14 +13,6 @@ use Session;
 class PagesController extends Controller
 {
 
-    protected $fb;
-
-    public function __construct(LaravelFacebookSdk $fb)
-    {
-        $this->fb = $fb;
-    }
-    
-
     public function build()
     {
 
@@ -36,13 +28,21 @@ class PagesController extends Controller
 
     public function showIndex()
     {
-        return view('index');
+        $allUsers = User::all();
+        return view('index')->with(compact('allUsers'));
     }
 
     public function showPictureCreator()
     {
-        $login_url = $this->fb->getLoginUrl(['email', 'user_photos']);
-        return view('picture')->with(compact('login_url'));
+        
+        return view('picture');
+    }
+
+    public function showProfile($fbID)
+    {
+        $user = User::where('facebook_user_id', $fbID)->first();
+        $allUsers = User::where('facebook_user_id', '!=', $user->facebook_user_id)->get();
+        return view('profile')->with(compact('user'))->with(compact('allUsers'));   
     }
 
     public function showGallery()

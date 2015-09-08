@@ -15,16 +15,14 @@ use Illuminate\Http\Request;
 Route::get('/', 'PagesController@showIndex');
 Route::get('picture', 'PagesController@showPictureCreator');
 
-Route::get('build', 'ImageBuildController@build');
+// Route::get('build', 'ImageBuildController@build');
 Route::post('build', 'ImageBuildController@proccessImage');
 
-Route::get('gallery', 'PagesController@showGallery');
-Route::get('gallery/{id}', 'PagesController@showStory');
+// Route::get('gallery', 'PagesController@showGallery');
+// Route::get('gallery/{id}', 'PagesController@showStory');
 
 // Profile page
-Route::get('profile', function(){
-	return view('profile');
-});
+Route::get('profile/{fbID}', 'PagesController@showProfile');
 
 Route::post('/login', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');

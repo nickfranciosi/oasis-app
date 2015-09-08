@@ -19,8 +19,7 @@
     <meta name="twitter:image" content="http://placehold.it/1600x640">
     <!-- Opengraph-->
     <meta property="og:title" content="">
-    <meta property="og:image" content="http://invisionapp.com/subsystems/now_ui_kit/assets/img/social-media/facebook.jpg">
-    <meta property="og:url" content="http://placehold.it/1200x628">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Oasis - Theres More to Youth">
     <meta property="og:description" content="Oasis Center #moretoyouth is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
     <meta property="og:locale" content="en_US">
@@ -202,11 +201,9 @@
     <section class="instragram-grid">
       <div class="container">
         <h2 class="header text-center">Instagram</h2>
-        <div class="row">
-          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-          <div class="col-sm-4"><img src="http://fillmurray.com/300/300" class="img-max"></div>
-        </div>
-        <div class="view-more clearfix"><a class="btn-main veiw-more">View More</a></div>
+        <div class="row"></div>@foreach ($allUsers as $currentUser)
+        <div class="col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
+        <div class="view-more"><a class="btn-main veiw-more">View More</a></div>
       </div>
     </section>
     <!-- Social band-->

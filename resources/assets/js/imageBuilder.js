@@ -15,7 +15,7 @@
       var $updatedImage = $('#updated-image');
 
       //determines how far down the image/canvas to place the words and colorbox
-      var overlayPlacementModifier = 3;
+      var overlayPlacementModifier = 2.9;
 
       
 
@@ -26,7 +26,7 @@
         setDimensionsOfCanvasToImageSize(this);
         convertTograyScale();
         drawOverlayBox(this);
-        setUpFont('120px league-gothic', 'white');
+        setUpFont('38px league-gothic', 'white');
 
         var firstWidth = getTextWidth(firstWord);
         addWordToCanvas(firstWord, firstWidth, this);
@@ -86,9 +86,9 @@
         reverse = typeof reverse !== 'undefined' ? reverse : false;
         var intendedWordPosition = imgRef.height / overlayPlacementModifier;
         if(reverse){
-          context.fillText(word, -(imgRef.width + wordWidth) / 2, -(imgRef.height - intendedWordPosition + 5));
+          context.fillText(word, -(imgRef.width + wordWidth) / 2, -(imgRef.height - intendedWordPosition));
         }else{
-          context.fillText(word, (imgRef.width - wordWidth) / 2, imgRef.height - intendedWordPosition - 5);  
+          context.fillText(word, (imgRef.width - wordWidth) / 2, imgRef.height - intendedWordPosition);  
         }
       }
 
@@ -119,10 +119,7 @@
           data: data,
           dataType: 'text',
           success:function(data){
-            console.log('success data', data);
-            // setTimeout(function(){
-            //   window.location.href = "gallery";
-            // }, 500)
+            window.location.href = "profile/" + data;
           },
           error:function(){
             // failed request; give feedback to user
