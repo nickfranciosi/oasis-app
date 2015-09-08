@@ -9,20 +9,14 @@
     <meta name="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
     <meta itemprop="name" content="Theres more to youth">
     <meta itemprop="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
-    <meta itemprop="image" content="http://placehold.it/1200x628">
     <!-- Twitter-->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@moretoyouth">
     <meta name="twitter:title" content="Theres more to youth">
     <meta name="twitter:url" content="http://www.moretoyouth.com">
     <meta name="twitter:description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
-    <meta name="twitter:image" content="http://placehold.it/1600x640">
     <!-- Opengraph-->
-    <meta property="og:title" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Oasis - Theres More to Youth">
-    <meta property="og:description" content="Oasis Center #moretoyouth is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
-    <meta property="og:locale" content="en_US">
+    
     <!-- Favicons (created with http://realfavicongenerator.net/)-->
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
@@ -280,16 +274,20 @@
             @if(isset($user))
                 userImagePath = '{!! $user->image_path !!}';
             @endif
-            
+            console.log(_globalObj._root_url + userImagePath);
             FB.ui({
               method: 'share',
-              link: 'https://developers.facebook.com/docs/',
-              caption: 'A new Caption',
+              link: _globalObj._root_url,
+              caption: 'A newest Caption',
               href: _globalObj._root_url,
               picture: _globalObj._root_url + userImagePath
           }, function(response){});
         });
     });
+
+
+    //Twitter Share
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
     
 </script>
   </body>
