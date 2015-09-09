@@ -26,7 +26,7 @@
         setDimensionsOfCanvasToImageSize(this);
         convertTograyScale();
         drawOverlayBox(this);
-        setUpFont('38px league-gothic', 'white');
+        setUpFont('95px league-gothic', 'white');
 
         var firstWidth = getTextWidth(firstWord);
         addWordToCanvas(firstWord, firstWidth, this);
@@ -59,17 +59,17 @@
 
       function setDimensionsOfCanvasToImageSize(imgRef)
       {
-        canvas.width = imgRef.width;
-        canvas.height = imgRef.height;
-        context.drawImage(imageObj, 0, 0);
+        canvas.width = 500;
+        canvas.height = 500;
+        context.drawImage(imageObj, 0, 0, canvas.width, canvas.height);
       }
 
       function drawOverlayBox(imgRef){
         context.save();
         context.globalAlpha = 0.5;
         context.fillStyle = boxColor;
-        var intendedBoxPosition = imgRef.height / overlayPlacementModifier;
-        context.fillRect(0, imgRef.height - intendedBoxPosition, imgRef.width, imgRef.height / 2);
+        var intendedBoxPosition = canvas.height / overlayPlacementModifier;
+        context.fillRect(0, canvas.height - intendedBoxPosition, canvas.width, canvas.height / 2);
         context.restore();
       }  
 
@@ -84,11 +84,11 @@
 
       function addWordToCanvas(word, wordWidth, imgRef, reverse){
         reverse = typeof reverse !== 'undefined' ? reverse : false;
-        var intendedWordPosition = imgRef.height / overlayPlacementModifier;
+        var intendedWordPosition = canvas.height / overlayPlacementModifier;
         if(reverse){
-          context.fillText(word, -(imgRef.width + wordWidth) / 2, -(imgRef.height - intendedWordPosition));
+          context.fillText(word, -(canvas.width + wordWidth) / 2, -(canvas.height - intendedWordPosition));
         }else{
-          context.fillText(word, (imgRef.width - wordWidth) / 2, imgRef.height - intendedWordPosition);  
+          context.fillText(word, (canvas.width - wordWidth) / 2, canvas.height - intendedWordPosition);  
         }
       }
 
