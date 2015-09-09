@@ -128,6 +128,7 @@
 	</g>
 </svg></a></div>
     </nav>
+    <!-- include ../layouts/partials/preloader.jade-->
     <form id="canvasForm" method="post" action="/build" style="display: none;">
       <input name="first" value="Dork">
       <input name="second" value="Determined">

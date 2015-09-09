@@ -144,23 +144,15 @@ selectedWord.on('click', function(event) {
 
 
 
-// Window Load
+// Load
 $(window).on('load', function() {
 
   // Preloader
-  $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-    $('.preloader').hide();
-    $('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
-  });
+  // $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+  //   $('.preloader').hide();
+  // });
 
-  // Dynamic height of cut thing
-  $('#intro').height($(window).height() - 80);
-  $('section .cut').each(function() {
-    if ($(this).hasClass('cut-top'))
-      $(this).css('border-right-width', $(this).parent().width() + "px");
-    else if ($(this).hasClass('cut-bottom'))
-      $(this).css('border-left-width', $(this).parent().width() + "px");
-  });
+  $('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 
 });
 
@@ -194,6 +186,15 @@ $('#video-promo').hover(function toggleControls() {
 
 
 jQuery(document).ready(function($){
+
+	// Dynamic height of cut thing
+	$('#intro').height($(window).height() - 80);
+	$('section .cut').each(function() {
+	  if ($(this).hasClass('cut-top'))
+	    $(this).css('border-right-width', $(this).parent().width() + "px");
+	  else if ($(this).hasClass('cut-bottom'))
+	    $(this).css('border-left-width', $(this).parent().width() + "px");
+	});
 
 		$('#canvasForm input[name="first"]').val('');
 

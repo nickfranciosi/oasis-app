@@ -129,8 +129,7 @@
 	</g>
 </svg></a></div>
     </nav>
-    <!-- Preloader-->
-    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
+    <!-- include ../layouts/partials/preloader.jade-->
     <!-- Intro-->
     <section id="intro">
       <div class="container">

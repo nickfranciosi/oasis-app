@@ -129,6 +129,7 @@
 	</g>
 </svg></a></div>
     </nav>
+    <!-- include ../layouts/partials/preloader.jade-->
     <div class="container">
       <h1>This is the Style Guide</h1>
       <hr>
