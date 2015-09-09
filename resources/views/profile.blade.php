@@ -142,7 +142,7 @@
                 <p>Next level mixtape, trust fund Brooklyn lumbersexual ennui. Gluten-free fanny pack dreamcatcher cliche, sartorial lo-fi polaroid chia. Vice ennui fap salvia, fashion axe retro sriracha slow-carb asymmetrical whatever. Pickled mixtape art party lo-fi cold-pressed roof party, locavore fixie fanny pack Shoreditch. Photo booth Echo Park whatever, cronut stumptown fap bitters organic meh.</p>
                 @if (isset($user) && Auth::check())
                 @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
-                <button id="fbTest2">Share on Facebook</button><a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
+                <button id="fbTest">Share on Facebook</button><a href="https://www.facebook.com/dialog/share?app_id=1477990922522983&amp;display=popup&amp;href=http://oasis.app:8000&amp;redirect_uri=http://oasis.app:8000&amp;image=http://oasis.app:8000/img/generated/10100411290737202-1441747334.png">test</a><a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
                 <a href="/{{ $user->image_path }}" id="downloadLink" download>Download</a>
                 @endif
                 @endif
@@ -247,11 +247,7 @@
         });
 
         $('#fbTest2').on('click', function(e){
-          window.location = 'https://www.facebook.com/dialog/share?
-  app_id=145634995501895
-  &display=popup
-  &href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F
-  &redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer';
+
           
         });
     });

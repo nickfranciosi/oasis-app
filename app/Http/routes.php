@@ -27,7 +27,7 @@ Route::get('profile/{fbID}', 'PagesController@showProfile');
 Route::post('/login', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');
 
-Route::get('users', function(){
-    return App\User::all();
+Route::get('test', function(){
+    return view('test');
 });
 

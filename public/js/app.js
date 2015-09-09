@@ -12,7 +12,7 @@ function checkLoginState() {
   // });
 FB.login(function(response) {
   statusChecker(response);
-}, {scope: 'email'});
+}, {scope: 'email, publish_actions'});
 }
 
 
