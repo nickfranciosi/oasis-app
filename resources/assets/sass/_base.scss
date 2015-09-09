@@ -270,5 +270,21 @@ section {
 
 
 
-.modal { top: 10%; }
+.modal { top: 15%; }
+.modal-content { border-radius: 0; }
+.modal-header {
+	border: none;
+	.header {
+		line-height: 1em;
+		margin-top: 48px;
+	}
+}
+.modal-footer {
+	padding: 10px 15px 40px;
+	border: none;
+}
+.modal-content .btn {
+	display: block;
+	margin: 0 auto;
+}
 

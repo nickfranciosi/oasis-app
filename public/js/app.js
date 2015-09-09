@@ -28,16 +28,24 @@ function statusChecker(response){
     loginEvents();
     buttonLogin.hide();
     buttonLogout.show();
+
+    // Set status
+    _globalObj._login_status  = true
+
     // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
+  	_globalObj._login_status  = false
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
     'into this app.';
+
   } else {
     // The person is not logged into Facebook, so we're not sure if
     // they are logged into this app or not.
+    _globalObj._login_status  = false
     buttonLogin.show();
     buttonLogout.hide();
+
     document.getElementById('status').innerHTML = 'Please log ' +
     'into Facebook.';
   }
@@ -187,6 +195,9 @@ $(function(){
    e.preventDefault();
    console.log('you clicked the fb logout');
    FB.logout(function(response) {
+   	// Set global status
+   	_globalObj._login_status  = false
+
     $('.img-color img').attr('src','');
     $('#profileImage').val('');
     buttonLogin.show();
@@ -216,37 +227,39 @@ pictureSteps.steps({
 
   onStepChanging: function (event, currentIndex, newIndex) {
 
-  	var selectedWord = $('.selected-word.selected');
-  	// Allways allow previous action even if the current form is not valid
-    if (currentIndex > newIndex) {
+  	if (currentIndex > newIndex) {
       return true;
-    } else {
-
-    	// First slide selected words
-  		if ( selectedWord.length > 1 ) {
-  			// console.log('all words selected');
-
-  			// Update form
-  			updateForm();
-
-  			return true
-
-    	} else {
-    		// Fire modal
-    		$('#modal-error').modal('show');
-    		// console.log('select more words')
-    	}
-
     }
 
-  },
+    // First slide with word selection
+  	var selectedWord = $('.selected-word.selected');
+		if ( currentIndex == 0 && selectedWord.length > 1 ) {
+			return true;
+  	}
 
+  	if ( currentIndex == 0 && selectedWord.length <= 1 ) {
+  		// Error
+  		$('#modal-error').modal('show');
+  		$('#modal-error .header').replaceWith('<h3 class="header text-center">Please Select A Few More Words.</h3>');
+  		return false;
+  	}
+
+  	if ( currentIndex == 1 && _globalObj._login_status == true ) {
+			return true;
+		}
+
+		if ( currentIndex == 1 && newIndex == 2 && _globalObj._login_status == false ) {
+			$('#modal-error').modal('show');
+	  	$('#modal-error .header').replaceWith('<h3 class="header text-center">Please Login to Facebook</h3>');
+		} else if ( currentIndex == 1 && newIndex == 0 && _globalObj._login_status == false ) {
+			return true;
+		}
+
+  },
   onFinished: function (event, currentIndex) {
    	$('#canvasForm').submit();
   }
-})
-
-
+});
 
 
 // Color picker

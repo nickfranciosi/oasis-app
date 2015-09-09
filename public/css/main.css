@@ -55,7 +55,24 @@ section {
   margin: 0 10px; }
 
 .modal {
-  top: 10%; }
+  top: 15%; }
+
+.modal-content {
+  border-radius: 0; }
+
+.modal-header {
+  border: none; }
+  .modal-header .header {
+    line-height: 1em;
+    margin-top: 48px; }
+
+.modal-footer {
+  padding: 10px 15px 40px;
+  border: none; }
+
+.modal-content .btn {
+  display: block;
+  margin: 0 auto; }
 
 h1,
 h2,
@@ -408,7 +425,7 @@ nav.navbar {
   text-align: center;
   color: white;
   vertical-align: middle;
-  padding-top: 120px; }
+  padding-top: 100px; }
   @media (min-width: 768px) {
     #intro .header-text {
       vertical-align: middle;
@@ -418,7 +435,7 @@ nav.navbar {
     margin-bottom: 0;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 50px; }
+    font-size: 44px; }
     @media (min-width: 768px) {
       #intro .header-text .tagline {
         font-size: 64px; } }
@@ -431,7 +448,9 @@ nav.navbar {
         max-width: 420px;
         margin: 0 auto; } }
   #intro .header-text .learn-more {
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px 15px; }
     @media (min-width: 768px) {
       #intro .header-text .learn-more {
         margin-top: 30px; } }
@@ -882,6 +901,7 @@ footer .social-footer li:hover a {
   color: #8a8e91; }
 
 .step-list {
+  animation-duration: 0.3s;
   -webkit-animation-duration: 0.3s; }
 
 .step-list ul {
@@ -911,10 +931,12 @@ footer .social-footer li:hover a {
 
 .step-half .step-list {
   transition: all 0.3s ease-in-out;
+  transform: translateY(100px);
   -webkit-transform: translateY(100px);
   opacity: 0; }
 
 .step-half.is-open .step-list {
+  transform: translateY(0px);
   -webkit-transform: translateY(0px);
   opacity: 1; }
 
@@ -935,7 +957,7 @@ footer .social-footer li:hover a {
 
 #picture-steps-p-1 .connect {
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   width: 100%; }
   @media (min-width: 768px) {
     #picture-steps-p-1 .connect {
@@ -943,12 +965,12 @@ footer .social-footer li:hover a {
 
 .persons img {
   position: absolute;
-  top: -60px;
+  top: -50px;
   left: 0;
   right: 0;
   margin: 0 auto;
   width: 100%;
-  max-width: 300px; }
+  max-width: 250px; }
   @media (min-width: 768px) {
     .persons img {
       top: -8em;

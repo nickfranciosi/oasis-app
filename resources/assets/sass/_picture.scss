@@ -323,6 +323,7 @@ $z-index-max-bottom:  -1000;
 
 // Step list
 .step-list {
+	animation-duration: 0.3s;
 	-webkit-animation-duration: 0.3s;
 }
 
@@ -333,6 +334,7 @@ $z-index-max-bottom:  -1000;
 
 	> li {
 		@include transition(0.2s);
+
 		&:after {
 			display: block;
 			content: '';
@@ -364,11 +366,13 @@ $z-index-max-bottom:  -1000;
 
 .step-half .step-list {
 	@include transition(0.3s);
+	transform: translateY(100px);
 	-webkit-transform: translateY(100px);
 	opacity: 0;
 }
 
 .step-half.is-open .step-list {
+	transform: translateY(0px);
 	-webkit-transform: translateY(0px);
 	opacity: 1;
 }
@@ -400,7 +404,7 @@ $z-index-max-bottom:  -1000;
 
 	.connect {
 		position: absolute;
-		bottom: 40px;
+		bottom: 50px;
 		width: 100%;
 
 		@include screen-sm {
@@ -412,12 +416,12 @@ $z-index-max-bottom:  -1000;
 
 .persons img {
 	position: absolute;
-	top: -60px;
+	top: -50px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 300px;
+	max-width: 250px;
 
 	@include screen-sm {
 		top: -8em;

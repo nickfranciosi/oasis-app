@@ -28,16 +28,24 @@ function statusChecker(response){
     loginEvents();
     buttonLogin.hide();
     buttonLogout.show();
+
+    // Set status
+    _globalObj._login_status  = true
+
     // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
+  	_globalObj._login_status  = false
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
     'into this app.';
+
   } else {
     // The person is not logged into Facebook, so we're not sure if
     // they are logged into this app or not.
+    _globalObj._login_status  = false
     buttonLogin.show();
     buttonLogout.hide();
+
     document.getElementById('status').innerHTML = 'Please log ' +
     'into Facebook.';
   }
@@ -187,6 +195,9 @@ $(function(){
    e.preventDefault();
    console.log('you clicked the fb logout');
    FB.logout(function(response) {
+   	// Set global status
+   	_globalObj._login_status  = false
+
     $('.img-color img').attr('src','');
     $('#profileImage').val('');
     buttonLogin.show();
