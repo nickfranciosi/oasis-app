@@ -282,14 +282,11 @@ $(".cp-fullscreen").colorPicker({
 
 
 // Select sections
-var sectionHalf = $('#picture-steps-p-0 .step-half'),
-    sectionTop  = $('.step-top'),
-    sectionBottom = $('.step-bottom'),
-    sectionList = $('.step-list'),
-    selectedWordSpan = $(''),
-    selectedWord = $('.step-list ul > li > a');
-
-
+var sectionHalf    = $('#picture-steps-p-0 .step-half'),
+    sectionTop     = $('.step-top'),
+    sectionBottom  = $('.step-bottom'),
+    sectionList    = $('.step-list'),
+    selectedWord   = $('.step-list ul > li > a');
 
 
 sectionHalf.on('click', function() {
@@ -362,8 +359,11 @@ $(window).on('load', function() {
   // $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
   //   $('.preloader').hide();
   // });
-
-  $('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+	var introTable = $('.intro-tables');
+  introTable.addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+  setTimeout(function(){
+		introTable.addClass('visible');
+	}, 200);
 
 });
 

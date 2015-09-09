@@ -122,11 +122,15 @@
 		margin-top: 10px;
 		font-size: 14px;
 		padding: 10px 20px;
-		@include screen-sm { margin-top: 30px; }
+		@include screen-sm {
+			margin-top: 30px;
+			font-size: 16px;
+			padding: 15px 30px;
+		}
 	}
 
-
 }
+
 
 .hero {
 	position: relative;

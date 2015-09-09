@@ -16,13 +16,21 @@
 			height: 100%;
 			width: 100%;
 			background-color: white;
-			background-position: -120px 10px;
+			background-position: -120px 20px;
 			background-image: url('../img/bg-girl-700.jpg');
 			background-repeat: no-repeat;
 		}
 
 		@include screen-md {
-			background-position: -25%% 30px;
+			background-position: -25% 20px;
+		}
+
+		@include screen-lg {
+			background-position: 10% 20px;
+		}
+
+		@include screen-xl {
+			background-position: 20% 20px;
 		}
 	}
 

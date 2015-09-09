@@ -21,6 +21,7 @@ require('laravel-elixir-imagemin');
     ], 'public/css/libs.css')
     .sass('main.scss')
     .scripts([
+    		'/resources/assets/js/jquery.js',
         './bower_components/bootstrap/dist/js/bootstrap.min.js',
         './bower_components/wow/dist/wow.min.js',
         './bower_components/velocity/velocity.min.js',

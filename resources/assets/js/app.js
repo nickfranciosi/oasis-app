@@ -71,14 +71,11 @@ $(".cp-fullscreen").colorPicker({
 
 
 // Select sections
-var sectionHalf = $('#picture-steps-p-0 .step-half'),
-    sectionTop  = $('.step-top'),
-    sectionBottom = $('.step-bottom'),
-    sectionList = $('.step-list'),
-    selectedWordSpan = $(''),
-    selectedWord = $('.step-list ul > li > a');
-
-
+var sectionHalf    = $('#picture-steps-p-0 .step-half'),
+    sectionTop     = $('.step-top'),
+    sectionBottom  = $('.step-bottom'),
+    sectionList    = $('.step-list'),
+    selectedWord   = $('.step-list ul > li > a');
 
 
 sectionHalf.on('click', function() {
@@ -155,8 +152,7 @@ $(window).on('load', function() {
   introTable.addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
   setTimeout(function(){
 		introTable.addClass('visible');
-	}, 1000);
-
+	}, 200);
 
 });
 
