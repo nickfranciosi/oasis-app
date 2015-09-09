@@ -96,6 +96,10 @@ $z-index-max-bottom:  -1000;
 		height: 100%;
 		width: 100%;
 
+		// Fall back for gradient
+		background: rgba(65, 90, 104, 0.9);
+
+
 		background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%, rgba(2,9,9,0.8) 6%, rgba(36,145,150,1) 99%, rgba(36,145,150,1) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.8)), color-stop(6%,rgba(2,9,9,0.8)), color-stop(99%,rgba(36,145,150,1)), color-stop(100%,rgba(36,145,150,1))); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%,rgba(2,9,9,0.8) 6%,rgba(36,145,150,1) 99%,rgba(36,145,150,1) 100%); /* Chrome10+,Safari5.1+ */

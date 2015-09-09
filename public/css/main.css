@@ -216,9 +216,9 @@ a {
 .btn-link .icon-arrow, .btn-main .icon-arrow, .btn-main-white .icon-arrow {
   display: inline-block;
   width: 25px;
+  height: 25px;
   vertical-align: middle;
   margin-left: 10px;
-  margin-top: 3px;
   transition: all 0.3s ease-in-out; }
   .btn-link .icon-arrow .st0, .btn-main .icon-arrow .st0, .btn-main-white .icon-arrow .st0 {
     transition: all 0.2s ease-in-out; }
@@ -450,7 +450,7 @@ nav.navbar {
   #intro .header-text .learn-more {
     margin-top: 10px;
     font-size: 14px;
-    padding: 10px 15px; }
+    padding: 10px 20px; }
     @media (min-width: 768px) {
       #intro .header-text .learn-more {
         margin-top: 30px; } }
@@ -783,6 +783,7 @@ footer .social-footer li:hover a {
     top: 0;
     height: 100%;
     width: 100%;
+    background: rgba(65, 90, 104, 0.9);
     /* FF3.6+ */
     /* Chrome,Safari4+ */
     /* Chrome10+,Safari5.1+ */
