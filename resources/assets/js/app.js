@@ -151,8 +151,12 @@ $(window).on('load', function() {
   // $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
   //   $('.preloader').hide();
   // });
+	var introTable = $('.intro-tables');
+  introTable.addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+  setTimeout(function(){
+		introTable.addClass('visible');
+	}, 1000);
 
-  $('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 
 });
 
