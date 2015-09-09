@@ -109,7 +109,7 @@ function loginEvents() {
 }
 
 function loadImage(response){
-  var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture?type=large';
+  var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture?width=720&height=720';
   $('.img-color img').attr('src',profileImageURL);
   $('#profileImage').val(profileImageURL);
   $("#hiddenToken").val(_globalObj._token);
