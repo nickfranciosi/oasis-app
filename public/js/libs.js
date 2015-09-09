@@ -695,7 +695,8 @@ if( typeof Object.create !== 'function'){
         canvas = document.createElement("canvas");
         context = canvas.getContext('2d');
         imageObj = new Image();
-        imageObj.crossOrigin = "Anonymous";
+        // imageObj.crossOrigin = "Anonymous";
+        imageObj.crossOrigin = "";
 
         //fires imgObj.onload
         imageObj.src = imagePath;
