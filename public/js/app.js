@@ -10,8 +10,11 @@ function checkLoginState() {
   // FB.getLoginStatus(function(response) {
   //   statusChangeCallback(response);
   // });
+  $.cookie('first_word', $('#canvasForm input[name="first"]').val());
+  $.cookie('second_word', $('#canvasForm input[name="second"]').val());
   if( navigator.userAgent.match('CriOS') ){
       window.open('https://www.facebook.com/dialog/oauth?client_id='+ _globalObj._facebook_app_id +'&redirect_uri='+ document.location.href + '&first=test&second=cool&scope=email', '', null);
+     
   }else{
     FB.login(function(response) {
       statusChecker(response);
@@ -367,12 +370,27 @@ selectedWord.on('click', function(event) {
 
 });
 
+function setWordsOnImageFromCookie(first,second){
+ var pictureWordFirst = $('.img-color .words span:first-child'),
+ pictureWordLast = $('.img-color .words span:last-child');
+
+ pictureWordFirst.text(first);
+ pictureWordLast.text(second);
+
+ $('#canvasForm input[name="first"]').val(first);
+ $('#canvasForm input[name="second"]').val(second);
+}
+
 
 
 
 // Load
 $(window).on('load', function() {
 
+  if($.cookie('first_word') != undefined){
+    console.log('we have a cookie set');
+    setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
+  }
   // Preloader
   // $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
   //   $('.preloader').hide();
