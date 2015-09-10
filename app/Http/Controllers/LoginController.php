@@ -17,13 +17,11 @@ class LoginController extends Controller
     {
        $user =  User::where('facebook_user_id', $request->input('facebook_user_id'))->first();
        if(!$user){
-           echo " no user create one";
            $user = User::create($request->all());
-       }else{
-           echo " user exists update that guy";
-           // $user->update($request->all());
        }
        Auth::login($user);
+
+       echo $user->facebook_user_id;
    }
 
 
