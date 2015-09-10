@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Oasis - More to Youth</title>
     <meta name="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
@@ -178,7 +178,7 @@
           <header class="col-sm-6">
             <h2 class="header">Help Us Make a Stand</h2>
           </header>
-          <div class="col-sm-5">
+          <div class="col-sm-6">
             <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a class="btn btn-main space-top">Get Started</a>
           </div>
         </div>
@@ -273,7 +273,6 @@
         </div>
       </div>
     </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/js/libs.js"></script>
     <script src="/js/app.js"></script><script type="text/javascript">
 

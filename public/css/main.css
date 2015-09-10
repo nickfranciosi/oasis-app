@@ -74,6 +74,40 @@ section {
   display: block;
   margin: 0 auto; }
 
+@-webkit-keyframes slide-down {
+  0% {
+    top: initial;
+    height: 50%; }
+  100% {
+    top: 0;
+    height: 100%; } }
+
+@keyframes slide-down {
+  0% {
+    top: initial;
+    height: 50%; }
+  100% {
+    top: 0;
+    height: 100%; } }
+
+@-webkit-keyframes slide-up {
+  0% {
+    top: initial;
+    height: 50%; }
+  100% {
+    position: absolute;
+    top: 0;
+    height: 100%; } }
+
+@keyframes slide-up {
+  0% {
+    top: initial;
+    height: 50%; }
+  100% {
+    position: absolute;
+    top: 0;
+    height: 100%; } }
+
 h1,
 h2,
 h3,
@@ -453,7 +487,9 @@ nav.navbar {
     padding: 10px 20px; }
     @media (min-width: 768px) {
       #intro .header-text .learn-more {
-        margin-top: 30px; } }
+        margin-top: 30px;
+        font-size: 16px;
+        padding: 15px 30px; } }
 
 .hero {
   position: relative;
@@ -567,7 +603,9 @@ nav.navbar {
       margin: 0; } }
 
 .intro-table-first video {
+  display: block;
   width: 100%;
+  max-width: 840px;
   margin: 0 auto; }
 
 .intro-table-third img {
@@ -589,10 +627,18 @@ nav.navbar {
   background-repeat: repeat;
   background-position: 0% 0%; }
 
+.intro-tables.visible {
+  opacity: 1; }
+
 #video-controls {
   position: absolute;
-  height: 99%;
+  display: block;
+  height: 100%;
   width: 100%;
+  left: 0;
+  right: 0;
+  max-width: 840px;
+  margin: 0 auto;
   border-radius: 3px;
   background-color: #334752;
   opacity: 0.6; }
@@ -663,12 +709,18 @@ nav.navbar {
         height: 100%;
         width: 100%;
         background-color: white;
-        background-position: -120px 10px;
+        background-position: -120px 20px;
         background-image: url("../img/bg-girl-700.jpg");
         background-repeat: no-repeat; } }
     @media (min-width: 960px) {
       .help:before {
-        background-position: -25%; } }
+        background-position: -25% 20px; } }
+    @media (min-width: 1100px) {
+      .help:before {
+        background-position: 10% 20px; } }
+    @media (min-width: 1400px) {
+      .help:before {
+        background-position: 20% 20px; } }
   @media (min-width: 768px) {
     .help {
       padding: 14em 0; } }
@@ -857,24 +909,21 @@ footer .social-footer li:hover a {
   opacity: 0.2; }
 
 .step-half {
-  position: relative;
-  overflow: hidden;
   height: 50%;
-  transition: all 0.2s ease-in-out; }
+  overflow: hidden; }
   .step-half.is-open {
     overflow: scroll; }
     .step-half.is-open .close {
       opacity: 0.3; }
   .step-half.step-top.is-open {
-    height: 100%;
+    -webkit-transform: translateY(0px);
     transition: all 0.2s ease-in-out; }
   .step-half.step-top.squish {
     height: 0; }
   .step-half.step-bottom {
     background-color: white; }
     .step-half.step-bottom.is-open {
-      height: 100%;
-      transition: all 0.2s ease-in-out; }
+      -webkit-transform: translateY(0px); }
     .step-half.step-bottom .header {
       color: #415A68; }
     .step-half.step-bottom .step-list ul > li:after {

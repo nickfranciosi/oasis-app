@@ -180,7 +180,6 @@ $z-index-max-bottom:  -1000;
 
 // Step section general styles
 .step  {
-
 } // end step
 
 
@@ -221,10 +220,9 @@ $z-index-max-bottom:  -1000;
 
 // Sections
 .step-half {
-	position: relative;
-	overflow: hidden;
+	// position: relative;
 	height: 50%;
-	@include transition(0.2s);
+	overflow: hidden;
 
 	// Expanded half section
 	&.is-open {
@@ -256,7 +254,8 @@ $z-index-max-bottom:  -1000;
 
 		// When list is available
 		&.is-open {
-			height: 100%;
+			-webkit-transform: translateY(0px);
+			// height: 100%;
 			@include transition(0.2s);
 		}
 
@@ -270,8 +269,8 @@ $z-index-max-bottom:  -1000;
 		background-color: white;
 
 		&.is-open {
-			height: 100%;
-	    @include transition(0.2s);
+			-webkit-transform: translateY(0px);
+	    // @include transition(0.2s);
 		}
 
 		// Color changes for white backgrund

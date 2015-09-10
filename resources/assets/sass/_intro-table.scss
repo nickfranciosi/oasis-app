@@ -72,7 +72,9 @@
 
 
 .intro-table-first video {
+	display: block;
 	width: 100%;
+	max-width: 840px;
 	margin: 0 auto;
 }
 
@@ -104,12 +106,21 @@
 	background-position: 0% 0%;
 }
 
+.intro-tables.visible {
+	opacity: 1;
+}
+
 
 // Video controls
 #video-controls {
 	position: absolute;
-	height: 99%;
+	display: block;
+	height: 100%;
 	width: 100%;
+	left: 0;
+	right: 0;
+	max-width: 840px;
+	margin: 0 auto;
 	border-radius: 3px;
 	background-color: darken($brand-color7, 7%);
 	opacity: 0.6;
