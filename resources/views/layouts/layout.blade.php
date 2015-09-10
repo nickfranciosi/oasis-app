@@ -185,13 +185,9 @@
               link: _globalObj._root_url,
               caption: 'A newest Caption',
               href: _globalObj._root_url,
+              display: 'popup',
               picture: _globalObj._root_url + userImagePath
           }, function(response){});
-        });
-
-        $('#fbTest2').on('click', function(e){
-
-          
         });
     });
 
