@@ -141,10 +141,15 @@ selectedWord.on('click', function(event) {
 
 function setWordsOnImageFromCookie(first,second){
  var pictureWordFirst = $('.img-color .words span:first-child'),
- pictureWordLast = $('.img-color .words span:last-child');
+ pictureWordLast = $('.img-color .words span:last-child'),
+ listWordFirst = $('span.step-top'),
+ listWordLast = $('span.step-bottom');
+
 
  pictureWordFirst.text(first);
  pictureWordLast.text(second);
+ listWordFirst.text(first);
+ listWordLast.text(second);
 
  $('#canvasForm input[name="first"]').val(first);
  $('#canvasForm input[name="second"]').val(second);
