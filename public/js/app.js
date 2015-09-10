@@ -378,6 +378,8 @@ function setWordsOnImageFromCookie(first,second){
 
  pictureWordFirst.text(first);
  pictureWordLast.text(second);
+ listWordFirst.addClass('selected color-accent animated flipInX');
+ listWordLast.addClass('selected color-accent animated flipInX');
  listWordFirst.text(first);
  listWordLast.text(second);
 
