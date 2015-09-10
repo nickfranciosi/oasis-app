@@ -241,6 +241,7 @@ pictureSteps.steps({
   bodyTag: "section",
   transitionEffect: "fade",
   autoFocus: true,
+  saveState: true,
 
   onStepChanging: function (event, currentIndex, newIndex) {
 
