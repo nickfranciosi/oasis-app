@@ -303,40 +303,71 @@ $(".cp-fullscreen").colorPicker({
 
 // Select sections
 var sectionHalf    = $('#picture-steps-p-0 .step-half'),
-    sectionTop     = $('.step-top'),
-    sectionBottom  = $('.step-bottom'),
+    sectionTop     = $('#picture-steps-p-0 .step-top'),
+    sectionBottom  = $('#picture-steps-p-0 .step-bottom'),
+
     sectionList    = $('.step-list'),
     selectedWord   = $('.step-list ul > li > a');
 
 
 sectionHalf.on('click', function() {
-  sectionHalf.animate({
-    scrollTop: sectionHalf.offset().top - 100
-  }, 200);
+
+	function toTop() {
+	  sectionHalf.animate({
+	    scrollTop: sectionHalf.offset().top - 100
+	  }, 200);
+	}
 
   // When section is open
   if ( $(this).hasClass('is-open') ) {
-  	// Return to top of div if you have scrolled down to select something
-    sectionHalf.animate({
-    scrollTop: sectionHalf.offset().top - 100
-  }, 200);
-
-    // Remove open and animations and collapse
+  	// Remove classes and go to top
+  	sectionHalf.removeClass('squish');
     $(this).removeClass('is-open').addClass('collapsed');
-    $(this).find(sectionList).removeClass('animated fadeIn').addClass('animated fadeOut');
+    toTop();
+
+    $(this).css('overflow', 'scroll');
 
   } else {
-    $(this).find(sectionList).removeClass('animated fadeOut');
-    $(this).find(sectionList).addClass('animated fadeIn');
     $(this).addClass('is-open').removeClass('collapsed');
   }
 
-  // Bottom step
-  if ( $(this).hasClass('step-bottom is-open') ) {
-    sectionTop.addClass('squish');
+  if ( sectionTop.hasClass('is-open') ) {
+  	sectionBottom.css({
+			'-webkit-transform' : 'translateY(-50%)',
+			'-ms-transform' : 'translateY(-50%)',
+			'transform' : 'translateY(-50%)'
+		});
   } else {
-    sectionTop.removeClass('squish');
+  	sectionBottom.css({
+			'-webkit-transform' : 'translateY(-105%)',
+			'-ms-transform' : 'translateY(-105%)',
+			'transform' : 'translateY(-105%)'
+		});
   }
+
+
+  if ( sectionBottom.hasClass('is-open') ) {
+  	sectionBottom.css({
+			'-webkit-transform' : 'translateY(-141%)',
+			'-ms-transform' : 'translateY(-141%)',
+			'transform' : 'translateY(-141%)',
+			'overflow': 'scroll'
+		});
+
+		sectionTop.css({
+			'-webkit-transform' : 'translateY(-10%)',
+			'-ms-transform' : 'translateY(-10%)',
+			'transform' : 'translateY(-10%)'
+		});
+
+  } else {
+  	sectionTop.css({
+			'-webkit-transform' : 'translateY(0)',
+			'-ms-transform' : 'translateY(0)',
+			'transform' : 'translateY(0)'
+		});
+  }
+
 
 });
 

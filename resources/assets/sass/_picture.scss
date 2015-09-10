@@ -5,82 +5,12 @@ $z-index-max-top:      1000;
 $z-index-max-bottom:  -1000;
 
 
-// Anim for sliding
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes $animation-name {
-    @content;
-  }
-  @-moz-keyframes $animation-name {
-    @content;
-  }
-  @-ms-keyframes $animation-name {
-    @content;
-  }
-  @-o-keyframes $animation-name {
-    @content;
-  }
-  @keyframes $animation-name {
-    @content;
-  }
-}
-
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
-}
-
-// @include keyframes(slide-up) {
-//   0% { opacity: 1; }
-//   90% { opacity: 0; }
-// }
-
-// .element {
-//   width: 100px;
-//   height: 100px;
-//   background: black;
-//   @include animation('slide-down 5s 3');
-// }
-
-@include keyframes(slide-down) {
-	0% {
-		top: initial;
-		height: 50%;
-	}
-
-	100% {
-		top: 0;
-		height: 100%;
-	}
-}
-
-@include keyframes(slide-up) {
-	0% {
-		top: initial;
-		height: 50%;
-	}
-
-	100% {
-		position: absolute;
-		top: 0;
-		// transform: translateY(-100%);
-		height: 100%;
-	}
-}
-
-
-
-
-
-
 
 
 // Step proccess
 #picture-steps {
 	height: 100%;
-	overflow: hidden;
+	// overflow: hidden;
 
 	background-color: #249196;
 	background-image: url('../img/bg-process.jpg');
@@ -98,8 +28,6 @@ $z-index-max-bottom:  -1000;
 
 		// Fall back for gradient
 		background: rgba(65, 90, 104, 0.9);
-
-
 		background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%, rgba(2,9,9,0.8) 6%, rgba(36,145,150,1) 99%, rgba(36,145,150,1) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.8)), color-stop(6%,rgba(2,9,9,0.8)), color-stop(99%,rgba(36,145,150,1)), color-stop(100%,rgba(36,145,150,1))); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%,rgba(2,9,9,0.8) 6%,rgba(36,145,150,1) 99%,rgba(36,145,150,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -126,7 +54,10 @@ $z-index-max-bottom:  -1000;
 
 
 // Body elements
-#picture-steps .body { height: 100%; }
+#picture-steps .body {
+	overflow: hidden;
+	height: 100%;
+}
 
 
 
@@ -220,20 +151,12 @@ $z-index-max-bottom:  -1000;
 
 // Sections
 .step-half {
-	// position: relative;
-	height: 50%;
-	overflow: hidden;
+	position: relative;
 
-	// Expanded half section
 	&.is-open {
-		// Allow scrolling when expanded for list selection
-		overflow: scroll;
-		// -webkit-overflow-scrolling: touch;
-		// Show close button
 		.close { opacity: 0.3; }
 	}
 
-	// Collapsed half section
 	&.collapsed {
 		// //Arrow on complete
 		// .selected-word:before {
@@ -247,51 +170,110 @@ $z-index-max-bottom:  -1000;
 		// }
 	}
 
+	&.step-bottom { background: #fff; }
+
+}
 
 
-	// First section
-	&.step-top {
 
-		// When list is available
-		&.is-open {
-			-webkit-transform: translateY(0px);
-			// height: 100%;
-			@include transition(0.2s);
+
+// Top section
+#picture-steps-p-0 .step-half.step-top {
+	-webkit-transition-duration: 0.3s;
+	    -ms-transition-duration: 0.3s;
+	        transition-duration: 0.3s;
+
+	-webkit-transform: translateY(0);
+		  -ms-transform: translateY(0);
+		      transform: translateY(0);
+
+	&.is-open {
+		-webkit-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		        transform: translateY(0);
+	}
+
+}
+
+
+// Bottom section
+#picture-steps-p-0 .step-half.step-bottom {
+	background: white;
+	-webkit-transition-duration: 0.3s;
+	    -ms-transition-duration: 0.3s;
+	        transition-duration: 0.3s;
+
+	-webkit-transform: translateY(-105%);
+	    -ms-transform: translateY(-105%);
+	        transform: translateY(-105%);
+
+	.header { color: $brand-color7; }
+}
+
+
+
+// Step list animations
+.step-half .step-list {
+	-webkit-transition-property: transform, opacity;
+  -webkit-transition-duration: 0.4s, 0.3s;
+
+	-webkit-transform: translateY(100px);
+	    -ms-transform: translateY(100px);
+	        transform: translateY(100px);
+
+	opacity: 0;
+}
+
+.step-half.is-open .step-list {
+	-webkit-transform: translateY(0px);
+	    -ms-transform: translateY(0px);
+	        transform: translateY(0px);
+
+	opacity: 1;
+}
+
+
+
+// Step list
+.step-half .step-list ul {
+	margin-bottom: 3em;
+	padding: 0;
+	list-style-type: none;
+
+	li {
+		// Line under item
+		&:after {
+			display: block;
+			content: '';
+			height: 1px;
+			width: 100%;
+			background-color: rgba(255,255,255, 0.2);
 		}
+	}
 
-		// When bottom is open squish top
-		&.squish { height: 0; }
-	} // end top
+	li > a {
+		display: block;
+		padding: 15px 0;
+
+		font-family: $font-family-sans-serif;
+		text-transform: uppercase;
+		font-size: 24px;
+		// Smooth out headers
+		-webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+
+	  &:hover, &:focus {
+	  	text-decoration: none;
+	  	box-shadow: 0px 1px #ececec;
+	  }
+	}
+}
 
 
-	// Bottom section
-	&.step-bottom {
-		background-color: white;
 
-		&.is-open {
-			-webkit-transform: translateY(0px);
-	    // @include transition(0.2s);
-		}
 
-		// Color changes for white backgrund
-		.header {
-			color: $brand-color7;
-		}
-
-		.step-list ul {
-			> li {
-				&:after {
-					background-color: rgba(0,0,0, 0.1);
-				}
-			}
-
-			}
-
-			li > a {
-				color: $brand-color7;
-			}
-	} //end bottom
-} // end step half
+.step p { color: white; }
+.step-bottom .step-content p { color: $font-base-color; }
 
 
 
@@ -311,74 +293,10 @@ $z-index-max-bottom:  -1000;
 }
 
 
-.step-content {
-	padding: 15px 0;
-}
-
-
-.step p {
-	color: white;
-}
-.step-bottom .step-content p {
-	color: $font-base-color;
-}
-
-
-// Step list
-.step-list {
-	animation-duration: 0.3s;
-	-webkit-animation-duration: 0.3s;
-}
-
-.step-list ul {
-	margin-bottom: 3em;
-	padding: 0;
-	list-style-type: none;
-
-	> li {
-		@include transition(0.2s);
-
-		&:after {
-			display: block;
-			content: '';
-			height: 1px;
-			width: 100%;
-			background-color: rgba(255,255,255, 0.2);
-		}
-	}
-
-	> li > a {
-		display: block;
-		padding: 15px 0;
-		color: white;
-		font-family: $font-family-sans-serif;
-		text-transform: uppercase;
-		font-size: 24px;
-		// Smooth out headers
-		-webkit-font-smoothing: antialiased;
-	  -moz-osx-font-smoothing: grayscale;
-
-	  &:hover, &:focus {
-	  	text-decoration: none;
-	  	box-shadow: 0px 1px #ececec;
-	  }
-	}
-}
 
 
 
-.step-half .step-list {
-	@include transition(0.3s);
-	transform: translateY(100px);
-	-webkit-transform: translateY(100px);
-	opacity: 0;
-}
 
-.step-half.is-open .step-list {
-	transform: translateY(0px);
-	-webkit-transform: translateY(0px);
-	opacity: 1;
-}
 
 
 
@@ -415,6 +333,11 @@ $z-index-max-bottom:  -1000;
 		}
 
 	}
+}
+
+#picture-steps-p-1 .step-half,
+#picture-steps-p-2 .step-half, {
+	height: 50%;
 }
 
 .persons img {
@@ -536,10 +459,4 @@ $overlay-height: 30%;
 #step-5 {
 	overflow: scroll;
 }
-
-
-
-
-
-
 
