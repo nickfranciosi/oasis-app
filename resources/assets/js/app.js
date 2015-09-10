@@ -142,8 +142,8 @@ selectedWord.on('click', function(event) {
 function setWordsOnImageFromCookie(first,second){
  var pictureWordFirst = $('.img-color .words span:first-child'),
  pictureWordLast = $('.img-color .words span:last-child'),
- listWordFirst = $('span.step-top'),
- listWordLast = $('span.step-bottom');
+ listWordFirst = $('.step-top span.selected-word'),
+ listWordLast = $('.step-bottom span.selected-word');
 
 
  pictureWordFirst.text(first);
