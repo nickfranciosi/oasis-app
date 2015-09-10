@@ -29,6 +29,17 @@ class ImageBuildController extends Controller
     }
 
 
+    public function saveProfileImage(Request $request){
+        $user = Auth::user();
+        $url = $request->input('url');
+        $imgPath = 'img/profile/'. $user->facebook_user_id .'.jpg';
+
+        file_put_contents($imgPath, file_get_contents($url)) ? $repsonse = $imgPath : $response = "could not upload image";
+
+        echo $repsonse;
+    }   
+
+
     public function proccessImage(Request $request)
     {
         $data = $request->input('updatedImage');
@@ -53,7 +64,6 @@ class ImageBuildController extends Controller
 
     private function buildFilePath($fileName)
     {
-
        return $filePath = 'img/generated/' . $fileName . '.png';
     }
 }

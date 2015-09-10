@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 |
 */
 
+//Save Profile Photo
+Route::post('save-profile', 'ImageBuildController@saveProfileImage');
+
 // Create picture
 Route::get('/', 'PagesController@showIndex');
 Route::get('picture', 'PagesController@showPictureCreator');
@@ -18,16 +21,11 @@ Route::get('picture', 'PagesController@showPictureCreator');
 // Route::get('build', 'ImageBuildController@build');
 Route::post('build', 'ImageBuildController@proccessImage');
 
-// Route::get('gallery', 'PagesController@showGallery');
-// Route::get('gallery/{id}', 'PagesController@showStory');
-
 // Profile page
 Route::get('profile/{fbID}', 'PagesController@showProfile');
 
+// Login routes
 Route::post('/login', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');
 
-Route::get('test', function(){
-    return view('test');
-});
 

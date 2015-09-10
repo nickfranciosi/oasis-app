@@ -90,17 +90,6 @@ FB.getLoginStatus(function(response) {
 // successful.  See statusChangeCallback() for when this call is made.
 function loginEvents() {
   FB.api('/me', function(response) {
-
-    // var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture??width=500&height=500';
-    // $('.img-color img').attr('src',profileImageURL);
-    // $('#profileImage').val(profileImageURL);
-    // $("#hiddenToken").val(_globalObj._token);
-
-    // // hide login and give feedback
-    // $('.btn-main.login').hide();
-    // document.getElementById('status').innerHTML =
-    // 'Thanks for logging in, ' + response.name + '!';
-
     console.log('response', response);
     logInToBackend(response);
     loadImage(response);
@@ -110,11 +99,34 @@ function loginEvents() {
 
 function loadImage(response){
   var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture?width=720&height=720';
-  $('.img-color img').attr('src',profileImageURL);
-  $('#profileImage').val(profileImageURL);
+  downloadImageForCanvas(profileImageURL);
+  $('.img-color img').attr('src',profileImageURL);  
   $("#hiddenToken").val(_globalObj._token);
 }
 
+function downloadImageForCanvas(url){
+  console.log('Download the image ');
+  var data = {
+      "_token" : _globalObj._token,
+      "url" : url
+    }
+
+  $.ajax({
+    type: 'POST',
+    url: '/save-profile',
+    data: data,
+    dataType: 'text',
+    success:function(data){
+      console.log(data);
+     $('#profileImage').val(data);
+    },
+    error:function(){
+      // failed request; give feedback to user
+      console.log("error saving profile image");
+    }
+  });
+
+}
 
 function updateResponseText(response){
   document.getElementById('status').innerHTML =
