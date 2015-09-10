@@ -36,8 +36,8 @@ function statusChecker(response){
   } else if (response.status === 'not_authorized') {
   	_globalObj._login_status  = false
     // The person is logged into Facebook, but not your app.
-    document.getElementById('status').innerHTML = 'Please log ' +
-    'into this app.';
+    // document.getElementById('status').innerHTML = 'Please log ' +
+    // 'into this app.';
 
   } else {
     // The person is not logged into Facebook, so we're not sure if
@@ -46,8 +46,8 @@ function statusChecker(response){
     buttonLogin.show();
     buttonLogout.hide();
 
-    document.getElementById('status').innerHTML = 'Please log ' +
-    'into Facebook.';
+    // document.getElementById('status').innerHTML = 'Please log ' +
+    // 'into Facebook.';
   }
 }
 
@@ -129,8 +129,8 @@ function downloadImageForCanvas(url){
 }
 
 function updateResponseText(response){
-  document.getElementById('status').innerHTML =
-  'Thanks for logging in, ' + response.name + '!';
+  // document.getElementById('status').innerHTML =
+  // 'Thanks for logging in, ' + response.name + '!';
 }
 
 function logInToBackend(response){
@@ -216,8 +216,8 @@ $(function(){
     buttonLogout.hide();
     logOutOfBackend();
 
-    document.getElementById('status').innerHTML = 'Please log ' +
-    'into Facebook.';
+    // document.getElementById('status').innerHTML = 'Please log ' +
+    // 'into Facebook.';
   });
  });
 });
