@@ -10,9 +10,13 @@ function checkLoginState() {
   // FB.getLoginStatus(function(response) {
   //   statusChangeCallback(response);
   // });
-FB.login(function(response) {
-  statusChecker(response);
-}, {scope: 'email, publish_actions'});
+  if( navigator.userAgent.match('CriOS') ){
+      window.open('https://www.facebook.com/dialog/oauth?client_id='+appID+'&redirect_uri='+ document.location.href +'&scope=email', '', null);
+  }else{
+    FB.login(function(response) {
+      statusChecker(response);
+    }, {scope: 'email'});
+  }
 }
 
 
