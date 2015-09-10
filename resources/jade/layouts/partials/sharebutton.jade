@@ -1,7 +1,7 @@
 @if (isset($user) && Auth::check())
 @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
 button#fbTest Share on Facebook
-a(href="https://www.facebook.com/dialog/share?app_id=1477990922522983&display=popup&href=http://oasis-app.xyz/&picture=http://oasis-app.xyz/generated/10100411290737202-1441556548.png&redirect_uri=THE_LANDING_URL_AFTER_SHARING") test
+a(href="https://www.facebook.com/dialog/share?app_id=1477990922522983&display=popup&href=http://oasis-app.xyz/&picture=http://oasis-app.xyz/generated/10100411290737202-1441556548.png&redirect_uri=http://oasis-app.xyz/") test
 <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
 <a href="/{{ $user->image_path }}" id="downloadLink" download>Download</a>
 @endif

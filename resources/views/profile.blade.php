@@ -141,7 +141,7 @@
                 <p>Next level mixtape, trust fund Brooklyn lumbersexual ennui. Gluten-free fanny pack dreamcatcher cliche, sartorial lo-fi polaroid chia. Vice ennui fap salvia, fashion axe retro sriracha slow-carb asymmetrical whatever. Pickled mixtape art party lo-fi cold-pressed roof party, locavore fixie fanny pack Shoreditch. Photo booth Echo Park whatever, cronut stumptown fap bitters organic meh.</p>
                 @if (isset($user) && Auth::check())
                 @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
-                <button id="fbTest">Share on Facebook</button><a href="https://www.facebook.com/dialog/share?app_id=1477990922522983&amp;display=popup&amp;href=http://oasis-app.xyz/&amp;picture=http://oasis-app.xyz/generated/10100411290737202-1441556548.png&amp;redirect_uri=THE_LANDING_URL_AFTER_SHARING">test</a><a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
+                <button id="fbTest">Share on Facebook</button><a href="https://www.facebook.com/dialog/share?app_id=1477990922522983&amp;display=popup&amp;href=http://oasis-app.xyz/&amp;picture=http://oasis-app.xyz/generated/10100411290737202-1441556548.png&amp;redirect_uri=http://oasis-app.xyz/">test</a><a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
                 <a href="/{{ $user->image_path }}" id="downloadLink" download>Download</a>
                 @endif
                 @endif
