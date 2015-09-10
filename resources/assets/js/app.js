@@ -145,7 +145,6 @@ function setWordsOnImageFromCookie(first,second){
  listWordFirst = $('.step-top span.selected-word'),
  listWordLast = $('.step-bottom span.selected-word');
 
-
  pictureWordFirst.text(first);
  pictureWordLast.text(second);
  listWordFirst.text(first);
