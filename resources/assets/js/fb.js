@@ -10,9 +10,15 @@ function checkLoginState() {
   // FB.getLoginStatus(function(response) {
   //   statusChangeCallback(response);
   // });
-FB.login(function(response) {
-  statusChecker(response);
-}, {scope: 'email, publish_actions'});
+  $.cookie('first_word', $('#canvasForm input[name="first"]').val());
+  $.cookie('second_word', $('#canvasForm input[name="second"]').val());
+  if( navigator.userAgent.match('CriOS') ){
+      window.open('https://www.facebook.com/dialog/oauth?client_id='+ _globalObj._facebook_app_id +'&redirect_uri='+ document.location.href + '&first=test&second=cool&scope=email', '', null);
+  }else{
+    FB.login(function(response) {
+      statusChecker(response);
+    }, {scope: 'email'});
+  }
 }
 
 

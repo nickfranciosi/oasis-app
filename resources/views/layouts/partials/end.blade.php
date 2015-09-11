@@ -6,22 +6,19 @@
     $(function(){
         $('#fbTest').on('click',function(){
             var userImagePath = '';
+            var userURL = _globalObj._root_url;
             @if(isset($user))
                 userImagePath = '{!! $user->image_path !!}';
+                userURL += 'profile/{!! $user->facebook_user_id !!}';
             @endif
             console.log(_globalObj._root_url + userImagePath);
             FB.ui({
               method: 'share',
-              link: _globalObj._root_url,
-              caption: 'A newest Caption',
-              href: _globalObj._root_url,
+              link: userURL,
+              caption: 'Oasis',
+              href: userURL,
               picture: _globalObj._root_url + userImagePath
           }, function(response){});
-        });
-
-        $('#fbTest2').on('click', function(e){
-
-          
         });
     });
 

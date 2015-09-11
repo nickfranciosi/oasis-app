@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="http://placehold.it/1600x640">
     <!-- Opengraph-->
     <meta property="og:title" content="Oasis - Theres More to Youth">@if(isset($user))
-    <meta property='og:url' content='http://oasis-app.xyz?id={!! $user->id !!}' >
+    <meta property='og:url' content='http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}' >
     <meta property='og:image' content='http://oasis-app.xyz/{!! $user->image_path !!}'>
 @else
     <meta property='og:url' content='http://oasis-app.xyz' >
@@ -176,22 +176,19 @@
     $(function(){
         $('#fbTest').on('click',function(){
             var userImagePath = '';
+            var userURL = _globalObj._root_url;
             @if(isset($user))
                 userImagePath = '{!! $user->image_path !!}';
+                userURL += 'profile/{!! $user->facebook_user_id !!}';
             @endif
             console.log(_globalObj._root_url + userImagePath);
             FB.ui({
               method: 'share',
-              link: _globalObj._root_url,
-              caption: 'A newest Caption',
-              href: _globalObj._root_url,
+              link: userURL,
+              caption: 'Oasis',
+              href: userURL,
               picture: _globalObj._root_url + userImagePath
           }, function(response){});
-        });
-
-        $('#fbTest2').on('click', function(e){
-
-          
         });
     });
 

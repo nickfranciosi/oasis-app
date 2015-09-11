@@ -18,7 +18,7 @@
     <meta name="twitter:image" content="http://placehold.it/1600x640">
     <!-- Opengraph-->
     <meta property="og:title" content="Oasis - Theres More to Youth">@if(isset($user))
-    <meta property='og:url' content='http://oasis-app.xyz?id={!! $user->id !!}' >
+    <meta property='og:url' content='http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}' >
     <meta property='og:image' content='http://oasis-app.xyz/{!! $user->image_path !!}'>
 @else
     <meta property='og:url' content='http://oasis-app.xyz' >
@@ -138,7 +138,7 @@
             <div class="row">
               <div class="col-md-12 text-center">
                 <h1 class="tagline">There's more to youth</h1>
-                <p class="tagline-text">Teens are often judged unfairly—by their peers, by their parents and by other adults. As a result, they often get stuck with labels that do not reflect who they really are. Did this happen to you?</p><a href="picture" class="btn-main-white learn-more">Learn More at oasiscenter.org<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
+                <p class="tagline-text">Teens are often judged unfairly—by their peers, by their parents and by other adults. As a result, they often get stuck with labels that do not reflect who they really are. Did this happen to you?</p><a href=" https://www.oasiscenter.org/#programs" target="_blank" class="btn-main-white learn-more">Learn More at oasiscenter.org<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
@@ -179,7 +179,7 @@
             <h2 class="header">Help Us Make a Stand</h2>
           </header>
           <div class="col-sm-6">
-            <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a class="btn btn-main space-top">Get Started</a>
+            <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a href="picture" class="btn btn-main space-top">Get Started</a>
           </div>
         </div>
       </div>
@@ -195,7 +195,7 @@
             <p>The teen years are a difficult time for anyone. Challenges posed by peer pressure, drugs, academic demands and even sexual orientation force many young people to make difficult choices that can complicate their lives even more.</p>
           </div>
           <div class="col-sm-6">
-            <p>Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential, turning them into happy, well-adjusted adults.</p><a href="https://www.oasiscenter.org/#about" target="_blank" class="btn-link">Learn More at oasiscenter.org<i class="icon-arrow"></i>
+            <p>Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential, turning them into happy, well-adjusted adults.</p><a href="https://www.oasiscenter.org/#programs" target="_blank" class="btn-link">Learn More at oasiscenter.org<i class="icon-arrow"></i>
               <!-- @import ../includes/svg-arrow-right.html--></a>
           </div>
         </div>
@@ -228,7 +228,7 @@
         <div class="row">
           <div class="col-sm-offset-6 col-sm-6">
             <h2 class="header">How you can help</h2>
-            <p>You have the power to make a difference in a teen’s life. At Oasis, we value each relationship we have with every supporter and count on you to help us get the job done. To find out how you can donate click on the button below.</p><a href="https://www.oasiscenter.org" target="_blank" class="btn btn-main space-top">Make a Donation</a>
+            <p>You have the power to make a difference in a teen’s life. At Oasis, we value each relationship we have with every supporter and count on you to help us get the job done. To find out how you can donate click on the button below.</p><a href="https://www.oasiscenter.org/donate.html" target="_blank" class="btn btn-main space-top">Make a Donation</a>
           </div>
         </div>
       </div>
@@ -280,22 +280,19 @@
     $(function(){
         $('#fbTest').on('click',function(){
             var userImagePath = '';
+            var userURL = _globalObj._root_url;
             @if(isset($user))
                 userImagePath = '{!! $user->image_path !!}';
+                userURL += 'profile/{!! $user->facebook_user_id !!}';
             @endif
             console.log(_globalObj._root_url + userImagePath);
             FB.ui({
               method: 'share',
-              link: _globalObj._root_url,
-              caption: 'A newest Caption',
-              href: _globalObj._root_url,
+              link: userURL,
+              caption: 'Oasis',
+              href: userURL,
               picture: _globalObj._root_url + userImagePath
           }, function(response){});
-        });
-
-        $('#fbTest2').on('click', function(e){
-
-          
         });
     });
 

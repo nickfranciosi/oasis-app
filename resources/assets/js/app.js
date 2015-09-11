@@ -13,6 +13,7 @@ pictureSteps.steps({
   bodyTag: "section",
   transitionEffect: "fade",
   autoFocus: true,
+  saveState: true,
 
   onStepChanging: function (event, currentIndex, newIndex) {
 
@@ -165,12 +166,33 @@ selectedWord.on('click', function(event) {
 
 });
 
+function setWordsOnImageFromCookie(first,second){
+ var pictureWordFirst = $('.img-color .words span:first-child'),
+ pictureWordLast = $('.img-color .words span:last-child'),
+ listWordFirst = $('.step-top span.selected-word'),
+ listWordLast = $('.step-bottom span.selected-word');
+
+ pictureWordFirst.text(first);
+ pictureWordLast.text(second);
+ listWordFirst.addClass('selected color-accent animated flipInX');
+ listWordLast.addClass('selected color-accent animated flipInX');
+ listWordFirst.text(first);
+ listWordLast.text(second);
+
+ $('#canvasForm input[name="first"]').val(first);
+ $('#canvasForm input[name="second"]').val(second);
+}
+
 
 
 
 // Load
 $(window).on('load', function() {
 
+  if($.cookie('first_word') != undefined){
+    console.log('we have a cookie set');
+    setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
+  }
   // Preloader
   // $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
   //   $('.preloader').hide();
