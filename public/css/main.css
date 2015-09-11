@@ -875,11 +875,21 @@ footer .social-footer li:hover a {
   opacity: 0.2; }
 
 .step-half {
-  position: relative; }
-  .step-half.is-open .close {
-    opacity: 0.3; }
+  position: relative;
+  height: 50%; }
+  .step-half.is-open {
+    overflow: scroll; }
+    .step-half.is-open .close {
+      opacity: 0.3; }
   .step-half.step-bottom {
     background: #fff; }
+
+#picture-steps-p-0 .step-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%; }
 
 #picture-steps-p-0 .step-half.step-top {
   transition-duration: 0.3s;
@@ -892,8 +902,11 @@ footer .social-footer li:hover a {
 #picture-steps-p-0 .step-half.step-bottom {
   background: white;
   transition-duration: 0.3s;
-  -webkit-transform: translateY(-105%);
-  transform: translateY(-105%); }
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%); }
+  #picture-steps-p-0 .step-half.step-bottom.is-open {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
   #picture-steps-p-0 .step-half.step-bottom .header {
     color: #415A68; }
 

@@ -152,8 +152,10 @@ $z-index-max-bottom:  -1000;
 // Sections
 .step-half {
 	position: relative;
+	height: 50%;
 
 	&.is-open {
+		overflow: scroll;
 		.close { opacity: 0.3; }
 	}
 
@@ -176,6 +178,15 @@ $z-index-max-bottom:  -1000;
 
 
 
+
+
+#picture-steps-p-0 .step-half {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+}
 
 // Top section
 #picture-steps-p-0 .step-half.step-top {
@@ -203,9 +214,15 @@ $z-index-max-bottom:  -1000;
 	    -ms-transition-duration: 0.3s;
 	        transition-duration: 0.3s;
 
-	-webkit-transform: translateY(-105%);
-	    -ms-transform: translateY(-105%);
-	        transform: translateY(-105%);
+	-webkit-transform: translateY(50%);
+	    -ms-transform: translateY(50%);
+	        transform: translateY(50%);
+
+	&.is-open {
+		-webkit-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		        transform: translateY(0);
+	}
 
 	.header { color: $brand-color7; }
 }

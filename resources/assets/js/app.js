@@ -89,12 +89,10 @@ sectionHalf.on('click', function() {
 
   // When section is open
   if ( $(this).hasClass('is-open') ) {
+
   	// Remove classes and go to top
-  	sectionHalf.removeClass('squish');
     $(this).removeClass('is-open').addClass('collapsed');
     toTop();
-
-    $(this).css('overflow', 'scroll');
 
   } else {
     $(this).addClass('is-open').removeClass('collapsed');
@@ -102,25 +100,25 @@ sectionHalf.on('click', function() {
 
   if ( sectionTop.hasClass('is-open') ) {
   	sectionBottom.css({
-			'-webkit-transform' : 'translateY(-50%)',
-			'-ms-transform' : 'translateY(-50%)',
-			'transform' : 'translateY(-50%)'
+			'-webkit-transform' : 'translateY(100%)',
+			'-ms-transform' : 'translateY(100%)',
+			'transform' : 'translateY(100%)'
 		});
   } else {
   	sectionBottom.css({
-			'-webkit-transform' : 'translateY(-105%)',
-			'-ms-transform' : 'translateY(-105%)',
-			'transform' : 'translateY(-105%)'
+			'-webkit-transform' : 'translateY(50%)',
+			'-ms-transform' : 'translateY(50%)',
+			'transform' : 'translateY(50%)'
 		});
   }
 
 
   if ( sectionBottom.hasClass('is-open') ) {
+
   	sectionBottom.css({
-			'-webkit-transform' : 'translateY(-141%)',
-			'-ms-transform' : 'translateY(-141%)',
-			'transform' : 'translateY(-141%)',
-			'overflow': 'scroll'
+			'-webkit-transform' : 'translateY(0)',
+			'-ms-transform' : 'translateY(0)',
+			'transform' : 'translateY(0)'
 		});
 
 		sectionTop.css({
@@ -128,7 +126,6 @@ sectionHalf.on('click', function() {
 			'-ms-transform' : 'translateY(-10%)',
 			'transform' : 'translateY(-10%)'
 		});
-
   } else {
   	sectionTop.css({
 			'-webkit-transform' : 'translateY(0)',
@@ -136,7 +133,6 @@ sectionHalf.on('click', function() {
 			'transform' : 'translateY(0)'
 		});
   }
-
 
 });
 
