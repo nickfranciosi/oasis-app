@@ -102,14 +102,14 @@ FB.getLoginStatus(function(response) {
 function loginEvents() {
   FB.api('/me', function(response) {
     console.log('response', response);
+    loadImage(response);
     logInToBackend(response);
-    // loadImage(response);
     updateResponseText(response);
   });
 }
 
 function loadImage(response){
-  var profileImageURL = 'https://graph.facebook.com/'+ response +'/picture?width=720&height=720';
+  var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture?width=720&height=720';
   downloadImageForCanvas(profileImageURL);
   $('.img-color img').attr('src',profileImageURL);  
   $("#hiddenToken").val(_globalObj._token);
@@ -174,7 +174,7 @@ function sendAjaxLogInRequest(data){
     success:function(data){
       console.log('You are logged in');
       console.log('data:', data);
-      loadImage(data);
+      // loadImage(data);
     },
     error:function(){
         // failed request; give feedback to user
