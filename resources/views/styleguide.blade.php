@@ -130,9 +130,7 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader"><img src="img/loader.gif" alt="Preloader image">
-      <h1 class="header">Nick is a fag</h1>
-    </div>
+    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
     <div class="container">
       <h1>This is the Style Guide</h1>
       <hr>

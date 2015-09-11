@@ -130,9 +130,7 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader"><img src="img/loader.gif" alt="Preloader image">
-      <h1 class="header">Nick is a fag</h1>
-    </div>
+    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
     <div id="picture-steps">
       <!-- First Step-->
       <h2 class="sr-only">Choose a word</h2>
