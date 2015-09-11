@@ -173,7 +173,11 @@ block content
           h2.header Choose a Color
           p Click the photo to pick a different color
         .img-color
+          @if(Auth::check())
+          <img src="https://graph.facebook.com/{!! Auth::user()->facebook_user_id !!}/picture?width=720&height=720" />
+          @else
           img(src="../img/no-profile.png")
+          @endif
           div.words
             span.word Goody-Two-Shoes
             span.word Delinquent

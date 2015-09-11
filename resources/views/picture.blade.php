@@ -242,7 +242,10 @@
             <h2 class="header">Choose a Color</h2>
             <p>Click the photo to pick a different color</p>
           </header>
-          <div class="img-color"><img src="../img/no-profile.png">
+          <div class="img-color">
+            @if(Auth::check())
+            <img src="https://graph.facebook.com/{!! Auth::user()->facebook_user_id !!}/picture?width=720&height=720" />
+            @else<img src="../img/no-profile.png">@endif
             <div class="words"><span class="word">Goody-Two-Shoes</span><span class="word">Delinquent</span></div>
             <div class="color-overlay"></div><a href="#" alt="Choose a color for the image overlay" data-fullscreen="true" data-insertcode="true" class="link-area cp-fullscreen"></a>
           </div>
