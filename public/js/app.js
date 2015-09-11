@@ -10,10 +10,10 @@ function checkLoginState() {
   // FB.getLoginStatus(function(response) {
   //   statusChangeCallback(response);
   // });
-  
+  $.cookie('first_word', $('#canvasForm input[name="first"]').val());
+  $.cookie('second_word', $('#canvasForm input[name="second"]').val());
   if( navigator.userAgent.match('CriOS') ){
-      $.cookie('first_word', $('#canvasForm input[name="first"]').val());
-      $.cookie('second_word', $('#canvasForm input[name="second"]').val());
+      
       window.open('https://www.facebook.com/dialog/oauth?client_id='+ _globalObj._facebook_app_id +'&redirect_uri='+ document.location.href + '&first=test&second=cool&scope=email', '', null);
   }else{
     FB.login(function(response) {
@@ -37,7 +37,11 @@ function statusChecker(response){
     buttonLogout.show();
     // Set status
     _globalObj._login_status  = true;
-    $('#picture-steps').steps('next');
+    if($('#picture-steps').steps('getCurrentIndex') == 1){
+          setTimeout(function(){
+            $('#picture-steps').steps('next');
+          }, 500);
+    }
 
     // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
@@ -375,12 +379,14 @@ jQuery(document).ready(function($){
       e.preventDefault();
       console.log($(this).text());
       $('#canvasForm input[name="first"]').val($(this).text());
+      $.cookie('first_word', $(this).text());
   });
 
   $('#negative-list  li > a').on('click', function(e){
       e.preventDefault();
       console.log($(this).text());
       $('#canvasForm input[name="second"]').val($(this).text());
+      $.cookie('second_word', $(this).text());
   });
 
 

@@ -9985,7 +9985,7 @@ if( typeof Object.create !== 'function'){
       var $updatedImage = $('#updated-image');
 
       //determines how far down the image/canvas to place the words and colorbox
-      var overlayPlacementModifier = 2.9;
+      var overlayPlacementModifier = 3.9;
 
       
 
