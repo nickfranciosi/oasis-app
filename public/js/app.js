@@ -423,7 +423,9 @@ $(window).on('load', function() {
 
   if($.cookie('first_word') != undefined){
     console.log('we have a cookie set');
-    $('#picture-steps').steps('next');
+    if($('#picture-steps').steps('getCurrentIndex') == 1){
+      $('#picture-steps').steps('next');  
+    }
     setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
   }
   // Preloader
