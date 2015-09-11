@@ -310,16 +310,21 @@ jQuery(document).ready(function($){
 	*/
 
 	var sectionHalf    = $('#picture-steps-p-0 .step-half'),
-			selectedWord   = $('.step-list ul > li > a');
+			selectedWord   = $('.step-list ul > li > a'),
+			sectionBottom  = $('#picture-steps-p-0 .step-bottom');
 
+	// Add tranform on load for ie9
+	sectionBottom.css({
+		'-webkit-transform' : 'translateY(50%)',
+		'-ms-transform' : 'translateY(50%)',
+		'transform' : 'translateY(50%)'
+	});
 
 	// Expand half sextions
 	sectionHalf.on('click', function() {
 		var sectionTop     = $('#picture-steps-p-0 .step-top'),
 		    sectionTop     = $('#picture-steps-p-0 .step-top'),
-		    sectionBottom  = $('#picture-steps-p-0 .step-bottom'),
-
-		    sectionList    = $('.step-list')
+		    sectionList    = $('.step-list');
 
 		function toTop() {
 		  sectionHalf.animate({
