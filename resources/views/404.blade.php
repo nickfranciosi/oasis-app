@@ -130,7 +130,7 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
+    <div class="preloader"><img src="/img/loader.gif" alt="Preloader image"></div>
     <div class="container">
       <h1>404</h1>
       <h3>Great you broke it! Are you happy?</h3>

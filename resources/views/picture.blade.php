@@ -130,7 +130,7 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
+    <div class="preloader"><img src="/img/loader.gif" alt="Preloader image"></div>
     <div id="picture-steps">
       <!-- First Step-->
       <h2 class="sr-only">Choose a word</h2>

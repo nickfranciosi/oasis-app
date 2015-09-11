@@ -130,7 +130,7 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
+    <div class="preloader"><img src="/img/loader.gif" alt="Preloader image"></div>
     <div id="profile">
       <section class="hero">
         <div class="container">
