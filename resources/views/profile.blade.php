@@ -232,6 +232,7 @@
    
     $(function(){
         $('#fb-share').on('click',function(e){
+          console.log('fb share');
             e.preventDefault();
             var userImagePath = '';
             var userURL = _globalObj._root_url;
@@ -242,7 +243,7 @@
             console.log(_globalObj._root_url + userImagePath);
 
             if( navigator.userAgent.match('CriOS') ){
-              window.open( 'https://www.facebook.com/dialog/share?app_id='+_globalObj._facebook_app_id+'&href=http://oasis-app.xyz/'+userURL+'&display=popup&picture=http://oasis-app.xyz/'+userImagePath+'&redirect_uri=http://oasis-app.xyz/'+userURL," ", "status = 1, height = 500, width = 360, resizable = 0" )
+              window.open( 'https://www.facebook.com/dialog/share?app_id='+_globalObj._facebook_app_id+'&href=http://oasis-app.xyz/'+userURL+'&display=popup&picture=http://oasis-app.xyz/'+userImagePath+'&redirect_uri=http://oasis-app.xyz/'+userURL," ", "status = 1, height = 500, width = 360, resizable = 0" );
             }else{
                 FB.ui({
                   method: 'share',
