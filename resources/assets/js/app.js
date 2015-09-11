@@ -137,7 +137,7 @@ jQuery(document).ready(function($){
 	});
 
 	// Collect values for canvas
-	$('#canvasForm input[name="first"]').val('');
+
   $('#positive-list  li > a').on('click', function(e){
       e.preventDefault();
       console.log($(this).text());

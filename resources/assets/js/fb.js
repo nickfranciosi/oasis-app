@@ -18,7 +18,6 @@ function checkLoginState() {
   }else{
     FB.login(function(response) {
       statusChecker(response);
-      $('#picture-steps').steps('next');
     }, {scope: 'email'});
   }
 }
@@ -36,9 +35,9 @@ function statusChecker(response){
     loginEvents();
     buttonLogin.hide();
     buttonLogout.show();
-
     // Set status
-    _globalObj._login_status  = true
+    _globalObj._login_status  = true;
+    $('#picture-steps').steps('next');
 
     // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
@@ -216,6 +215,8 @@ $(function(){
    e.preventDefault();
    console.log('you clicked the fb logout');
    FB.logout(function(response) {
+    var buttonLogin = $('.btn-main.login');
+    var buttonLogout = $('.btn-main.logout');
    	// Set global status
    	_globalObj._login_status  = false
 
