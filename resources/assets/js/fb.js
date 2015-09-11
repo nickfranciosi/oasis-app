@@ -10,15 +10,14 @@ function checkLoginState() {
   // FB.getLoginStatus(function(response) {
   //   statusChangeCallback(response);
   // });
-  
+  $.cookie('first_word', $('#canvasForm input[name="first"]').val());
+  $.cookie('second_word', $('#canvasForm input[name="second"]').val());
   if( navigator.userAgent.match('CriOS') ){
-      $.cookie('first_word', $('#canvasForm input[name="first"]').val());
-      $.cookie('second_word', $('#canvasForm input[name="second"]').val());
+      
       window.open('https://www.facebook.com/dialog/oauth?client_id='+ _globalObj._facebook_app_id +'&redirect_uri='+ document.location.href + '&first=test&second=cool&scope=email', '', null);
   }else{
     FB.login(function(response) {
       statusChecker(response);
-      $('#picture-steps').steps('next');
     }, {scope: 'email'});
   }
 }
@@ -36,9 +35,13 @@ function statusChecker(response){
     loginEvents();
     buttonLogin.hide();
     buttonLogout.show();
-
     // Set status
-    _globalObj._login_status  = true
+    _globalObj._login_status  = true;
+    if($('#picture-steps').steps('getCurrentIndex') == 1){
+          setTimeout(function(){
+            $('#picture-steps').steps('next');
+          }, 500);
+    }
 
     // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
@@ -216,6 +219,8 @@ $(function(){
    e.preventDefault();
    console.log('you clicked the fb logout');
    FB.logout(function(response) {
+    var buttonLogin = $('.btn-main.login');
+    var buttonLogout = $('.btn-main.logout');
    	// Set global status
    	_globalObj._login_status  = false
 

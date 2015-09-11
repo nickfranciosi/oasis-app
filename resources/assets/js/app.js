@@ -137,17 +137,19 @@ jQuery(document).ready(function($){
 	});
 
 	// Collect values for canvas
-	$('#canvasForm input[name="first"]').val('');
+
   $('#positive-list  li > a').on('click', function(e){
       e.preventDefault();
       console.log($(this).text());
       $('#canvasForm input[name="first"]').val($(this).text());
+      $.cookie('first_word', $(this).text());
   });
 
   $('#negative-list  li > a').on('click', function(e){
       e.preventDefault();
       console.log($(this).text());
       $('#canvasForm input[name="second"]').val($(this).text());
+      $.cookie('second_word', $(this).text());
   });
 
 
