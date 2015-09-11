@@ -201,7 +201,7 @@ function sendAjaxLogOutRequest(data){
 $(function(){
   var buttonLogin = $('.btn-main.login');
   var buttonLogout = $('.btn-main.logout');
-  buttonLogin.hide();
+  buttonLogin.show();
   buttonLogout.hide();
 
   $(document).delegate('#fbLogin','click', function(e){
