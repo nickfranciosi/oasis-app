@@ -235,7 +235,10 @@ jQuery(document).ready(function($){
   if($.cookie('first_word') != undefined){
     console.log('we have a cookie set');
     if($('#picture-steps').steps('getCurrentIndex') == 1){
-      $('#picture-steps').steps('next');  
+      setTimeout(function(){
+        $('#picture-steps').steps('next'); 
+      }, 500);
+       
     }
     setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
   }
