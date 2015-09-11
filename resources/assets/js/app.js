@@ -189,13 +189,7 @@ function setWordsOnImageFromCookie(first,second){
 // Load
 $(window).on('load', function() {
 
-  if($.cookie('first_word') != undefined){
-    console.log('we have a cookie set');
-    if($('#picture-steps').steps('getCurrentIndex') == 1){
-      $('#picture-steps').steps('next');  
-    }
-    setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
-  }
+  
   // Preloader
   // $('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
   //   $('.preloader').hide();
@@ -238,7 +232,13 @@ $('#video-promo').hover(function toggleControls() {
 
 
 jQuery(document).ready(function($){
-
+  if($.cookie('first_word') != undefined){
+    console.log('we have a cookie set');
+    if($('#picture-steps').steps('getCurrentIndex') == 1){
+      $('#picture-steps').steps('next');  
+    }
+    setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
+  }
 	// Dynamic height of cut thing
 	$('#intro').height($(window).height() - 80);
 	$('section .cut').each(function() {
