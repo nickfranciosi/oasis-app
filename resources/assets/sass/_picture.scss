@@ -28,6 +28,7 @@ $z-index-max-bottom:  -1000;
 
 		// Fall back for gradient
 		background: rgba(65, 90, 104, 0.9);
+		// #415a68
 		background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%, rgba(2,9,9,0.8) 6%, rgba(36,145,150,1) 99%, rgba(36,145,150,1) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.8)), color-stop(6%,rgba(2,9,9,0.8)), color-stop(99%,rgba(36,145,150,1)), color-stop(100%,rgba(36,145,150,1))); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%,rgba(2,9,9,0.8) 6%,rgba(36,145,150,1) 99%,rgba(36,145,150,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -252,6 +253,9 @@ $z-index-max-bottom:  -1000;
 
 
 
+
+
+
 // Step list
 .step-half .step-list ul {
 	margin-bottom: 3em;
@@ -289,6 +293,28 @@ $z-index-max-bottom:  -1000;
 
 
 
+
+.step-half.step-top .step-list ul > li > a {
+	color: white;
+	&:hover {
+		color: $brand-accent;
+	}
+}
+
+.step-half.step-bottom .step-list ul > li {
+
+	&:after {
+		box-shadow: 0px 1px #ececec;
+	}
+
+	> a {
+		color: $brand-color7;
+		&:hover {
+			color: $brand-accent;
+		}
+	}
+
+}
 
 .step p { color: white; }
 .step-bottom .step-content p { color: $font-base-color; }
@@ -379,7 +405,7 @@ $z-index-max-bottom:  -1000;
 
 
 
-$overlay-height: 30%;
+$overlay-height: 20%;
 
 .color-overlay {
 	position: absolute;
@@ -410,6 +436,9 @@ $overlay-height: 30%;
 		position: relative;
 		display: block;
 		font-size: 38px;
+
+		@include screen-sm { font-size: 64px; }
+
 		line-height: 1em;
 		margin: 0;
 		padding: 0;
@@ -421,6 +450,8 @@ $overlay-height: 30%;
 
 	span:last-child {
 		top: -18px;
+
+		@include screen-sm { top: -28px; }
 		transform: rotate(180deg);
 		-webkit-transform: rotate(180deg);
 	}
@@ -436,6 +467,11 @@ $overlay-height: 30%;
 	position: relative;
 	max-width: 200px;
 	margin: 0 auto;
+
+	@include screen-sm {
+		max-width: 350px;
+		margin: 4em auto;
+	}
 
 	img { max-width: 100%;}
 
@@ -471,10 +507,5 @@ $overlay-height: 30%;
 			font-size: 1.5em;
 		}
 	}
-}
-
-
-#step-5 {
-	overflow: scroll;
 }
 
