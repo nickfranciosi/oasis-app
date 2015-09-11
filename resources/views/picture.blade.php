@@ -130,7 +130,9 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
+    <div class="preloader"><img src="img/loader.gif" alt="Preloader image">
+      <h1 class="header">Nick is a fag</h1>
+    </div>
     <div id="picture-steps">
       <!-- First Step-->
       <h2 class="sr-only">Choose a word</h2>
@@ -139,42 +141,55 @@
         <div class="step-half step-top">
           <div class="container">
             <header>
-              <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a positive</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+              <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a percieved word</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
               <div id="positive-list" class="step-list">
                 <p>Choose a word that best describes how you feel on the inside</p>
                 <ul>
+                  <li><a href="#">Bitch</a></li>
                   <li><a href="#">Nerd</a></li>
                   <li><a href="#">Freak</a></li>
-                  <li><a href="#">Deuchebag</a></li>
-                  <li><a href="#">Shithead</a></li>
-                  <li><a href="#">Fart Sniffer</a></li>
-                  <li><a href="#">Indignant</a></li>
                   <li><a href="#">Dork</a></li>
                   <li><a href="#">Bully</a></li>
-                  <li><a href="#">Goody-two-shoes</a></li>
-                  <li><a href="#">Arrogant</a></li>
-                  <li><a href="#">Nerd</a></li>
-                  <li><a href="#">Freak</a></li>
-                  <li><a href="#">Deuchebag</a></li>
-                  <li><a href="#">Shithead</a></li>
-                  <li><a href="#">Fart Sniffer</a></li>
-                  <li><a href="#">Indignant</a></li>
-                  <li><a href="#">Dork</a></li>
-                  <li><a href="#">Bully</a></li>
-                  <li><a href="#">Goody-two-shoes</a></li>
-                  <li><a href="#">Arrogant</a></li>
-                  <li><a href="#">Nerd</a></li>
-                  <li><a href="#">Freak</a></li>
-                  <li><a href="#">Deuchebag</a></li>
-                  <li><a href="#">Shithead</a></li>
-                  <li><a href="#">Fart Sniffer</a></li>
-                  <li><a href="#">Indignant</a></li>
-                  <li><a href="#">Dork</a></li>
-                  <li><a href="#">Bully</a></li>
-                  <li><a href="#">Goody-two-shoes</a></li>
-                  <li><a href="#">Arrogant</a></li>
+                  <li><a href="#">Weirdo</a></li>
+                  <li><a href="#">Troubled</a></li>
+                  <li><a href="#">Depressed</a></li>
+                  <li><a href="#">Angry</a></li>
+                  <li><a href="#">Privileged</a></li>
+                  <li><a href="#">stuck-up</a></li>
+                  <li><a href="#">priss</a></li>
+                  <li><a href="#">aloof</a></li>
+                  <li><a href="#">angry</a></li>
+                  <li><a href="#">loudmouth</a></li>
+                  <li><a href="#">drunk</a></li>
+                  <li><a href="#">thief</a></li>
+                  <li><a href="#">misfit</a></li>
+                  <li><a href="#">outcast</a></li>
+                  <li><a href="#">desperate</a></li>
+                  <li><a href="#">thug</a></li>
+                  <li><a href="#">junkie</a></li>
+                  <li><a href="#">stoner</a></li>
+                  <li><a href="#">tramp</a></li>
+                  <li><a href="#">spaz</a></li>
+                  <li><a href="#">creep</a></li>
+                  <li><a href="#">slut</a></li>
+                  <li><a href="#">wannabe</a></li>
+                  <li><a href="#">brainiac</a></li>
+                  <li><a href="#">hater</a></li>
+                  <li><a href="#">runaway</a></li>
+                  <li><a href="#">reject</a></li>
+                  <li><a href="#">wallflower</a></li>
+                  <li><a href="#">airhead</a></li>
+                  <li><a href="#">redneck</a></li>
+                  <li><a href="#">jock</a></li>
+                  <li><a href="#">spoiled</a></li>
+                  <li><a href="#">goody-two-shoes</a></li>
+                  <li><a href="#">geek</a></li>
+                  <li><a href="#">wild</a></li>
+                  <li><a href="#">aggressive</a></li>
+                  <li><a href="#">meathead</a></li>
+                  <li><a href="#">loner</a></li>
                 </ul>
               </div>
             </div>
@@ -184,32 +199,48 @@
         <div class="step-half step-bottom">
           <div class="container">
             <header>
-              <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a negative</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+              <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a flip word</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
               <div id="negative-list" class="step-list">
                 <p>Choose a word that best describes how you feel on the inside</p>
                 <ul>
-                  <li><a href="#">Nerd</a></li>
-                  <li><a href="#">Freak</a></li>
-                  <li><a href="#">Deuchebag</a></li>
-                  <li><a href="#">Shithead</a></li>
-                  <li><a href="#">Fart Sniffer</a></li>
-                  <li><a href="#">Indignant</a></li>
-                  <li><a href="#">Dork</a></li>
-                  <li><a href="#">Bully</a></li>
-                  <li><a href="#">Goody-two-shoes</a></li>
-                  <li><a href="#">Arrogant</a></li>
-                  <li><a href="#">Nerd</a></li>
-                  <li><a href="#">Freak</a></li>
-                  <li><a href="#">Deuchebag</a></li>
-                  <li><a href="#">Shithead</a></li>
-                  <li><a href="#">Fart Sniffer</a></li>
-                  <li><a href="#">Indignant</a></li>
-                  <li><a href="#">Dork</a></li>
-                  <li><a href="#">Bully</a></li>
-                  <li><a href="#">Goody-two-shoes</a></li>
-                  <li><a href="#">Arrogant</a></li>
+                  <li><a href="#">Thoughtful</a></li>
+                  <li><a href="#">Alienated</a></li>
+                  <li><a href="#">Passionate</a></li>
+                  <li><a href="#">Shy</a></li>
+                  <li><a href="#">Fragile</a></li>
+                  <li><a href="#">Driven</a></li>
+                  <li><a href="#">Conflicted</a></li>
+                  <li><a href="#">Hungry</a></li>
+                  <li><a href="#">Misunderstood</a></li>
+                  <li><a href="#">Distracted</a></li>
+                  <li><a href="#">Ambitious</a></li>
+                  <li><a href="#">Talented</a></li>
+                  <li><a href="#">Spirited</a></li>
+                  <li><a href="#">Misguided</a></li>
+                  <li><a href="#">Distraught</a></li>
+                  <li><a href="#">Overwhelmed</a></li>
+                  <li><a href="#">well-meaning</a></li>
+                  <li><a href="#">scattered</a></li>
+                  <li><a href="#">determined</a></li>
+                  <li><a href="#">insecure</a></li>
+                  <li><a href="#">directionless</a></li>
+                  <li><a href="#">immature</a></li>
+                  <li><a href="#">survivor</a></li>
+                  <li><a href="#">resilient</a></li>
+                  <li><a href="#">introverted</a></li>
+                  <li><a href="#">bored</a></li>
+                  <li><a href="#">naïve</a></li>
+                  <li><a href="#">enthusiastic</a></li>
+                  <li><a href="#">intense</a></li>
+                  <li><a href="#">expressive</a></li>
+                  <li><a href="#">sensitive</a></li>
+                  <li><a href="#">idealistic</a></li>
+                  <li><a href="#">brave</a></li>
+                  <li><a href="#">persistent</a></li>
+                  <li><a href="#">gifted</a></li>
+                  <li><a href="#">positive</a></li>
                 </ul>
               </div>
             </div>

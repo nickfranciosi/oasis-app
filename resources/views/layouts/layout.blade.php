@@ -129,7 +129,9 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
+    <div class="preloader">
+      <h1 class="header">Nick is a fag</h1><img src="img/loader.gif" alt="Preloader image">
+    </div>
     <form id="canvasForm" method="post" action="/build" style="display: none;">
       <input name="first" value="Dork">
       <input name="second" value="Determined">
