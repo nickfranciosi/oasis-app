@@ -18,7 +18,7 @@
     <meta name="twitter:image" content="http://placehold.it/1600x640">
     <!-- Opengraph-->
     <meta property="og:title" content="Oasis - Theres More to Youth">@if(isset($user))
-    <meta property='og:url' content='http://oasis-app.xyz?id={!! $user->id !!}' >
+    <meta property='og:url' content='http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}' >
     <meta property='og:image' content='http://oasis-app.xyz/{!! $user->image_path !!}'>
 @else
     <meta property='og:url' content='http://oasis-app.xyz' >
@@ -141,7 +141,7 @@
                 <p>Next level mixtape, trust fund Brooklyn lumbersexual ennui. Gluten-free fanny pack dreamcatcher cliche, sartorial lo-fi polaroid chia. Vice ennui fap salvia, fashion axe retro sriracha slow-carb asymmetrical whatever. Pickled mixtape art party lo-fi cold-pressed roof party, locavore fixie fanny pack Shoreditch. Photo booth Echo Park whatever, cronut stumptown fap bitters organic meh.</p>
                 @if (isset($user) && Auth::check())
                 @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
-                <button id="fbTest">Share on Facebook</button><a href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/">test</a>
+                <button id="fbTest">Share on Facebook</button><a href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}">test</a>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis">Tweet</a>
                 <a href="/{{ $user->image_path }}" id="downloadLink" download>Download</a>
                 @endif
