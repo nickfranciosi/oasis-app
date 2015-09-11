@@ -156,6 +156,7 @@ $z-index-max-bottom:  -1000;
 
 	&.is-open {
 		overflow: scroll;
+		-webkit-overflow-scrolling: touch; /* lets it scroll lazy */
 		.close { opacity: 0.3; }
 	}
 

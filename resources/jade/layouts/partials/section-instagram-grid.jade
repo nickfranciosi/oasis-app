@@ -3,10 +3,10 @@ section.instragram-grid
     h2.header.text-center Instagram
 
     .row
-    @foreach ($allUsers as $currentUser)
-    .col-sm-4
-      a(href="/profile/{{$currentUser['facebook_user_id']}}")
-        img.img-max(src="/{{ $currentUser['image_path'] }}")
-    @endforeach
+      @foreach ($allUsers as $currentUser)
+      .col-sm-4
+        a(href="/profile/{{$currentUser['facebook_user_id']}}")
+          img.img-max(src="/{{ $currentUser['image_path'] }}")
+      @endforeach
     .view-more
-      a.btn-main.veiw-more View More
+      a.btn.btn-main View More

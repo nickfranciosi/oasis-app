@@ -129,7 +129,8 @@
 	</g>
 </svg></a></div>
     </nav>
-    <!-- include ../layouts/partials/preloader.jade-->
+    <!-- Preloader-->
+    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
     <div id="picture-steps">
       <!-- First Step-->
       <h2 class="sr-only">Choose a word</h2>

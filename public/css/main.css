@@ -878,7 +878,9 @@ footer .social-footer li:hover a {
   position: relative;
   height: 50%; }
   .step-half.is-open {
-    overflow: scroll; }
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    /* lets it scroll lazy */ }
     .step-half.is-open .close {
       opacity: 0.3; }
   .step-half.step-bottom {

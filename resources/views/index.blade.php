@@ -129,7 +129,8 @@
 	</g>
 </svg></a></div>
     </nav>
-    <!-- include ../layouts/partials/preloader.jade-->
+    <!-- Preloader-->
+    <div class="preloader"><img src="img/loader.gif" alt="Preloader image"></div>
     <!-- Intro-->
     <section id="intro">
       <div class="container">
@@ -205,9 +206,10 @@
     <section class="instragram-grid">
       <div class="container">
         <h2 class="header text-center">Instagram</h2>
-        <div class="row"></div>@foreach ($allUsers as $currentUser)
-        <div class="col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
-        <div class="view-more"><a class="btn-main veiw-more">View More</a></div>
+        <div class="row">@foreach ($allUsers as $currentUser)
+          <div class="col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
+        </div>
+        <div class="view-more"><a class="btn btn-main">View More</a></div>
       </div>
     </section>
     <!-- Social band-->
