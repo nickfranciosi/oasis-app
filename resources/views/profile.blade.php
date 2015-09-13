@@ -141,7 +141,7 @@
                 <h2 class="header">{{ $user->name }}</h2>
                 <p>Next level mixtape, trust fund Brooklyn lumbersexual ennui. Gluten-free fanny pack dreamcatcher cliche, sartorial lo-fi polaroid chia. Vice ennui fap salvia, fashion axe retro sriracha slow-carb asymmetrical whatever. Pickled mixtape art party lo-fi cold-pressed roof party, locavore fixie fanny pack Shoreditch. Photo booth Echo Park whatever, cronut stumptown fap bitters organic meh.</p>
                 @if (isset($user) && Auth::check())
-                @if ($user->facebook_user_id == Auth::user()->facebook_user_id)<a href="#" id="fb-profile-share">Test</a><a href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"> <i class="fa fa-facebook"></i></a>
+                @if ($user->facebook_user_id == Auth::user()->facebook_user_id)<a href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"> <i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i></a>
                 <a href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i></a>
                 @endif
@@ -256,29 +256,6 @@
           }
           
         });
-        // $(document).delegate('#fbTest','click',function(event){
-        //     event.preventDefault();
-        //     console.log('fb share');
-            // var userImagePath = '';
-            // var userURL = _globalObj._root_url;
-            // @if(isset($user))
-            //     userImagePath = '{!! $user->image_path !!}';
-            //     userURL += 'profile/{!! $user->facebook_user_id !!}';
-            // @endif
-            // console.log(_globalObj._root_url + userImagePath);
-
-        //     if( navigator.userAgent.match('CriOS') ){
-        //       window.open( 'https://www.facebook.com/dialog/share?app_id='+_globalObj._facebook_app_id+'&href=http://oasis-app.xyz/'+userURL+'&display=popup&picture=http://oasis-app.xyz/'+userImagePath+'&redirect_uri=http://oasis-app.xyz/'+userURL," ", "status = 1, height = 500, width = 360, resizable = 0" );
-        //     }else{
-        //         FB.ui({
-        //           method: 'share',
-        //           link: userURL,
-        //           caption: 'Oasis',
-        //           href: userURL,
-        //           picture: _globalObj._root_url + userImagePath
-        //       }, function(response){});
-        //     }
-        // });
     });
 
 
