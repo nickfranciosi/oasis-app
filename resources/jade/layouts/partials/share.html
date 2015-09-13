@@ -2,9 +2,9 @@
 
    
     $(function(){
-        $('#fb-share').on('click',function(e){
-          console.log('fb share');
-            e.preventDefault();
+        $(document).delegate('#fbTest','click',function(event){
+            event.preventDefault();
+            console.log('fb share');
             var userImagePath = '';
             var userURL = _globalObj._root_url;
             @if(isset($user))
