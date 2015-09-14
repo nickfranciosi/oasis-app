@@ -10060,7 +10060,7 @@ if( typeof Object.create !== 'function'){
         grd.addColorStop(0.5,'rgba(255,255,255,0)');
         // grd.addColorStop(0.35,"transparent");
         grd.addColorStop(1,"transparent");
-        
+
 
         context.fillStyle=grd;
         context.fillRect(0,0,canvas.width,canvas.height - canvas.height / overlayPlacementModifier);

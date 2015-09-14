@@ -48,6 +48,9 @@ section {
 #ok {
   background: white; }
 
+.clearfix {
+  clear: both; }
+
 .blink {
   position: relative;
   top: 4px;
@@ -289,7 +292,8 @@ a {
 
 .preloader {
   position: fixed;
-  z-index: 9999;
+  top: 0;
+  z-index: 123456789;
   width: 100%;
   height: 100%;
   background-color: white; }
@@ -300,7 +304,7 @@ a {
   left: calc(50% - 32px); }
 
 .preloader div {
-  top: 50%; }
+  top: 45%; }
 
 .preloader h1 {
   height: 100%;
@@ -679,7 +683,7 @@ nav.navbar {
 
 .about {
   position: relative;
-  background-image: url("../img/bg-graduates.jpg");
+  background-image: url("../img/bg-bg.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1044,7 +1048,7 @@ footer .social-footer li:hover a {
 
 .color-overlay {
   position: absolute;
-  height: 20%;
+  height: 25%;
   width: 100%;
   bottom: 0;
   opacity: 0.6;
@@ -1055,7 +1059,7 @@ footer .social-footer li:hover a {
 .words {
   display: block;
   position: absolute;
-  height: 20%;
+  height: 25%;
   width: 100%;
   bottom: 13%;
   z-index: 1;
@@ -1074,7 +1078,8 @@ footer .social-footer li:hover a {
       .words span {
         font-size: 64px; } }
   .words span:first-child {
-    top: -7px; }
+    top: -7px;
+    color: #333; }
   .words span:last-child {
     top: -18px;
     transform: rotate(180deg);
@@ -1092,7 +1097,33 @@ footer .social-footer li:hover a {
       max-width: 350px;
       margin: 4em auto; } }
   .img-color img {
-    max-width: 100%; }
+    max-width: 100%;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-filter: gray;
+    filter: gray;
+    /* IE 6-9 */ }
+  .img-color .img-canvas:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 25%;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0+70,1+100 */
+    /* FF3.6+ */
+    /* Chrome,Safari4+ */
+    /* Chrome10+,Safari5.1+ */
+    /* Opera 11.10+ */
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 70%, white 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    /* IE6-9 */ }
   .img-color .link-area {
     z-index: 500; }
 
