@@ -12,8 +12,7 @@ function checkLoginState() {
   // });
   $.cookie('first_word', $('#canvasForm input[name="first"]').val());
   $.cookie('second_word', $('#canvasForm input[name="second"]').val());
-  if( navigator.userAgent.match('CriOS') ){
-      
+  if( navigator.userAgent.match('CriOS') ){    
       window.open('https://www.facebook.com/dialog/oauth?client_id='+ _globalObj._facebook_app_id +'&redirect_uri='+ document.location.href + '&first=test&second=cool&scope=email', '', null);
   }else{
     FB.login(function(response) {
@@ -37,11 +36,7 @@ function statusChecker(response){
     buttonLogout.show();
     // Set status
     _globalObj._login_status  = true;
-    if($('#picture-steps').steps('getCurrentIndex') == 1){
-          setTimeout(function(){
-            $('#picture-steps').steps('next');
-          }, 500);
-    }
+    
 
     // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
@@ -102,14 +97,13 @@ FB.getLoginStatus(function(response) {
 function loginEvents() {
   FB.api('/me', function(response) {
     console.log('response', response);
-    loadImage(response);
     logInToBackend(response);
     updateResponseText(response);
   });
 }
 
 function loadImage(response){
-  var profileImageURL = 'https://graph.facebook.com/'+ response.id +'/picture?width=720&height=720';
+  var profileImageURL = 'https://graph.facebook.com/'+ response +'/picture?width=720&height=720';
   downloadImageForCanvas(profileImageURL);
   $('.img-color img').attr('src',profileImageURL);  
   $("#hiddenToken").val(_globalObj._token);
@@ -130,6 +124,14 @@ function downloadImageForCanvas(url){
     success:function(data){
       console.log(data);
      $('#profileImage').val(data);
+
+     if($('#picture-steps').length){
+       if($('#picture-steps').steps('getCurrentIndex') == 1){
+             setTimeout(function(){
+               $('#picture-steps').steps('next');
+             }, 500);
+       }
+     }
     },
     error:function(){
       // failed request; give feedback to user
@@ -174,7 +176,7 @@ function sendAjaxLogInRequest(data){
     success:function(data){
       console.log('You are logged in');
       console.log('data:', data);
-      // loadImage(data);
+      loadImage(data);
     },
     error:function(){
         // failed request; give feedback to user
@@ -472,12 +474,13 @@ jQuery(document).ready(function($){
 	*/
 	if($.cookie('first_word') != undefined){
     console.log('we have a cookie set');
-    if($('#picture-steps').steps('getCurrentIndex') == 1){
-      setTimeout(function(){
-        $('#picture-steps').steps('next');
-      }, 500);
-
-    }
+    if($('#picture-steps').length){
+          if($('#picture-steps').steps('getCurrentIndex') == 1){
+                setTimeout(function(){
+                  $('#picture-steps').steps('next');
+                }, 500);
+          }
+     }
     setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
   }
 

@@ -235,12 +235,13 @@ jQuery(document).ready(function($){
 	*/
 	if($.cookie('first_word') != undefined){
     console.log('we have a cookie set');
-    if($('#picture-steps').steps('getCurrentIndex') == 1){
-      setTimeout(function(){
-        $('#picture-steps').steps('next');
-      }, 500);
-
-    }
+    if($('#picture-steps').length){
+          if($('#picture-steps').steps('getCurrentIndex') == 1){
+                setTimeout(function(){
+                  $('#picture-steps').steps('next');
+                }, 500);
+          }
+     }
     setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
   }
 

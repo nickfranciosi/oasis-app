@@ -9987,6 +9987,7 @@ if( typeof Object.create !== 'function'){
       var secondWord    = this.second.value.toUpperCase();
       var boxColor      = this.color.value;
       var $updatedImage = $('#updated-image');
+      var fontSettings  = '95px league-gothic';
 
       //determines how far down the image/canvas to place the words and colorbox
       var overlayPlacementModifier = 3.9;
@@ -9999,13 +10000,15 @@ if( typeof Object.create !== 'function'){
 
         setDimensionsOfCanvasToImageSize(this);
         convertTograyScale();
+        addGradient();
         drawOverlayBox(this);
-        setUpFont('95px league-gothic', 'white');
+        setUpFont(fontSettings, '#222');
 
         var firstWidth = getTextWidth(firstWord);
         addWordToCanvas(firstWord, firstWidth, this);
 
         context.save();
+        setUpFont(fontSettings, 'white');
         var secondWidth = getTextWidth(secondWord);
         flipText();
         addWordToCanvas(secondWord, secondWidth, this, true);
@@ -10046,6 +10049,21 @@ if( typeof Object.create !== 'function'){
         var intendedBoxPosition = canvas.height / overlayPlacementModifier;
         context.fillRect(0, canvas.height - intendedBoxPosition, canvas.width, canvas.height / 2);
         context.restore();
+      }
+
+
+      function addGradient(){
+        var grd=context.createLinearGradient(0,canvas.width,0,0);
+        grd.addColorStop(0,'rgba(255,255,255,1)');
+        grd.addColorStop(0.3,'rgba(255,255,255,.5)');
+        grd.addColorStop(0.4,'rgba(255,255,255,.3)');
+        grd.addColorStop(0.5,'rgba(255,255,255,0)');
+        // grd.addColorStop(0.35,"transparent");
+        grd.addColorStop(1,"transparent");
+        
+
+        context.fillStyle=grd;
+        context.fillRect(0,0,canvas.width,canvas.height - canvas.height / overlayPlacementModifier);
       }
 
       function setUpFont(fontFace, color){
