@@ -132,18 +132,18 @@
     <!-- Preloader-->
     <div class="preloader"><img src="/img/loader.gif" alt="Preloader image"></div>
     <div id="profile">
-      <section class="hero">
+      <section class="hero_profile">
         <div class="container">
           <div class="table">
             <div class="row">
               <div class="col-sm-5"><img src="/{{ $user['image_path'] }}" class="img-max"></div>
               <div class="col-sm-7">
                 <h2 class="header">{{ $user->name }}</h2>
-                <p>Next level mixtape, trust fund Brooklyn lumbersexual ennui. Gluten-free fanny pack dreamcatcher cliche, sartorial lo-fi polaroid chia. Vice ennui fap salvia, fashion axe retro sriracha slow-carb asymmetrical whatever. Pickled mixtape art party lo-fi cold-pressed roof party, locavore fixie fanny pack Shoreditch. Photo booth Echo Park whatever, cronut stumptown fap bitters organic meh.</p>
+                <p>Share your stuff on Facebok, Twitter or Download the image and do whatever you want with it.</p>
                 @if (isset($user) && Auth::check())
-                @if ($user->facebook_user_id == Auth::user()->facebook_user_id)<a href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"> <i class="fa fa-facebook"></i></a>
-                <a href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i></a>
-                <a href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i></a>
+                @if ($user->facebook_user_id == Auth::user()->facebook_user_id)<a class="btn-main" href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"><i class="fa fa-facebook"></i> Facebook</a>
+                <a class="btn-main" href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i> Twitter</a>
+                <a class="btn-main" href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i> Download </a>
                 @endif
                 @endif
               </div>
@@ -152,9 +152,9 @@
         </div>
       </section>
       <!-- Instagram feed-->
-      <section class="instragram-grid">
+      <section class="gallery-grid">
         <div class="container">
-          <h2 class="header text-center">Instagram</h2>
+          <h2 class="header text-center">The others</h2>
           <div class="row">@foreach ($allUsers as $currentUser)
             <div class="col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
           </div>

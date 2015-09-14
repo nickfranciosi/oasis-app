@@ -9,7 +9,7 @@ block title
 block content
 
   div#profile
-    section.hero
+    section.hero_profile
       .container
         .table
           .row
@@ -17,10 +17,10 @@ block content
               img.img-max(src="/{{ $user['image_path'] }}")
             div.col-sm-7
               h2.header {{ $user->name }}
-              p Next level mixtape, trust fund Brooklyn lumbersexual ennui. Gluten-free fanny pack dreamcatcher cliche, sartorial lo-fi polaroid chia. Vice ennui fap salvia, fashion axe retro sriracha slow-carb asymmetrical whatever. Pickled mixtape art party lo-fi cold-pressed roof party, locavore fixie fanny pack Shoreditch. Photo booth Echo Park whatever, cronut stumptown fap bitters organic meh.
+              p Share your stuff on Facebok, Twitter or Download the image and do whatever you want with it.
               include ./layouts/partials/shareButton.jade
     // Instagram feed
-    include ./layouts/partials/section-instagram-grid.jade
+    include ./layouts/partials/section-gallery-grid.jade
 
     // Social band
     include ./layouts/partials/section-social-band.jade

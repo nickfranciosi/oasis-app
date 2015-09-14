@@ -4,10 +4,55 @@ $nav-height: 60px;
 
 #profile {
 
-	.hero {
+	.hero_profile {
 		margin-top: $nav-height;
 		padding-top: 5em;
 		padding-bottom: 5em;
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+		color: white;
+		height: 100%;
+		max-height: 800px;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 100%;
+
+			// Fall back for gradient
+			background: rgba(65, 90, 104, 0.9);
+			// #415a68
+			background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%, rgba(2,9,9,0.8) 6%, rgba(36,145,150,1) 99%, rgba(36,145,150,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0.8)), color-stop(6%,rgba(2,9,9,0.8)), color-stop(99%,rgba(36,145,150,1)), color-stop(100%,rgba(36,145,150,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%,rgba(2,9,9,0.8) 6%,rgba(36,145,150,1) 99%,rgba(36,145,150,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%,rgba(2,9,9,0.8) 6%,rgba(36,145,150,1) 99%,rgba(36,145,150,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(45deg,  rgba(0,0,0,0.8) 0%,rgba(2,9,9,0.8) 6%,rgba(36,145,150,1) 99%,rgba(36,145,150,1) 100%); /* IE10+ */
+			background: linear-gradient(45deg,  rgba(0,0,0,0.8) 0%,rgba(2,9,9,0.8) 6%,rgba(36,145,150,1) 99%,rgba(36,145,150,1) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#249196',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		}
+
+		.header {
+			margin-top: 0.3em;
+			color: #fff;
+		}
+		p {
+			color: #fff;
+		}
+
+		a {
+			text-align: center;
+			display: inline-block;
+			color: #fff;
+			margin-top: 15px;
+			width: 100%;
+			@include screen-sm {
+				width: auto;
+			}
+		}
 
 	}
 

@@ -139,7 +139,7 @@
             <div class="row">
               <div class="col-md-12 text-center">
                 <h1 class="tagline">There's more to youth</h1>
-                <p class="tagline-text">Teens are often judged unfairly—by their peers, by their parents and by other adults. As a result, they often get stuck with labels that do not reflect who they really are. Did this happen to you?</p><a href=" https://www.oasiscenter.org/#programs" target="_blank" class="btn-main-white learn-more">Learn More at oasiscenter.org<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
+                <p class="tagline-text">Teens are often judged unfairly—by their peers, by their parents and by other adults. As a result, they often get stuck with labels that do not reflect who they really are. Did this happen to you?</p><a href="/picture" class="btn-main-white learn-more">Make Your <span class="hashtag">#MoreToYouth</span> Picture<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
@@ -164,25 +164,16 @@
       <!-- Diagnol cut-->
       <div class="cut cut-top"></div>
       <div class="container">
-        <div class="row intro-tables">
-          <div class="col-sm-12">
-            <div class="intro-table intro-table-first">
-              <div id="video-controls"></div>
-              <video id="video-promo" width="500" height="auto" poster="vid/poster.jpg">
-                <source src="vid/oasis-promo-small.mp4" type="video/mp4">
-                <source src="vid/oasis-promo.webm" type="video/webm">Your browser does not support the video tag.
-              </video>
+        <!-- Gallery feed-->
+        <section class="gallery-grid">
+          <div class="container">
+            <h2 class="header text-center">The others</h2>
+            <div class="row">@foreach ($allUsers as $currentUser)
+              <div class="col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
             </div>
+            <div class="view-more"><a class="btn btn-main">View More</a></div>
           </div>
-        </div>
-        <div class="row content-block">
-          <header class="col-sm-6">
-            <h2 class="header">Help Us Make a Stand</h2>
-          </header>
-          <div class="col-sm-6">
-            <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a href="picture" class="btn btn-main space-top">Get Started</a>
-          </div>
-        </div>
+        </section>
       </div>
     </section>
     <!-- About Oasis-->
@@ -202,14 +193,27 @@
         </div>
       </div>
     </section>
-    <!-- Instagram feed-->
-    <section class="instragram-grid">
+    <section id="ok">
       <div class="container">
-        <h2 class="header text-center">Instagram</h2>
-        <div class="row">@foreach ($allUsers as $currentUser)
-          <div class="col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
+        <div class="row intro-tables">
+          <div class="col-sm-12">
+            <div class="intro-table intro-table-first">
+              <div id="video-controls"></div>
+              <video id="video-promo" width="500" height="auto" poster="vid/poster.jpg">
+                <source src="vid/oasis-promo-small.mp4" type="video/mp4">
+                <source src="vid/oasis-promo.webm" type="video/webm">Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </div>
-        <div class="view-more"><a class="btn btn-main">View More</a></div>
+        <div class="row content-block">
+          <header class="col-sm-6">
+            <h2 class="header">Help Us Make a Stand</h2>
+          </header>
+          <div class="col-sm-6">
+            <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a href="picture" class="btn btn-main space-top">Get Started</a>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Social band-->

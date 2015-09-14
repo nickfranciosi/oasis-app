@@ -17,8 +17,7 @@ $brand-color5: #6B81B2;
 $brand-color7: #415A68;
 $brand-color8: #778D1D;
 // $brand-accent: #7B8FC7; // purple
-// $brand-accent: #50E3C2; // seafoam
-$brand-accent: blue;
+$brand-accent: #50E3C2; // seafoam
 
 // Text
 $text-base: 16px;
@@ -192,6 +191,8 @@ section {
 		padding-bottom: 10em
 	}
 }
+
+#ok { background: white; }
 
 
 .blink {
