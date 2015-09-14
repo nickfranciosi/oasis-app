@@ -30,8 +30,9 @@
 
         setDimensionsOfCanvasToImageSize(this);
         convertTograyScale();
+        addGradient();
         drawOverlayBox(this);
-        setUpFont(fontSettings, 'black');
+        setUpFont(fontSettings, '#222');
 
         var firstWidth = getTextWidth(firstWord);
         addWordToCanvas(firstWord, firstWidth, this);
@@ -78,6 +79,21 @@
         var intendedBoxPosition = canvas.height / overlayPlacementModifier;
         context.fillRect(0, canvas.height - intendedBoxPosition, canvas.width, canvas.height / 2);
         context.restore();
+      }
+
+
+      function addGradient(){
+        var grd=context.createLinearGradient(0,canvas.width,0,0);
+        grd.addColorStop(0,'rgba(255,255,255,1)');
+        grd.addColorStop(0.3,'rgba(255,255,255,.5)');
+        grd.addColorStop(0.4,'rgba(255,255,255,.3)');
+        grd.addColorStop(0.5,'rgba(255,255,255,0)');
+        // grd.addColorStop(0.35,"transparent");
+        grd.addColorStop(1,"transparent");
+        
+
+        context.fillStyle=grd;
+        context.fillRect(0,0,canvas.width,canvas.height - canvas.height / overlayPlacementModifier);
       }
 
       function setUpFont(fontFace, color){
