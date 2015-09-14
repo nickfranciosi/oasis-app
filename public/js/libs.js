@@ -9972,6 +9972,10 @@ if( typeof Object.create !== 'function'){
 
     $('#canvasForm').on('submit',function(e){
       e.preventDefault();
+
+      // Initiate loading gif
+      $('.preloader').removeClass('fadeOut').fadeIn('fast');
+
       console.log('in the form submit');
       var canvas,
       context,
@@ -9987,7 +9991,7 @@ if( typeof Object.create !== 'function'){
       //determines how far down the image/canvas to place the words and colorbox
       var overlayPlacementModifier = 3.9;
 
-      
+
 
       initiateCanvas();
 
@@ -10010,7 +10014,7 @@ if( typeof Object.create !== 'function'){
         updateImgToUserGeneratedImage();
 
         sendAjaxRequest($form.serialize());
-      };  
+      };
 
       function flipText(){
         context.rotate(Math.PI);
@@ -10026,7 +10030,7 @@ if( typeof Object.create !== 'function'){
         //fires imgObj.onload
         imageObj.src = imagePath;
         console.log(imageObj);
-      }  
+      }
 
       function setDimensionsOfCanvasToImageSize(imgRef)
       {
@@ -10042,7 +10046,7 @@ if( typeof Object.create !== 'function'){
         var intendedBoxPosition = canvas.height / overlayPlacementModifier;
         context.fillRect(0, canvas.height - intendedBoxPosition, canvas.width, canvas.height / 2);
         context.restore();
-      }  
+      }
 
       function setUpFont(fontFace, color){
         context.font = fontFace;
@@ -10059,7 +10063,7 @@ if( typeof Object.create !== 'function'){
         if(reverse){
           context.fillText(word, -(canvas.width + wordWidth) / 2, -(canvas.height - intendedWordPosition));
         }else{
-          context.fillText(word, (canvas.width - wordWidth) / 2, canvas.height - intendedWordPosition);  
+          context.fillText(word, (canvas.width - wordWidth) / 2, canvas.height - intendedWordPosition);
         }
       }
 

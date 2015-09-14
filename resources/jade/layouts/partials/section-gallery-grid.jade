@@ -4,7 +4,7 @@ section.gallery-grid
 
     .row
       @foreach ($allUsers as $currentUser)
-      .col-sm-4
+      .col-xs-6.col-sm-4
         a(href="/profile/{{$currentUser['facebook_user_id']}}")
           img.img-max(src="/{{ $currentUser['image_path'] }}")
       @endforeach
