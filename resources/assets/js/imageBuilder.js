@@ -17,6 +17,7 @@
       var secondWord    = this.second.value.toUpperCase();
       var boxColor      = this.color.value;
       var $updatedImage = $('#updated-image');
+      var fontSettings  = '95px league-gothic';
 
       //determines how far down the image/canvas to place the words and colorbox
       var overlayPlacementModifier = 3.9;
@@ -30,12 +31,13 @@
         setDimensionsOfCanvasToImageSize(this);
         convertTograyScale();
         drawOverlayBox(this);
-        setUpFont('95px league-gothic', 'white');
+        setUpFont(fontSettings, 'black');
 
         var firstWidth = getTextWidth(firstWord);
         addWordToCanvas(firstWord, firstWidth, this);
 
         context.save();
+        setUpFont(fontSettings, 'white');
         var secondWidth = getTextWidth(secondWord);
         flipText();
         addWordToCanvas(secondWord, secondWidth, this, true);
