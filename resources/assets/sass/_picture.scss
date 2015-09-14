@@ -369,7 +369,7 @@ $z-index-max-bottom:  -1000;
 
 	.connect {
 		position: absolute;
-		bottom: 30px;
+		bottom: 43%;
 		width: 100%;
 
 		@include screen-sm {
@@ -385,6 +385,9 @@ $z-index-max-bottom:  -1000;
 }
 
 .persons img {
+	display: none;
+	@include screen-sm { display: block; }
+
 	position: absolute;
 	top: -30px;
 	left: 0;
