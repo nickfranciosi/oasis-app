@@ -1,3 +1,5 @@
 
 <!-- Preloader-->
-<div class="preloader"><img src="/img/loader.gif" alt="Preloader image"/></div>
+<div class="preloader">
+  <div class="typing-indicator"><span></span><span></span><span></span></div>
+</div>

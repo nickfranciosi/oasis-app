@@ -129,7 +129,9 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader"><img src="/img/loader.gif" alt="Preloader image"></div>
+    <div class="preloader">
+      <div class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
     <form id="canvasForm" method="post" action="/build" style="display: none;">
       <input name="first" value="Dork">
       <input name="second" value="Determined">

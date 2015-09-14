@@ -300,9 +300,7 @@ a {
   left: calc(50% - 32px); }
 
 .preloader div {
-  display: none;
-  background: url(../img/pricing2.jpg) no-repeat 9999px 9999px;
-  background-position: 9999px 9999px; }
+  top: 50%; }
 
 .preloader h1 {
   height: 100%;
@@ -1256,14 +1254,18 @@ tbody {
 
 #profile .hero_profile {
   margin-top: 60px;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 1em;
+  padding-bottom: 2em;
   position: relative;
   width: 100%;
   max-width: 100%;
   color: white;
   height: 100%;
   max-height: 800px; }
+  @media (min-width: 768px) {
+    #profile .hero_profile {
+      padding-top: 5em;
+      padding-bottom: 5em; } }
   #profile .hero_profile:before {
     content: '';
     display: block;
@@ -1295,5 +1297,66 @@ tbody {
     @media (min-width: 768px) {
       #profile .hero_profile a {
         width: auto; } }
+
+.typing-indicator {
+  background-color: #E6E7ED;
+  width: auto;
+  border-radius: 50px;
+  padding: 20px;
+  display: table;
+  margin: 0 auto;
+  position: relative;
+  -webkit-animation: 2s bulge infinite ease-out;
+  animation: 2s bulge infinite ease-out; }
+  .typing-indicator:before, .typing-indicator:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #E6E7ED; }
+  .typing-indicator:after {
+    height: 10px;
+    width: 10px;
+    left: -10px;
+    bottom: -10px; }
+  .typing-indicator span {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin: 0 1px;
+    background-color: #9E9EA1;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4; }
+    .typing-indicator span:nth-of-type(1) {
+      -webkit-animation: 1s blink infinite 0.3333s;
+      animation: 1s blink infinite 0.3333s; }
+    .typing-indicator span:nth-of-type(2) {
+      -webkit-animation: 1s blink infinite 0.6666s;
+      animation: 1s blink infinite 0.6666s; }
+    .typing-indicator span:nth-of-type(3) {
+      -webkit-animation: 1s blink infinite 0.9999s;
+      animation: 1s blink infinite 0.9999s; }
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1; } }
+
+@keyframes blink {
+  50% {
+    opacity: 1; } }
+
+@-webkit-keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); } }
+
+@keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); } }
 
 /*# sourceMappingURL=main.css.map */
