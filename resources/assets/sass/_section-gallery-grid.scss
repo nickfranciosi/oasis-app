@@ -16,3 +16,16 @@
 		text-align: center;
 	}
 }
+
+#info {
+
+	.gallery-grid {
+		padding-top: 0;
+		margin-top: -70px;
+		background-color: transparent;
+
+		@include screen-sm { margin-top: -120px; }
+
+		.header { display: none; }
+	}
+}

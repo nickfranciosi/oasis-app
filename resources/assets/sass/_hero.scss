@@ -131,7 +131,7 @@
 			padding: 15px 30px;
 		}
 
-		i { display: none; @include screen-sm {display: block; } }
+		i { display: none; @include screen-sm {display: inline-block; } }
 	}
 
 }

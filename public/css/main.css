@@ -508,7 +508,7 @@ nav.navbar {
       display: none; }
       @media (min-width: 768px) {
         #intro .header-text .learn-more i {
-          display: block; } }
+          display: inline-block; } }
 
 .hero {
   position: relative;
@@ -772,6 +772,16 @@ nav.navbar {
     display: block;
     margin-top: 2em;
     text-align: center; }
+
+#info .gallery-grid {
+  padding-top: 0;
+  margin-top: -70px;
+  background-color: transparent; }
+  @media (min-width: 768px) {
+    #info .gallery-grid {
+      margin-top: -120px; } }
+  #info .gallery-grid .header {
+    display: none; }
 
 footer.footer {
   clear: both;
