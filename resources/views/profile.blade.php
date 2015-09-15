@@ -148,6 +148,7 @@
                 <a class="btn-main" href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i> Download </a>
                 @endif
                 @endif
+                <p>Blurb about Oasis</p><a href="/picture" class="btn-main">Create Your Own</a>
               </div>
             </div>
           </div>
