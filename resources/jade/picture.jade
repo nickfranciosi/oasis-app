@@ -201,7 +201,6 @@ block content
                 li
                   a(href='#') positive
 
-
     // Second step
     h2.sr-only Choose a photo
     section.step
@@ -245,6 +244,16 @@ block content
           div.color-overlay
           a.link-area.cp-fullscreen(href="#", alt="Choose a color for the image overlay",data-fullscreen="true",data-insertcode="true")
 
+  div#modal-error.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalError')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h3.header.modal-title.text-center Please Select Some More Words
+        // .modal-body
+        .modal-footer.text-center
+          button.btn.btn-main(type='button', data-dismiss='modal') Ok, got it!
 
 
 

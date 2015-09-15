@@ -484,6 +484,33 @@ jQuery(document).ready(function($){
     setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
   }
 
+  /*
+  	On scroll little helper div
+  */
+	var offset = 300,
+		offset_opacity = 1200,
+		scroll_top_duration = 700,
+		$helpPop = $('.helpPop');
+
+	$(window).scroll(function(){
+		( $(this).scrollTop() > offset ) ? $helpPop.addClass('is-visible') : $helpPop.removeClass('is-visible fade-out');
+		if( $(this).scrollTop() > offset_opacity ) {
+			$helpPop.addClass('fade-out');
+		}
+	});
+
+	//smooth scroll to top
+	$helpPop.on('click', function(event){
+		event.preventDefault();
+
+		$('#modal-help').modal('show');
+
+		// $('body,html').animate({
+		// 	scrollTop: 0 ,
+		//  	}, scroll_top_duration
+		// );
+	});
+
 });
 
 

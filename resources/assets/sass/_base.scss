@@ -379,3 +379,55 @@ section {
 }
 
 
+
+.helpPop {
+	display: inline-block;
+
+	position: fixed;
+	bottom: 40px;
+	right: 15px;
+	z-index: 1100;
+
+
+
+	overflow: hidden;
+	white-space: nowrap;
+
+	border: 2px solid blue;
+	padding: 10px;
+	color: blue;
+	font-family: $font-family-sans-serif;
+	text-transform: uppercase;
+	font-size: 21px;
+
+	visibility: hidden;
+	opacity: 0;
+
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+	-moz-transition: opacity .3s 0s, visibility 0s .3s;
+	transition: opacity .3s 0s, visibility 0s .3s;
+
+	&.is-visible, &.fade-out, .no-touch &:hover {
+		-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+		-moz-transition: opacity .3s 0s, visibility 0s 0s;
+		transition: opacity .3s 0s, visibility 0s 0s;
+	}
+
+	&.is-visible {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&.fade-out {
+		// make less visible
+		opacity: 1;
+	}
+
+	.no-touch &:hover {
+		background-color: rgba(#333, 1);
+		opacity: 1;
+	}
+
+}
+
+

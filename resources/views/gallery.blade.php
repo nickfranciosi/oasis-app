@@ -197,21 +197,7 @@
           </div>
         </div>
       </div>
-    </footer>
-    <div id="modal-error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
-      <div role="document" class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-            <h3 class="header modal-title text-center">Please Select Some More Words</h3>
-          </div>
-          <!-- .modal-body-->
-          <div class="modal-footer text-center">
-            <button type="button" data-dismiss="modal" class="btn btn-main">Ok, got it!</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    </footer><a href="#0" class="helpPop">What is this?</a>
     <script src="/js/libs.js"></script>
     <script src="/js/app.js"></script><script type="text/javascript">
 
