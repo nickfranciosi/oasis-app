@@ -17,7 +17,7 @@ function checkLoginState() {
   }else{
     FB.login(function(response) {
       statusChecker(response);
-    }, {scope: 'email'});
+    }, {scope: 'public_profile,email'});
   }
 }
 
