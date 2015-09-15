@@ -245,6 +245,8 @@ jQuery(document).ready(function($){
     setWordsOnImageFromCookie($.cookie('first_word'), $.cookie('second_word'));
   }
 
+
+
   /*
   	On scroll little helper div
   */
@@ -264,8 +266,10 @@ jQuery(document).ready(function($){
 	$helpPop.on('click', function(event){
 		event.preventDefault();
 
+		// Show a modal
 		$('#modal-help').modal('show');
 
+		// Back to top functionality if we evey wanna switch it
 		// $('body,html').animate({
 		// 	scrollTop: 0 ,
 		//  	}, scroll_top_duration
@@ -273,7 +277,6 @@ jQuery(document).ready(function($){
 	});
 
 });
-
 
 
 
