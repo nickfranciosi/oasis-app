@@ -10,8 +10,19 @@ block content
 
   div#gallery
     section.gallery-grid
+      header
+        h1.header.text-center Gallery
       .container
         .row
+
+          // TEMP
+          .col-xs-6.col-sm-4
+            a(href="/profile/{{$currentUser['facebook_user_id']}}")
+              img.img-max(src="/img/gal1.png")
+          .col-xs-6.col-sm-4
+            a(href="/profile/{{$currentUser['facebook_user_id']}}")
+              img.img-max(src="/img/gal2.png")
+
           @foreach ($allUsers as $currentUser)
           .col-xs-6.col-sm-4
             a(href="/profile/{{$currentUser['facebook_user_id']}}")

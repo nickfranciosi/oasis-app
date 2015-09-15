@@ -18,6 +18,7 @@ $brand-color7: #415A68;
 $brand-color8: #778D1D;
 // $brand-accent: #7B8FC7; // purple
 $brand-accent: #50E3C2; // seafoam
+$brand-accent: $brand-color1;
 
 // Text
 $text-base: 16px;
@@ -192,7 +193,18 @@ section {
 	}
 }
 
-#ok { background: white; }
+
+#make {
+	background: white;
+	text-align: center;
+	@include screen-sm { text-align: center; }
+
+	.content-block {
+		padding-top: 0;
+		padding-bottom: 4em;
+	}
+
+}
 
 .clearfix { clear: both; }
 

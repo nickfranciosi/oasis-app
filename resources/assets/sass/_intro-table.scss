@@ -3,9 +3,12 @@
 .intro-tables {
 	opacity: 0;
 
-	top: 40px;
+	top: 0;
+	padding-top: 2em;
+	padding-bottom: 3em;
 
 	@include screen-sm {
+		padding: 0;
 		top: -100px;
 	}
 

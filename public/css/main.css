@@ -5,7 +5,7 @@
   margin-bottom: 1em; }
 
 .color-accent {
-  color: #50E3C2 !important; }
+  color: #78B5CA !important; }
 
 html {
   height: 100%;
@@ -45,8 +45,15 @@ section {
       padding-top: 2em;
       padding-bottom: 10em; } }
 
-#ok {
-  background: white; }
+#make {
+  background: white;
+  text-align: center; }
+  @media (min-width: 768px) {
+    #make {
+      text-align: center; } }
+  #make .content-block {
+    padding-top: 0;
+    padding-bottom: 4em; }
 
 .clearfix {
   clear: both; }
@@ -197,7 +204,7 @@ ul.white-list li:before {
 
 a {
   text-decoration: none;
-  color: #50E3C2;
+  color: #78B5CA;
   transition: all 0.2s ease-in-out;
   font-weight: 300; }
   a:hover {
@@ -206,16 +213,16 @@ a {
 
 .btn-main {
   background-color: transparent;
-  border: 2px solid #50E3C2;
+  border: 2px solid #78B5CA;
   border-radius: 50px;
-  color: #50E3C2;
+  color: #78B5CA;
   font-weight: 500;
   letter-spacing: 0.03em;
   padding: 15px 50px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   .btn-main:hover, .btn-main:focus, .btn-main:active {
-    background-color: #50E3C2;
+    background-color: #78B5CA;
     color: #fff; }
 
 .btn-main-white {
@@ -228,9 +235,9 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   .btn-main-white:hover, .btn-main-white:focus, .btn-main-white:active {
-    background-color: #50E3C2;
+    background-color: #78B5CA;
     color: #fff;
-    border-color: #50E3C2;
+    border-color: #78B5CA;
     text-decoration: none; }
 
 .btn-link {
@@ -242,9 +249,9 @@ a {
   transition: all 0.2s ease-in-out; }
   .btn-link:hover, .btn-link:focus, .btn-link:active {
     text-decoration: none;
-    color: #50E3C2; }
+    color: #78B5CA; }
     .btn-link:hover .st0, .btn-link:focus .st0, .btn-link:active .st0 {
-      fill: #50E3C2; }
+      fill: #78B5CA; }
     .btn-link:hover .icon-arrow, .btn-link:focus .icon-arrow, .btn-link:active .icon-arrow {
       -webkit-transform: translate(3px, 0);
       transform: translate(3px, 0); }
@@ -324,7 +331,7 @@ nav.navbar {
   min-height: 60px;
   margin: 0;
   transition: all 0.3s ease;
-  background: #50E3C2;
+  background: transparent;
   border-radius: 0; }
   nav.navbar .navbar-header {
     width: 100%; }
@@ -334,7 +341,7 @@ nav.navbar {
   padding: 15px 0;
   margin: 0 !important; }
   .navbar-brand:hover .st0, .navbar-brand:focus .st0, .navbar-brand:active .st0 {
-    fill: #15856c; }
+    fill: #306679; }
   .navbar-brand svg .st0 {
     transition: all 0.2s ease-in-out;
     fill: #ffffff; }
@@ -348,7 +355,7 @@ nav.navbar {
     -webkit-transform: scale(1.1);
     transform: scale(1.1); }
     .navbar .btn-donate:hover .st0, .navbar .btn-donate:focus .st0, .navbar .btn-donate:active .st0 {
-      fill: #15856c; }
+      fill: #306679; }
   .navbar .btn-donate svg .st0 {
     transition: all 0.3s ease-in-out;
     fill: #ffffff; }
@@ -577,7 +584,9 @@ nav.navbar {
 
 .intro-tables {
   opacity: 0;
-  top: 40px;
+  top: 0;
+  padding-top: 2em;
+  padding-bottom: 3em;
   position: relative;
   -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
@@ -585,6 +594,7 @@ nav.navbar {
   animation-timing-function: ease-in-out; }
   @media (min-width: 768px) {
     .intro-tables {
+      padding: 0;
       top: -100px; } }
 
 .intro-tables img {
@@ -683,15 +693,17 @@ nav.navbar {
 
 .about {
   position: relative;
+  background-color: #79B6CB;
   background-image: url("../img/bg-bg.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   color: #fff;
   padding: 1em 0 3em; }
   @media (min-width: 768px) {
     .about {
-      padding: 14em 0; } }
+      background-size: contain;
+      padding: 6em 0 10em; } }
   .about:before {
     display: block;
     content: '';
@@ -700,7 +712,7 @@ nav.navbar {
     height: 100%;
     width: 100%;
     background: #4A4A4A;
-    opacity: 0.64; }
+    opacity: 0.4; }
   .about header {
     text-align: center;
     padding: 4em 0; }
@@ -717,8 +729,13 @@ nav.navbar {
 .help {
   position: relative;
   overflow: hidden;
-  padding: 4em 0;
-  background-color: white; }
+  padding: 6em 0;
+  background-color: white;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .help {
+      padding: 14em 0;
+      text-align: initial; } }
   .help:before {
     display: none; }
     @media (min-width: 768px) {
@@ -742,13 +759,10 @@ nav.navbar {
     @media (min-width: 1400px) {
       .help:before {
         background-position: 20% 20px; } }
-  @media (min-width: 768px) {
-    .help {
-      padding: 14em 0; } }
 
 .social-band {
-  padding: 3em 0;
-  background-color: #78B5CA;
+  padding: 5em 0;
+  background-color: #415A68;
   text-align: center; }
   .social-band p, .social-band ul, .social-band li, .social-band a {
     color: #fff; }
@@ -769,7 +783,7 @@ nav.navbar {
   .gallery-grid .header {
     margin-bottom: 1em; }
   .gallery-grid img {
-    margin-bottom: 1em; }
+    margin-bottom: 2em; }
   .gallery-grid .view-more {
     display: block;
     margin-top: 2em;
@@ -800,7 +814,7 @@ footer.footer {
     font-size: 11px;
     color: #fff; }
     footer.footer a:hover {
-      color: #50E3C2; }
+      color: #78B5CA; }
 
 footer .social-footer {
   padding: 0;
@@ -815,7 +829,7 @@ footer .social-footer li a {
   color: #fff; }
 
 footer .social-footer li:hover a {
-  color: #50E3C2; }
+  color: #78B5CA; }
 
 #picture-steps {
   height: 100%;
@@ -867,11 +881,11 @@ footer .social-footer li:hover a {
     display: inline-block;
     width: 50%;
     float: left;
-    background-color: #50E3C2;
+    background-color: #78B5CA;
     transition: all 0.2s ease-in-out;
     text-align: center; }
     #picture-steps .actions li:active, #picture-steps .actions li:hover {
-      background-color: #20c7a1; }
+      background-color: #4595b0; }
     #picture-steps .actions li:first-child {
       background-color: #78B5CA; }
       #picture-steps .actions li:first-child:active, #picture-steps .actions li:first-child:hover {
@@ -980,7 +994,7 @@ footer .social-footer li:hover a {
 .step-half.step-top .step-list ul > li > a {
   color: white; }
   .step-half.step-top .step-list ul > li > a:hover {
-    color: #50E3C2; }
+    color: #78B5CA; }
 
 .step-half.step-bottom .step-list ul > li:after {
   box-shadow: 0px 1px #ececec; }
@@ -988,7 +1002,7 @@ footer .social-footer li:hover a {
 .step-half.step-bottom .step-list ul > li > a {
   color: #415A68; }
   .step-half.step-bottom .step-list ul > li > a:hover {
-    color: #50E3C2; }
+    color: #78B5CA; }
 
 .step p {
   color: white; }
