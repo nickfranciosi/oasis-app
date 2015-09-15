@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Oasis - More to Youth</title>
+    <title>More to Youth - Gallery</title>
     <meta name="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
     <meta itemprop="name" content="Theres more to youth">
     <meta itemprop="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
@@ -130,126 +130,40 @@
 </svg></a></div>
     </nav>
     <!-- Preloader-->
-    <div class="preloader">
-      <div class="typing-indicator"><span></span><span></span><span></span></div>
+    <div class="preloader"><img src="/img/loader.gif" alt="Preloader image"></div>
+    <div id="gallery">
+      <section class="gallery-grid">
+        <div class="container">
+          <div class="row">@foreach ($allUsers as $currentUser)
+            <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
+          </div>
+        </div>
+      </section>
+      <!-- Social band-->
+      <section class="social-band">
+        <div class="container">
+          <p>Share <span class="hashtag">#MoreToYouth</span> with &amp; your friends</p>
+          <ul class="social-links">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- How you can help-->
+      <section class="help">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-offset-6 col-sm-6">
+              <h2 class="header">How you can help</h2>
+              <p>You have the power to make a difference in a teen’s life. At Oasis, we value each relationship we have with every supporter and count on you to help us get the job done. To find out how you can donate click on the button below.</p><a href="https://www.oasiscenter.org/donate.html" target="_blank" class="btn btn-main space-top">Make a Donation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </div>
-    <!-- Intro-->
-    <section id="intro">
-      <div class="container">
-        <div class="table">
-          <div class="header-text">
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <h1 class="tagline">There's more to youth</h1>
-                <p class="tagline-text">Teens are often judged unfairly—by their peers, by their parents and by other adults. As a result, they often get stuck with labels that do not reflect who they really are. Did this happen to you?</p><a href="/picture" class="btn-main-white learn-more">Make Your <span class="hashtag">#MoreToYouth</span> Picture<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-</style>
-<path class="st0" d="M-194.7,242.9c0.5-0.5,0.7-1.1,0.7-1.7c0-0.6-0.2-1.2-0.7-1.7l-20.1-20.1c-1-1-2.4-1-3.3,0c-1,1-1,2.4,0,3.3
-	l15.8,15.8h-40.5c-1.3,0-2.4,1.1-2.4,2.4c0,1.3,1.1,2.4,2.4,2.4h41l-16.3,16.3c-1,1-1,2.4,0,3.3c1,1,2.4,1,3.3,0L-194.7,242.9z"/>
-<path class="st0" d="M-169,241c0-27.1-22.9-50-50-50s-50,22.9-50,50s22.9,50,50,50S-169,268.1-169,241z M-264.2,241
-	c0-24.5,20.7-45.2,45.2-45.2s45.2,20.7,45.2,45.2s-20.7,45.2-45.2,45.2S-264.2,265.5-264.2,241z"/>
-</svg>
-
-</i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Intro info-->
-    <section id="info">
-      <!-- Diagnol cut-->
-      <div class="cut cut-top"></div>
-      <div class="container">
-        <!-- Gallery feed-->
-        <section class="gallery-grid">
-          <div class="container">
-            <h2 class="header text-center">The others</h2>
-            <div class="row">@foreach ($allUsers as $currentUser)
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
-            </div>
-            <div class="view-more"><a href="/gallery" class="btn btn-main">View More</a></div>
-          </div>
-        </section>
-      </div>
-    </section>
-    <!-- About Oasis-->
-    <section class="about">
-      <div class="container">
-        <header>
-          <h2 class="header">About Oasis Center</h2><span class="sub-header">Where Youth Grow, Thrive and Create Positive Change</span>
-        </header>
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3 text-center">
-            <p>Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential, turning them into happy, well-adjusted adults.</p><a href="https://www.oasiscenter.org/#programs" target="_blank" class="btn-link">Learn More at oasiscenter.org<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-</style>
-<path class="st0" d="M-194.7,242.9c0.5-0.5,0.7-1.1,0.7-1.7c0-0.6-0.2-1.2-0.7-1.7l-20.1-20.1c-1-1-2.4-1-3.3,0c-1,1-1,2.4,0,3.3
-	l15.8,15.8h-40.5c-1.3,0-2.4,1.1-2.4,2.4c0,1.3,1.1,2.4,2.4,2.4h41l-16.3,16.3c-1,1-1,2.4,0,3.3c1,1,2.4,1,3.3,0L-194.7,242.9z"/>
-<path class="st0" d="M-169,241c0-27.1-22.9-50-50-50s-50,22.9-50,50s22.9,50,50,50S-169,268.1-169,241z M-264.2,241
-	c0-24.5,20.7-45.2,45.2-45.2s45.2,20.7,45.2,45.2s-20.7,45.2-45.2,45.2S-264.2,265.5-264.2,241z"/>
-</svg>
-
-</i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="ok">
-      <div class="container">
-        <div class="row intro-tables">
-          <div class="col-sm-12">
-            <div class="intro-table intro-table-first">
-              <div id="video-controls"></div>
-              <video id="video-promo" width="500" height="auto" poster="vid/poster.jpg">
-                <source src="vid/oasis-promo-small.mp4" type="video/mp4">
-                <source src="vid/oasis-promo.webm" type="video/webm">Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-        <div class="row content-block">
-          <header class="col-sm-6">
-            <h2 class="header">Help Us Make a Stand</h2>
-          </header>
-          <div class="col-sm-6">
-            <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a href="picture" class="btn btn-main space-top">Get Started</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Social band-->
-    <section class="social-band">
-      <div class="container">
-        <p>Share <span class="hashtag">#MoreToYouth</span> with &amp; your friends</p>
-        <ul class="social-links">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-        </ul>
-      </div>
-    </section>
-    <!-- How you can help-->
-    <section class="help">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-offset-6 col-sm-6">
-            <h2 class="header">How you can help</h2>
-            <p>You have the power to make a difference in a teen’s life. At Oasis, we value each relationship we have with every supporter and count on you to help us get the job done. To find out how you can donate click on the button below.</p><a href="https://www.oasiscenter.org/donate.html" target="_blank" class="btn btn-main space-top">Make a Donation</a>
-          </div>
-        </div>
-      </div>
-    </section>
     <form id="canvasForm" method="post" action="/build" style="display: none;">
       <input name="first" value="Dork">
       <input name="second" value="Determined">

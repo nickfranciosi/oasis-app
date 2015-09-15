@@ -24,6 +24,9 @@ Route::post('build', 'ImageBuildController@proccessImage');
 // Profile page
 Route::get('profile/{fbID}', 'PagesController@showProfile');
 
+//Gallery page
+Route::get('gallery', 'PagesController@showGallery');
+
 // Login routes
 Route::post('/login', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');

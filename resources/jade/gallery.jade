@@ -1,0 +1,28 @@
+//- specify layout here
+extends ./layouts/layout.jade
+
+//- specifiy page title here
+block title
+ title More to Youth - Gallery
+
+//- page content here
+block content
+
+  div#gallery
+    section.gallery-grid
+      .container
+        .row
+          @foreach ($allUsers as $currentUser)
+          .col-xs-6.col-sm-4
+            a(href="/profile/{{$currentUser['facebook_user_id']}}")
+              img.img-max(src="/{{ $currentUser['image_path'] }}")
+          @endforeach
+
+    // Social band
+    include ./layouts/partials/section-social-band.jade
+
+    // How you can help
+    include ./layouts/partials/section-help.jade
+    //- include ./layouts/partials/share.html
+
+
