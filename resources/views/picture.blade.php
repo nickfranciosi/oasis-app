@@ -49,8 +49,13 @@
     <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token(), '_facebook_app_id'=> env('FACEBOOK_APP_ID'), '_root_url' => env('ROOT_URL'), '_login_status' => false)) !!}</script>
   </head>
   <body>
+    <!-- Preloader-->
+    <div class="preloader">
+      <div class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <!-- Nav-->
     <!-- Navbar-->
-    <nav class="navbar">
+    <nav class="navbar nav-trans">
       <div class="container"><a href="/" class="navbar-brand"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -129,10 +134,6 @@
 	</g>
 </svg></a></div>
     </nav>
-    <!-- Preloader-->
-    <div class="preloader">
-      <div class="typing-indicator"><span></span><span></span><span></span></div>
-    </div>
     <div id="picture-steps">
       <!-- First Step-->
       <h2 class="sr-only">Choose a word</h2>

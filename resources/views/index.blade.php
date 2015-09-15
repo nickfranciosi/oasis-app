@@ -49,8 +49,13 @@
     <script>var _globalObj = {!! json_encode(array('_token'=> csrf_token(), '_facebook_app_id'=> env('FACEBOOK_APP_ID'), '_root_url' => env('ROOT_URL'), '_login_status' => false)) !!}</script>
   </head>
   <body>
+    <!-- Preloader-->
+    <div class="preloader">
+      <div class="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+    <!-- Nav-->
     <!-- Navbar-->
-    <nav class="navbar">
+    <nav class="navbar nav-trans">
       <div class="container"><a href="/" class="navbar-brand"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -129,10 +134,6 @@
 	</g>
 </svg></a></div>
     </nav>
-    <!-- Preloader-->
-    <div class="preloader">
-      <div class="typing-indicator"><span></span><span></span><span></span></div>
-    </div>
     <!-- Intro-->
     <section id="intro">
       <div class="container">
@@ -173,14 +174,14 @@
             <div class="row">@foreach ($allUsers as $currentUser)
               <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
               <!-- TEMP-->
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/img/gal1.png" class="img-max"></a></div>
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/img/gal2.png" class="img-max"></a></div>
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/img/gal3.png" class="img-max"></a></div>
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/img/gal4.png" class="img-max"></a></div>
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/img/gal5.png" class="img-max"></a></div>
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/img/gal2.png" class="img-max"></a></div>
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/img/gal3.png" class="img-max"></a></div>
-              <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/img/gal4.png" class="img-max"></a></div>
+              <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal1.png" class="img-max"></a></div>
+              <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal2.png" class="img-max"></a></div>
+              <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal3.png" class="img-max"></a></div>
+              <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal4.png" class="img-max"></a></div>
+              <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal5.png" class="img-max"></a></div>
+              <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal2.png" class="img-max"></a></div>
+              <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal3.png" class="img-max"></a></div>
+              <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal4.png" class="img-max"></a></div>
             </div>
             <div class="view-more"><a href="/gallery" class="btn btn-main">View More Pictures</a></div>
           </div>
@@ -213,6 +214,7 @@
         </div>
       </div>
     </section>
+    <!-- Make-->
     <section id="make">
       <div class="container">
         <div class="row intro-tables">

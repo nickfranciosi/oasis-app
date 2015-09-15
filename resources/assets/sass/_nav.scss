@@ -13,7 +13,6 @@ nav.navbar {
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 
-	background: transparent;
 	border-radius: 0;
 
 	// @include screen-sm { top: 25px; }
@@ -58,6 +57,9 @@ nav.navbar {
 		fill: #ffffff;
 	}
 }
+
+.nav-trans { background: transparent; }
+.nav-bg { background: $brand-color1; }
 
 
 

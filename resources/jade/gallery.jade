@@ -8,6 +8,9 @@ block title
 //- page content here
 block content
 
+  // Nav
+  include /layouts/partials/nav-bg.jade
+
   div#gallery
     section.gallery-grid
       header
@@ -17,10 +20,10 @@ block content
 
           // TEMP
           .col-xs-6.col-sm-4
-            a(href="/profile/{{$currentUser['facebook_user_id']}}")
+            a(href="#")
               img.img-max(src="/img/gal1.png")
           .col-xs-6.col-sm-4
-            a(href="/profile/{{$currentUser['facebook_user_id']}}")
+            a(href="#")
               img.img-max(src="/img/gal2.png")
 
           @foreach ($allUsers as $currentUser)
