@@ -32,4 +32,13 @@ class LoginController extends Controller
        }
 
     }
+
+    public function delete()
+    {
+       if (Auth::check()) {
+         Auth::user()->delete();
+       }
+
+       return redirect('/');
+    }
 }

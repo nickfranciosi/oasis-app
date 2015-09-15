@@ -31,4 +31,7 @@ Route::get('gallery', 'PagesController@showGallery');
 Route::post('/login', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');
 
+//Delete User
+Route::get('delete', 'LoginController@delete');
+
 
