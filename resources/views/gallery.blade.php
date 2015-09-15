@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>More to Youth - Profile</title>
+    <title>More to Youth - Gallery</title>
     <meta name="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
     <meta itemprop="name" content="Theres more to youth">
     <meta itemprop="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
@@ -131,34 +131,12 @@
     </nav>
     <!-- Preloader-->
     <div class="preloader"><img src="/img/loader.gif" alt="Preloader image"></div>
-    <div id="profile">
-      <section class="hero_profile">
-        <div class="container">
-          <div class="table">
-            <div class="row">
-              <div class="col-sm-5"><img src="/{{ $user['image_path'] }}" class="img-max"></div>
-              <div class="col-sm-7">
-                <h2 class="header">{{ $user->name }}</h2>
-                @if (isset($user) && Auth::check())
-                @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
-                <p>Share your stuff on Facebok, Twitter or Download the image and do whatever you want with it.</p><a class="btn-main" href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"><i class="fa fa-facebook"></i> Facebook</a>
-                <a class="btn-main" href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i> Twitter</a>
-                <a class="btn-main" href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i> Download </a>
-                @endif
-                @endif
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Instagram feed-->
+    <div id="gallery">
       <section class="gallery-grid">
         <div class="container">
-          <h2 class="header text-center">The others</h2>
           <div class="row">@foreach ($allUsers as $currentUser)
             <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
           </div>
-          <div class="view-more"><a href="/gallery" class="btn btn-main">View More</a></div>
         </div>
       </section>
       <!-- Social band-->
