@@ -1,12 +1,12 @@
 // _profile.scss
-$nav-height: 60px;
+$nav-height:0;
 
 
 #profile {
 
 	.hero_profile {
 		margin-top: $nav-height;
-		padding-top: 1em;
+		padding-top: 4em;
 		padding-bottom: 2em;
 
 		@include screen-sm {
@@ -46,19 +46,31 @@ $nav-height: 60px;
 			margin-top: 0.3em;
 			color: #fff;
 		}
-		p {
-			color: #fff;
+		p { color: #fff; }
+
+
+
+		.dropdown-menu {
+			margin-top: 10px;
+			min-width: 240px;
+			border-radius: 0;
+		}
+		.btn .caret { margin-left: 5px; }
+		.btn {
+			color: white;
+			width: 100%;
+			margin-bottom: 10px;
+			margin-top: 5px;
+			@include screen-sm { width: auto; }
+		}
+		.btn-group {
+			width: 100%;
+			@include screen-sm { width: auto; }
 		}
 
-		a {
-			text-align: center;
-			display: inline-block;
-			color: #fff;
-			margin-top: 15px;
-			width: 100%;
-			@include screen-sm {
-				width: auto;
-			}
+		.btn-group .dropdown-menu>li>a {
+			padding: 20px;
+			i { float: right; }
 		}
 
 	}

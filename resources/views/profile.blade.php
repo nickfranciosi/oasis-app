@@ -142,14 +142,21 @@
               <div class="col-sm-5"><img src="/{{ $user['image_path'] }}" class="img-max"></div>
               <div class="col-sm-7">
                 <h2 class="header">{{ $user->name }}</h2>
-                @if (isset($user) && Auth::check())
-                @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
-                <p>Share your stuff on Facebok, Twitter or Download the image and do whatever you want with it.</p><a class="btn-main" href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"><i class="fa fa-facebook"></i> Facebook</a>
-                <a class="btn-main" href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i> Twitter</a>
-                <a class="btn-main" href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i> Download </a>
-                <div class="delete"><a id="delete-user" href="/delete" class="btn-main">Remove Me</a></div>@endif
-                @endif
-                <p>Blurb about Oasis</p><a href="/picture" class="btn-main">Create Your Own</a>
+                <p>Oasis Outreach Center encourages people to make a statement against teen stereotypes. Help us by creating or sharing your own customized profile photo.</p>
+                <div class="btn-actions"><a href="/picture" class="btn btn-main btn-create">Create Your Own</a>
+                  @if (isset($user) && Auth::check())
+                  @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
+                  <div class="btn-group"><a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-main dropdown-toggle">Share<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="" href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"><i class="fa fa-facebook"></i> Facebook</a></li>
+                      <li><a class="" href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i> Twitter</a></li>
+                      <li><a class="" href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i> Download </a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a id="delete-user" href="/delete">Remove My Picture</a></li>
+                    </ul>
+                  </div>@endif
+                  @endif
+                </div>
               </div>
             </div>
           </div>
@@ -162,14 +169,6 @@
           <div class="row">@foreach ($allUsers as $currentUser)
             <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
             <!-- TEMP-->
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal1.png" class="img-max"></a></div>
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal2.png" class="img-max"></a></div>
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal3.png" class="img-max"></a></div>
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal4.png" class="img-max"></a></div>
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal5.png" class="img-max"></a></div>
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal2.png" class="img-max"></a></div>
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal3.png" class="img-max"></a></div>
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal4.png" class="img-max"></a></div>
           </div>
           <div class="view-more"><a href="/gallery" class="btn btn-main">View More Pictures</a></div>
         </div>

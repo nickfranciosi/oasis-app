@@ -141,9 +141,7 @@
         </header>
         <div class="container">
           <div class="row">
-            <!-- TEMP-->
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal1.png" class="img-max"></a></div>
-            <div class="col-xs-6 col-sm-4"><a href="#"><img src="/img/gal2.png" class="img-max"></a></div>@foreach ($allUsers as $currentUser)
+            @foreach ($allUsers as $currentUser)
             <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
           </div>
         </div>

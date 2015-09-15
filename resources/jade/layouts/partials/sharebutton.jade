@@ -1,12 +1,25 @@
 @if (isset($user) && Auth::check())
 @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
-p Share your stuff on Facebok, Twitter or Download the image and do whatever you want with it.
-//- a(href="#")#fb-profile-share Test
-<a class="btn-main" href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"><i class="fa fa-facebook"></i> Facebook</a>
-<a class="btn-main" href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i> Twitter</a>
-<a class="btn-main" href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i> Download </a>
 
-.delete
-  a#delete-user.btn-main(href='/delete') Remove Me
+//- a(href="#")#fb-profile-share Test
+//- a.btn-main(href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}") #[i.fa.fa-facebook] Facebook
+//- a.btn-main(href="https://twitter.com/share", data-text="Oasis Awareness Campaign", data-via="oasis", data-size="large", data-count="none", data-hashtags="oasis") #[i.fa.fa-twitter] Twitter
+//- a#downloadLink.btn-main(href="/{{ $user->image_path }}", download="{{ str_slug($user->name)}}.png") #[i.fa.fa-download] Download
+
+.btn-group
+  a.btn.btn-main.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+    | Share
+    span.caret
+  ul.dropdown-menu
+    li
+      <a class="" href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"><i class="fa fa-facebook"></i> Facebook</a>
+    li
+      <a class="" href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i> Twitter</a>
+    li
+      <a class="" href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i> Download </a>
+    li.divider(role='separator')
+    li
+      a#delete-user(href='/delete') Remove My Picture
+
 @endif
 @endif
