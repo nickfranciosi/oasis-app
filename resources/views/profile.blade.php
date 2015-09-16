@@ -139,21 +139,21 @@
         <div class="container">
           <div class="table">
             <div class="row">
-              <div class="col-sm-5"><img src="/{{ $user['image_path'] }}" class="img-max"></div>
+              <div class="col-sm-5"><img src="/{{ $user['image_path'] }}" class="img-max">@if (isset($user) && Auth::check())
+                @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
+                <div class="edit-block"><a id="delete-user" href="/delete">Remove My Picture</a><a href="/picture" class="btn-edit pull-right">Edit</a></div>@endif
+                @endif
+              </div>
               <div class="col-sm-7">
                 <h2 class="header">{{ $user->name }}</h2>
                 <p>Oasis Outreach Center encourages people to make a statement against teen stereotypes. Help us by creating or sharing your own customized profile photo.</p>
-                <div class="btn-actions"><a href="/picture" class="btn btn-main btn-create">Create Your Own</a>
+                <div class="btn-actions">
                   @if (isset($user) && Auth::check())
                   @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
-                  <div class="btn-group"><a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-main dropdown-toggle">Share<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a class="" href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}"><i class="fa fa-facebook"></i> Facebook</a></li>
-                      <li><a class="" href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis"><i class="fa fa-twitter"></i> Twitter</a></li>
-                      <li><a class="" href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png"><i class="fa fa-download"></i> Download </a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a id="delete-user" href="/delete">Remove My Picture</a></li>
-                    </ul>
+                  <div class="share-block">
+                    <h3 class="sub-header">Share Your Photo</h3><a href="https://www.facebook.com/dialog/share?app_id=1467629810225761&href=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}&display=popup&picture=http://oasis-app.xyz/{!! $user->image_path !!}&redirect_uri=http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}" alt="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/share"  data-text="Oasis Awareness Campaign" data-via="oasis" data-size="large" data-count="none" data-hashtags="oasis" alt="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png" alt="Download"><i class="fa fa-download"></i></a>
                   </div>@endif
                   @endif
                 </div>

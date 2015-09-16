@@ -30,7 +30,7 @@ nav.navbar {
   // Bootstrap override
   margin: 0 !important;
 	&:hover,&:focus,&:active {
-		.st0 { fill: darken($brand-accent, 30%); }
+		.st0 { fill: darken($brand-accent, 15%); }
 	}
 
 	svg .st0 {
@@ -49,7 +49,7 @@ nav.navbar {
 
 	&:hover,&:focus,&:active {
 		@include scale(1.1);
-		.st0 { fill: darken($brand-accent, 30%); }
+		.st0 { fill: darken($brand-accent, 15%); }
 	}
 
 	svg .st0 {
