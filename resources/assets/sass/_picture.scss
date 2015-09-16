@@ -317,7 +317,14 @@ $z-index-max-bottom:  -1000;
 }
 
 .step p { color: white; }
-.step-bottom .step-content p { color: $font-base-color; }
+.step .step-bottom p { color: $font-base-color; }
+
+.step .caret {
+	margin-left: 5px;
+  border-top: 7px dashed #e7e7e7;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
 
 
 

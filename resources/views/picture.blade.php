@@ -142,11 +142,11 @@
         <div class="step-half step-top">
           <div class="container">
             <header>
-              <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a percieved word</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+              <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a word</span> <span class="caret"></span></h2>
+              <p>Choose a word that best describes how people wrongfully percieved you</p><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
               <div id="positive-list" class="step-list">
-                <p>Choose a word that best describes how you feel on the inside</p>
                 <ul>
                   <li><a href="#">Bitch</a></li>
                   <li><a href="#">Nerd</a></li>
@@ -200,11 +200,11 @@
         <div class="step-half step-bottom">
           <div class="container">
             <header>
-              <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a flip word</span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+              <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a flip word</span> <span class="caret"></span></h2>
+              <p>Choose a word that best describes how you actually thought of yourself</p><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
               <div id="negative-list" class="step-list">
-                <p>Choose a word that best describes how you feel on the inside</p>
                 <ul>
                   <li><a href="#">Thoughtful</a></li>
                   <li><a href="#">Alienated</a></li>
