@@ -13,24 +13,22 @@ block content
 
   div#gallery
     section.gallery-grid
-      header
-        h1.header.text-center Gallery
       .container
+        div.row.content-block
+          header.col-sm-6
+            h2.header Help Us Make a Stand
+          div.col-sm-6
+            p Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.
+            a.btn.btn-main.space-top(href="picture") Create Your Own
+
         .row
-
-          //- // TEMP
-          //- .col-xs-6.col-sm-4
-          //-   a(href="#")
-          //-     img.img-max(src="/img/gal1.png")
-          //- .col-xs-6.col-sm-4
-          //-   a(href="#")
-          //-     img.img-max(src="/img/gal2.png")
-
           @foreach ($allUsers as $currentUser)
           .col-xs-6.col-sm-4
             a(href="/profile/{{$currentUser['facebook_user_id']}}")
               img.img-max(src="/{{ $currentUser['image_path'] }}")
           @endforeach
+        div.text-center
+          a.btn.btn-main(href="/picture") Create Your Own
 
     // Social band
     include ./layouts/partials/section-social-band.jade

@@ -136,14 +136,19 @@
     </nav>
     <div id="gallery">
       <section class="gallery-grid">
-        <header>
-          <h1 class="header text-center">Gallery</h1>
-        </header>
         <div class="container">
-          <div class="row">
-            @foreach ($allUsers as $currentUser)
+          <div class="row content-block">
+            <header class="col-sm-6">
+              <h2 class="header">Help Us Make a Stand</h2>
+            </header>
+            <div class="col-sm-6">
+              <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a href="picture" class="btn btn-main space-top">Create Your Own</a>
+            </div>
+          </div>
+          <div class="row">@foreach ($allUsers as $currentUser)
             <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
           </div>
+          <div class="text-center"><a href="/picture" class="btn btn-main">Create Your Own</a></div>
         </div>
       </section>
       <!-- Social band-->

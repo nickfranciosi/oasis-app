@@ -130,10 +130,10 @@ section {
   bottom: 15px;
   right: 15px;
   z-index: 1100;
-  padding: 10px 20px;
-  border: 2px solid #78B5CA;
-  color: #78B5CA;
-  background: rgba(255, 255, 255, 0.8);
+  padding: 12px 20px;
+  color: white;
+  background: #78B5CA;
+  border-radius: 50%;
   overflow: hidden;
   white-space: nowrap;
   visibility: hidden;
@@ -145,7 +145,7 @@ section {
     transition: opacity 0.3s 0s, visibility 0s 0s; }
   .helpPop.is-visible {
     visibility: visible;
-    opacity: 1; }
+    opacity: 0.8; }
   .helpPop.fade-out {
     opacity: 0; }
   .no-touch .helpPop:hover {
@@ -816,10 +816,14 @@ nav.navbar {
       padding: 20px; }
 
 .gallery-grid {
-  padding-top: 5em;
+  padding-top: 3em;
   padding-bottom: 5em;
   background-color: #fff;
-  z-index: 0; }
+  z-index: 0;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .gallery-grid {
+      text-align: initial; } }
   .gallery-grid .header {
     margin-bottom: 1em; }
   .gallery-grid img {
@@ -828,6 +832,13 @@ nav.navbar {
     display: block;
     margin-top: 2em;
     text-align: center; }
+  .gallery-grid .content-block {
+    padding-top: 4em;
+    padding-bottom: 2em; }
+    @media (min-width: 768px) {
+      .gallery-grid .content-block {
+        padding-top: 7em;
+        padding-bottom: 7em; } }
 
 #info .gallery-grid {
   padding-top: 0;
@@ -838,6 +849,11 @@ nav.navbar {
       margin-top: -120px; } }
   #info .gallery-grid .header {
     display: none; }
+  #info .gallery-grid .btn {
+    width: 100%; }
+    @media (min-width: 768px) {
+      #info .gallery-grid .btn {
+        width: auto; } }
 
 footer.footer {
   clear: both;

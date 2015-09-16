@@ -2,10 +2,16 @@
 
 // Instagram grid
 .gallery-grid {
-	padding-top: 5em;
+	padding-top: 3em;
 	padding-bottom: 5em;
 	background-color: #fff;
 	z-index: 0;
+
+	text-align: center;
+
+	@include screen-sm {
+		text-align: initial;
+	}
 
 	.header { margin-bottom: 1em; }
 
@@ -15,6 +21,16 @@
 		display: block;
 		margin-top: 2em;
 		text-align: center;
+	}
+
+	.content-block {
+		padding-top: 4em;
+		padding-bottom: 2em;
+
+		@include screen-sm {
+			padding-top: 7em;
+			padding-bottom: 7em;
+		}
 	}
 }
 
@@ -28,5 +44,10 @@
 		@include screen-sm { margin-top: -120px; }
 
 		.header { display: none; }
+
+		.btn {
+			width: 100%;
+			@include screen-sm { width: auto; }
+		}
 	}
 }

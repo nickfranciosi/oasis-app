@@ -253,7 +253,7 @@
         </div>
       </div>
     </section>
-    <!-- Help modal--><a href="#0" class="helpPop">What is this?</a>
+    <!-- Help modal--><a href="#0" class="helpPop">?</a>
     <div id="modal-help" tabindex="-1" role="dialog" aria-labelledby="modalHelp" class="modal fade">
       <div role="document" class="modal-dialog">
         <div class="modal-content">
