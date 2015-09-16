@@ -1,6 +1,4 @@
 @if (isset($user) && Auth::check())
-a.btn.btn-main(href="/picture") Create Your Own Picture
-
 @if ($user->facebook_user_id == Auth::user()->facebook_user_id)
 
 div.share-block
@@ -10,3 +8,8 @@ div.share-block
   <a href="/{{ $user->image_path }}" id="downloadLink" download="{{ str_slug($user->name)}}.png" alt="Download"><i class="fa fa-download"></i></a>
 @endif
 @endif
+
+@unless (Auth::check())
+div.share-block
+  a.btn.btn-main(href="/picture") Create Your Own Picture
+@endunless
