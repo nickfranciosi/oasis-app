@@ -325,7 +325,7 @@
           </div>
         </div>
       </div>
-    </footer><a href="#0" class="helpPop">What is this?</a>
+    </footer>
     <script src="/js/libs.js"></script>
     <script src="/js/app.js"></script><script type="text/javascript">
 

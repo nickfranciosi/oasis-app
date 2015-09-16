@@ -19,7 +19,7 @@ class PagesController extends Controller
         $user = Auth::user();
         $token = Session::get('fb_user_access_token');
         $this->fb->setDefaultAccessToken((string) $token);
-        
+
         $response = $this->fb->get('/me/photos?fields=images')->getDecodedBody();
 
         return view('build')->with(compact('response', 'user'));
@@ -28,13 +28,13 @@ class PagesController extends Controller
 
     public function showIndex()
     {
-        $allUsers = User::take(3)->get();
+        $allUsers = User::take(6)->get();
         return view('index')->with(compact('allUsers'));
     }
 
     public function showPictureCreator()
     {
-        
+
         return view('picture');
     }
 
@@ -42,7 +42,7 @@ class PagesController extends Controller
     {
         $user = User::where('facebook_user_id', $fbID)->first();
         $allUsers = User::where('facebook_user_id', '!=', $user->facebook_user_id)->take(3)->get();
-        return view('profile')->with(compact('user'))->with(compact('allUsers'));   
+        return view('profile')->with(compact('user'))->with(compact('allUsers'));
     }
 
     public function showGallery()
@@ -55,7 +55,7 @@ class PagesController extends Controller
     public function showStory($id)
     {
         $user = User::where('facebook_user_id', $id)->firstOrFail();
-        
+
         return view('pages.story')->with(compact('user'));
     }
 }

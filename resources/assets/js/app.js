@@ -251,7 +251,7 @@ jQuery(document).ready(function($){
   	On scroll little helper div
   */
 	var offset = 300,
-		offset_opacity = 1200,
+		offset_opacity = 2200,
 		scroll_top_duration = 700,
 		$helpPop = $('.helpPop');
 

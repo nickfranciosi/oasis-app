@@ -385,22 +385,17 @@ section {
 	display: inline-block;
 
 	position: fixed;
-	bottom: 40px;
+	bottom: 15px;
 	right: 15px;
 	z-index: 1100;
 
-
+	padding: 10px 20px;
+	border: 2px solid $brand-color1;
+	color: $brand-color1;
+	background: rgba(255,255,255, 0.8);
 
 	overflow: hidden;
 	white-space: nowrap;
-
-	border: 2px solid $brand-accent;
-	padding: 10px;
-	color: $brand-accent;
-
-	font-family: $font-family-sans-serif;
-	text-transform: uppercase;
-	font-size: 21px;
 
 	visibility: hidden;
 	opacity: 0;
@@ -408,6 +403,10 @@ section {
 	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
 	-moz-transition: opacity .3s 0s, visibility 0s .3s;
 	transition: opacity .3s 0s, visibility 0s .3s;
+
+	&:active, &:hover, &:focus {
+		color: darken($brand-color1, 15%);
+	}
 
 	&.is-visible, &.fade-out, .no-touch &:hover {
 		-webkit-transition: opacity .3s 0s, visibility 0s 0s;
@@ -422,7 +421,7 @@ section {
 
 	&.fade-out {
 		// make less visible
-		opacity: 1;
+		opacity: 0;
 	}
 
 	.no-touch &:hover {

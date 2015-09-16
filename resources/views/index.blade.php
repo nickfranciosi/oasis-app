@@ -175,7 +175,7 @@
               <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
               <!-- TEMP-->
             </div>
-            <div class="view-more"><a href="/gallery" class="btn btn-main">View More Pictures</a></div>
+            <div class="view-more"><a href="/gallery" class="btn btn-main">View More Pictures</a><a href="/picture" class="btn btn-main">Create Your Own</a></div>
           </div>
         </section>
       </div>
@@ -253,7 +253,7 @@
         </div>
       </div>
     </section>
-    <!-- Help modal-->
+    <!-- Help modal--><a href="#0" class="helpPop">What is this?</a>
     <div id="modal-help" tabindex="-1" role="dialog" aria-labelledby="modalHelp" class="modal fade">
       <div role="document" class="modal-dialog">
         <div class="modal-content">
@@ -293,7 +293,7 @@
           </div>
         </div>
       </div>
-    </footer><a href="#0" class="helpPop">What is this?</a>
+    </footer>
     <script src="/js/libs.js"></script>
     <script src="/js/app.js"></script><script type="text/javascript">
 
