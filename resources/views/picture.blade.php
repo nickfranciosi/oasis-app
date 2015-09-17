@@ -142,11 +142,11 @@
         <div class="step-half step-top">
           <div class="container">
             <header>
-              <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a word</span> <span class="caret"></span></h2>
-              <p>Choose a word that best describes how people wrongfully percieved you</p><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+              <h2 class="header">People saw me <br/> as a <span class="selected-word">Choose a word</span> <span class="caret"></span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
               <div id="positive-list" class="step-list">
+                <p>Choose a word that best describes how people wrongfully percieved you</p>
                 <ul>
                   <li><a href="#">Bitch</a></li>
                   <li><a href="#">Nerd</a></li>
@@ -200,11 +200,11 @@
         <div class="step-half step-bottom">
           <div class="container">
             <header>
-              <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a flip word</span> <span class="caret"></span></h2>
-              <p>Choose a word that best describes how you actually thought of yourself</p><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+              <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a flip word</span> <span class="caret"></span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
               <div id="negative-list" class="step-list">
+                <p>Choose a word that best describes how you actually thought of yourself</p>
                 <ul>
                   <li><a href="#">Thoughtful</a></li>
                   <li><a href="#">Alienated</a></li>
@@ -268,22 +268,25 @@
       <!-- Third step-->
       <h2 class="sr-only">Choose a color</h2>
       <section class="step">
-        <div class="container">
-          <!-- Image step-->
-          <header>
-            <h2 class="header">Choose a Color</h2>
-          </header>
-          <div class="img-color">
-            <div id="color-block"><a href="#" data-hex="#2ecc71" style="background-color: #2ecc71;" class="color"></a><a href="#" data-hex="#3498db" style="background-color: #3498db;" class="color"></a><a href="#" data-hex="#9b59b6" style="background-color: #9b59b6;" class="color"></a><a href="#" data-hex="#CA767F" style="background-color: #CA767F;" class="color"></a><a href="#" data-hex="#F9D085" style="background-color: #F9D085" class="color"></a></div>
-            <div class="img-canvas">
-              @if(Auth::check())
-              <img class="img-canvas" src="https://graph.facebook.com/{!! Auth::user()->facebook_user_id !!}/picture?width=720&height=720" />
-              @else<img , src="../img/no-profile.png">@endif
+        <div class="step-half step-top">
+          <div class="container">
+            <!-- Image step-->
+            <header>
+              <h2 class="header">Choose a Color</h2>
+            </header>
+            <div class="img-color">
+              <div id="color-block"><a href="#" data-hex="#2ecc71" style="background-color: #2ecc71;" class="color"></a><a href="#" data-hex="#3498db" style="background-color: #3498db;" class="color"></a><a href="#" data-hex="#9b59b6" style="background-color: #9b59b6;" class="color"></a><a href="#" data-hex="#CA767F" style="background-color: #CA767F;" class="color"></a><a href="#" data-hex="#F9D085" style="background-color: #F9D085" class="color"></a></div>
+              <div class="img-canvas">
+                @if(Auth::check())
+                <img class="img-canvas" src="https://graph.facebook.com/{!! Auth::user()->facebook_user_id !!}/picture?width=720&height=720" />
+                @else<img , src="../img/no-profile.png">@endif
+              </div>
+              <div class="words"><span class="word">Goody-Two-Shoes</span><span class="word">Delinquent</span></div>
+              <div class="color-overlay"></div><a href="#" alt="Choose a color for the image overlay" data-fullscreen="true" data-insertcode="true" class="link-area cp-fullscreen"></a>
             </div>
-            <div class="words"><span class="word">Goody-Two-Shoes</span><span class="word">Delinquent</span></div>
-            <div class="color-overlay"></div><a href="#" alt="Choose a color for the image overlay" data-fullscreen="true" data-insertcode="true" class="link-area cp-fullscreen"></a>
           </div>
         </div>
+        <div class="step-half step-bottom"></div>
       </section>
     </div>
     <div id="modal-error" tabindex="-1" role="dialog" aria-labelledby="modalError" class="modal fade">

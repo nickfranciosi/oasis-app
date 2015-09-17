@@ -23,12 +23,12 @@ block content
 
           header
             h2.header People saw me <br/> as a #[span.selected-word Choose a word] #[span.caret]
-            p Choose a word that best describes how people wrongfully percieved you
             i.fa.fa-times.close
             a.link-area(href="#") Please choose a word
 
           .step-content
             .step-list#positive-list
+              p Choose a word that best describes how people wrongfully percieved you
               ul
                 li
                   a(href='#') Bitch
@@ -124,12 +124,12 @@ block content
 
           header
             h2.header But actually I <br/> was #[span.selected-word Choose a flip word] #[span.caret]
-            p Choose a word that best describes how you actually thought of yourself
             i.fa.fa-times.close
             a.link-area(href="#") Please choose a word
 
           .step-content
             .step-list#negative-list
+              p Choose a word that best describes how you actually thought of yourself
               ul
                 li
                   a(href='#') Thoughtful
@@ -229,28 +229,32 @@ block content
     h2.sr-only Choose a color
     section.step
 
-      div.container
-        // Image step
-        header
-          h2.header Choose a Color
-        .img-color
-          #color-block
-            a.color(href="#", data-hex="#2ecc71" style="background-color: #2ecc71;")
-            a.color(href="#", data-hex="#3498db" style="background-color: #3498db;")
-            a.color(href="#", data-hex="#9b59b6" style="background-color: #9b59b6;")
-            a.color(href="#", data-hex="#CA767F" style="background-color: #CA767F;")
-            a.color(href="#", data-hex="#F9D085" style="background-color: #F9D085")
-          .img-canvas
-            @if(Auth::check())
-            <img class="img-canvas" src="https://graph.facebook.com/{!! Auth::user()->facebook_user_id !!}/picture?width=720&height=720" />
-            @else
-            img(, src="../img/no-profile.png")
-            @endif
-          div.words
-            span.word Goody-Two-Shoes
-            span.word Delinquent
-          div.color-overlay
-          a.link-area.cp-fullscreen(href="#", alt="Choose a color for the image overlay",data-fullscreen="true",data-insertcode="true")
+      .step-half.step-top
+
+        div.container
+          // Image step
+          header
+            h2.header Choose a Color
+          .img-color
+            #color-block
+              a.color(href="#", data-hex="#2ecc71" style="background-color: #2ecc71;")
+              a.color(href="#", data-hex="#3498db" style="background-color: #3498db;")
+              a.color(href="#", data-hex="#9b59b6" style="background-color: #9b59b6;")
+              a.color(href="#", data-hex="#CA767F" style="background-color: #CA767F;")
+              a.color(href="#", data-hex="#F9D085" style="background-color: #F9D085")
+            .img-canvas
+              @if(Auth::check())
+              <img class="img-canvas" src="https://graph.facebook.com/{!! Auth::user()->facebook_user_id !!}/picture?width=720&height=720" />
+              @else
+              img(, src="../img/no-profile.png")
+              @endif
+            div.words
+              span.word Goody-Two-Shoes
+              span.word Delinquent
+            div.color-overlay
+            a.link-area.cp-fullscreen(href="#", alt="Choose a color for the image overlay",data-fullscreen="true",data-insertcode="true")
+
+      .step-half.step-bottom
 
   include /layouts/partials/modal-error.jade
 

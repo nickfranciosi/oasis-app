@@ -26,6 +26,7 @@ $text-base: 16px;
 $text-small: 0.8rem;
 
 // Screens
+$screen-sms: 360px;
 $screen-sm: 768px;
 $screen-md: 960px;
 $screen-lg: 1100px;
@@ -44,6 +45,13 @@ $font-base-color: 								#8a8e91;
 // @include screen-xs { }
 @mixin screen-xs {
 	@media (max-width: #{$screen-sm - 1}) {
+		@content;
+	}
+}
+// @include screen-sm-5 { }
+// Wacked out media querie I need
+@mixin screen-sms {
+	@media (min-width: #{$screen-sms}) {
 		@content;
 	}
 }

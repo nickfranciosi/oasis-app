@@ -1224,28 +1224,50 @@ footer .social-footer li:hover a {
   .words span {
     position: relative;
     display: block;
-    font-size: 56px;
+    font-size: 30px;
     line-height: 1em;
     margin: 0;
     padding: 0; }
+    @media (min-height: 450px) {
+      .words span {
+        font-size: 44px; } }
+    @media (min-width: 360px) {
+      .words span {
+        font-size: 50px; } }
     @media (min-width: 768px) {
       .words span {
         font-size: 64px; } }
   .words span:first-child {
-    top: -7px;
+    top: -3px;
     color: #333; }
+    @media (min-height: 450px) {
+      .words span:first-child {
+        top: -4px; } }
+    @media (min-width: 768px) {
+      .words span:first-child {
+        top: -8px; } }
   .words span:last-child {
-    top: -26px;
+    top: -12px;
     transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg); }
+    @media (min-height: 450px) {
+      .words span:last-child {
+        top: -19px; } }
     @media (min-width: 768px) {
       .words span:last-child {
-        top: -28px; } }
+        top: -30px; } }
 
 .img-color {
   position: relative;
-  max-width: 300px;
+  max-width: 170px;
   margin: 20px auto 0; }
+  @media (min-height: 450px) {
+    .img-color {
+      max-width: 250px; } }
+  @media (min-width: 360px) {
+    .img-color {
+      max-width: 287px; } }
   @media (min-width: 768px) {
     .img-color {
       max-width: 350px;
@@ -1286,6 +1308,10 @@ footer .social-footer li:hover a {
     top: 0;
     opacity: 0.9;
     z-index: 1000; }
+    @media (min-width: 360px) {
+      .img-color #color-block {
+        top: initial;
+        bottom: -25%; } }
     .img-color #color-block ul {
       margin: 0;
       padding: 0;
@@ -1294,7 +1320,7 @@ footer .social-footer li:hover a {
       display: inline;
       margin: 0 0 0.5em 0; }
   .img-color .color {
-    height: 60px;
+    height: 50px;
     width: 20%;
     display: inline-block;
     background-color: gray;
