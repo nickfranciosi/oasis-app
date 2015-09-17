@@ -529,7 +529,8 @@ $overlay-height: 25%;
 	#color-block {
 		position: absolute;
 		width: 100%;
-		bottom: -25%;
+		top: 0;
+		opacity: 0.9;
 		z-index: 1000;
 
 		ul {
@@ -545,7 +546,7 @@ $overlay-height: 25%;
 	}
 
 	.color {
-		height: 55px;
+		height: 60px;
 		width: 20%;
 		display: inline-block;
 		background-color: gray;
@@ -559,6 +560,13 @@ $overlay-height: 25%;
 		&:nth-child(4) { background-color: $brand-color4; }
 		&:nth-child(5) { background-color: $brand-color5; }
 
+		&:focus {
+			transform: scale(0.8);
+			-webkit-transform: scale(0.8);
+			-ms-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+
+		}
 	}
 
 }

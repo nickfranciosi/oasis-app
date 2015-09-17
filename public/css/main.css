@@ -1283,7 +1283,8 @@ footer .social-footer li:hover a {
   .img-color #color-block {
     position: absolute;
     width: 100%;
-    bottom: -25%;
+    top: 0;
+    opacity: 0.9;
     z-index: 1000; }
     .img-color #color-block ul {
       margin: 0;
@@ -1293,7 +1294,7 @@ footer .social-footer li:hover a {
       display: inline;
       margin: 0 0 0.5em 0; }
   .img-color .color {
-    height: 55px;
+    height: 60px;
     width: 20%;
     display: inline-block;
     background-color: gray;
@@ -1310,6 +1311,11 @@ footer .social-footer li:hover a {
       background-color: #F9D085; }
     .img-color .color:nth-child(5) {
       background-color: #6B81B2; }
+    .img-color .color:focus {
+      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -moz-transform: scale(0.8); }
 
 #status {
   position: absolute;
