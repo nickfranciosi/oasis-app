@@ -259,6 +259,13 @@ a {
   .btn-main:hover, .btn-main:focus, .btn-main:active {
     background-color: #50E3C2;
     color: #fff; }
+  .btn-main.cta {
+    display: inline-block;
+    background-color: #50E3C2;
+    color: #fff;
+    border: none; }
+    .btn-main.cta:hover {
+      background-color: #20c7a1; }
 
 .btn-main-white {
   display: inline-block;
@@ -346,7 +353,7 @@ a {
   left: calc(50% - 32px); }
 
 .preloader div {
-  top: 38%;
+  top: 30%;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg); }
@@ -535,15 +542,15 @@ nav.navbar {
     opacity: 0.6;
     background-color: #78B5CA;
     -webkit-animation-name: color;
-    -webkit-animation-duration: 8s;
+    -webkit-animation-duration: 20s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-delay: 1s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     -webkit-animation-fill-mode: both;
     -webkit-animation-play-state: running;
-    -webkit-animation: color 8s ease-in-out 1s infinite alternate both running;
-    animation: color 8s ease-in-out 1s infinite alternate both running; }
+    -webkit-animation: color 20s ease-in-out 1s infinite alternate both running;
+    animation: color 20s ease-in-out 1s infinite alternate both running; }
 
 @-webkit-keyframes color {
   0% {
@@ -1019,8 +1026,11 @@ footer .social-footer li:hover a {
     font-size: 14px; }
 
 .step header {
-  padding: 8% 0 0;
+  padding: 2% 0 0;
   opacity: 1; }
+  @media (min-width: 768px) {
+    .step header {
+      padding-top: 8%; } }
   .step header .selected-word {
     color: #78B5CA; }
   .step header h2:after {
@@ -1196,7 +1206,7 @@ footer .social-footer li:hover a {
   width: 100%;
   bottom: 0;
   opacity: 0.6;
-  background-color: #29ADA8;
+  background-color: #2ecc71;
   text-align: center;
   transition: all 0.3s ease-in-out; }
 
@@ -1214,7 +1224,7 @@ footer .social-footer li:hover a {
   .words span {
     position: relative;
     display: block;
-    font-size: 38px;
+    font-size: 56px;
     line-height: 1em;
     margin: 0;
     padding: 0; }
@@ -1225,7 +1235,7 @@ footer .social-footer li:hover a {
     top: -7px;
     color: #333; }
   .words span:last-child {
-    top: -18px;
+    top: -26px;
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg); }
     @media (min-width: 768px) {
@@ -1234,8 +1244,8 @@ footer .social-footer li:hover a {
 
 .img-color {
   position: relative;
-  max-width: 200px;
-  margin: 0 auto; }
+  max-width: 300px;
+  margin: 20px auto 0; }
   @media (min-width: 768px) {
     .img-color {
       max-width: 350px;
@@ -1270,6 +1280,36 @@ footer .social-footer li:hover a {
     /* IE6-9 */ }
   .img-color .link-area {
     z-index: 500; }
+  .img-color #color-block {
+    position: absolute;
+    width: 100%;
+    bottom: -25%;
+    z-index: 1000; }
+    .img-color #color-block ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+    .img-color #color-block ul > li {
+      display: inline;
+      margin: 0 0 0.5em 0; }
+  .img-color .color {
+    height: 55px;
+    width: 20%;
+    display: inline-block;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    margin: 0; }
+    .img-color .color:nth-child(1) {
+      background-color: #78B5CA; }
+    .img-color .color:nth-child(2) {
+      background-color: #CA767F; }
+    .img-color .color:nth-child(3) {
+      background-color: #29ADA8; }
+    .img-color .color:nth-child(4) {
+      background-color: #F9D085; }
+    .img-color .color:nth-child(5) {
+      background-color: #6B81B2; }
 
 #status {
   position: absolute;

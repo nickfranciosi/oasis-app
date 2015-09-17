@@ -233,8 +233,13 @@ block content
         // Image step
         header
           h2.header Choose a Color
-          p Click the photo to pick a different color
         .img-color
+          #color-block
+            a.color(href="#", data-hex="#2ecc71" style="background-color: #2ecc71;")
+            a.color(href="#", data-hex="#3498db" style="background-color: #3498db;")
+            a.color(href="#", data-hex="#9b59b6" style="background-color: #9b59b6;")
+            a.color(href="#", data-hex="#CA767F" style="background-color: #CA767F;")
+            a.color(href="#", data-hex="#F9D085" style="background-color: #F9D085")
           .img-canvas
             @if(Auth::check())
             <img class="img-canvas" src="https://graph.facebook.com/{!! Auth::user()->facebook_user_id !!}/picture?width=720&height=720" />

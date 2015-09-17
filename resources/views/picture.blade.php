@@ -272,9 +272,9 @@
           <!-- Image step-->
           <header>
             <h2 class="header">Choose a Color</h2>
-            <p>Click the photo to pick a different color</p>
           </header>
           <div class="img-color">
+            <div id="color-block"><a href="#" data-hex="#2ecc71" style="background-color: #2ecc71;" class="color"></a><a href="#" data-hex="#3498db" style="background-color: #3498db;" class="color"></a><a href="#" data-hex="#9b59b6" style="background-color: #9b59b6;" class="color"></a><a href="#" data-hex="#CA767F" style="background-color: #CA767F;" class="color"></a><a href="#" data-hex="#F9D085" style="background-color: #F9D085" class="color"></a></div>
             <div class="img-canvas">
               @if(Auth::check())
               <img class="img-canvas" src="https://graph.facebook.com/{!! Auth::user()->facebook_user_id !!}/picture?width=720&height=720" />

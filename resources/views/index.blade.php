@@ -142,7 +142,7 @@
             <div class="row">
               <div class="col-md-12 text-center">
                 <h1 class="tagline">There's more to youth</h1>
-                <p class="tagline-text">Teens are often judged unfairly—by their peers, by their parents and by other adults. As a result, they often get stuck with labels that do not reflect who they really are. Did this happen to you?</p><a href="/picture" class="btn-main-white learn-more">Make Your <span class="hashtag">#MoreToYouth</span> Picture<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
+                <p class="tagline-text">Teens are often judged unfairly—by their peers, by their parents and by other adults. As a result, they often get stuck with labels that do not reflect who they really are. Did this happen to you?</p><a href="/picture" class="btn-main cta learn-more">Make Your <span class="hashtag">#MoreToYouth</span> Picture<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
@@ -225,7 +225,7 @@
             <h2 class="header">Help Us Make a Stand</h2>
           </header>
           <div class="col-sm-6">
-            <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a href="picture" class="btn btn-main space-top">Get Started</a>
+            <p>Our current campaign encourages people to make a statement against teen stereotypes. Help us by creating your own customized profile photo.</p><a href="picture" class="btn btn-main cta space-top">Get Started</a>
           </div>
         </div>
       </div>

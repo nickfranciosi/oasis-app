@@ -35,7 +35,7 @@
 
     // Not sure why, but need all keyframe declarations seperate for sarafi to work right
     -webkit-animation-name: color;
-		-webkit-animation-duration: 8s;
+		-webkit-animation-duration: 20s;
 		-webkit-animation-timing-function: ease-in-out;
 		-webkit-animation-delay: 1s;
 		-webkit-animation-iteration-count: infinite;
@@ -43,8 +43,8 @@
 		-webkit-animation-fill-mode: both;
 		-webkit-animation-play-state: running;
 
-     -moz-animation: color 8s ease-in-out 1s infinite alternate both running;
-     animation: color 8s ease-in-out 1s infinite alternate both running;
+     -moz-animation: color 20s ease-in-out 1s infinite alternate both running;
+     animation: color 20s ease-in-out 1s infinite alternate both running;
 	}
 
 }

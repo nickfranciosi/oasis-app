@@ -27,6 +27,15 @@
 		background-color: $brand-accent;
 		color: #fff;
 	}
+
+	&.cta {
+		display: inline-block;
+		background-color: $brand-accent;
+		color: #fff;
+		border: none;
+
+		&:hover { background-color: darken($brand-accent, 15%); }
+	}
 }
 
 .btn-main-white {

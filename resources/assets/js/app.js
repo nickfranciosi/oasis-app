@@ -1,7 +1,6 @@
 // Document ready
 jQuery(document).ready(function($){
 
-
 	/*
 		Diagonal cut across homepage
 	*/
@@ -189,20 +188,20 @@ jQuery(document).ready(function($){
 		Initiate Color Picker
 	*/
 	// Color picker
-	// http://www.bamdaa.com/demo/color-picker/
-	$(".cp-fullscreen").colorPicker({
-		// Get colors from json
-		colors: 'colors.json',
+	// // http://www.bamdaa.com/demo/color-picker/
+	// $(".cp-fullscreen").colorPicker({
+	// 	// Get colors from json
+	// 	colors: 'colors.json',
 
-		// Fill background overlay
-	  onSelect: function(ui, color){
-	    $('.color-overlay').css('background-color', color);
-	    console.log(color);
+	// 	// Fill background overlay
+	//   onSelect: function(ui, color){
+	//     $('.color-overlay').css('background-color', color);
+	//     console.log(color);
 
-	    // Add to the form
-	    $('#canvasForm input[name="color"]').val(color);
-	  }
-	});
+	//     // Add to the form
+	//     $('#canvasForm input[name="color"]').val(color);
+	//   }
+	// });
 
 
 
@@ -274,6 +273,24 @@ jQuery(document).ready(function($){
 		// 	scrollTop: 0 ,
 		//  	}, scroll_top_duration
 		// );
+	});
+
+
+	/*
+		Color picker thing
+	*/
+
+	$('#color-block .color').on('click', function(color) {
+		event.preventDefault();
+
+		var color = $(this).data('hex');
+		$('.color-overlay').css('background-color', color);
+    // Add to the form
+    $('#canvasForm input[name="color"]').val(color);
+
+    // Wjay color was it man?
+    console.log(color);
+
 	});
 
 });
