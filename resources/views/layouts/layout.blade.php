@@ -50,7 +50,7 @@
   <body>
     <!-- Preloader-->
     <div class="preloader">
-      <div class="typing-indicator"><span></span><span></span><span></span></div>
+      <div class="loader"></div>
     </div>
     <form id="canvasForm" method="post" action="/build" style="display: none;">
       <input name="first" value="Dork">
