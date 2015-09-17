@@ -18,6 +18,8 @@
 		> li > a {
 			font-size: 30px;
 			padding: 20px;
+
+			&:hover { color: $brand-accent; }
 		}
 	}
 }

@@ -399,6 +399,13 @@ nav.navbar {
 
 .nav-bg {
   background: #78B5CA; }
+  .nav-bg .navbar-brand:hover .st0, .nav-bg .navbar-brand:focus .st0, .nav-bg .navbar-brand:active .st0 {
+    fill: #4595b0; }
+  .nav-bg .btn-donate:hover, .nav-bg .btn-donate:focus, .nav-bg .btn-donate:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+    .nav-bg .btn-donate:hover .st0, .nav-bg .btn-donate:focus .st0, .nav-bg .btn-donate:active .st0 {
+      fill: #4595b0; }
 
 /* Mobile Nav */
 .mobile-nav {
@@ -815,6 +822,8 @@ nav.navbar {
     .social-band .social-links > li > a {
       font-size: 30px;
       padding: 20px; }
+      .social-band .social-links > li > a:hover {
+        color: #50E3C2; }
 
 .gallery-grid {
   padding-top: 3em;

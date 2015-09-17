@@ -59,7 +59,23 @@ nav.navbar {
 }
 
 .nav-trans { background: transparent; }
-.nav-bg { background: $brand-color1; }
+
+.nav-bg {
+	background: $brand-color1;
+
+	.navbar-brand {
+		&:hover,&:focus,&:active {
+			.st0 { fill: darken($brand-color1, 15%); }
+		}
+	}
+
+	.btn-donate {
+		&:hover,&:focus,&:active {
+			@include scale(1.1);
+			.st0 { fill: darken($brand-color1, 15%); }
+		}
+	}
+}
 
 
 
