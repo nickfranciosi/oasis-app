@@ -559,6 +559,12 @@ $overlay-height: 25%;
 		&:nth-child(3) { background-color: $brand-color3; }
 		&:nth-child(4) { background-color: $brand-color4; }
 		&:nth-child(5) { background-color: $brand-color5; }
+
+		&:focus, &:active {
+			        transform: scale(0.8);
+			-webkit-transform: scale(0.8);
+			    -ms-transform: scale(0.8);
+		}
 	}
 
 }

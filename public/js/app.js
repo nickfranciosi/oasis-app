@@ -524,12 +524,6 @@ jQuery(document).ready(function($){
 
 		var color = $(this).data('hex');
 
-		$(this).css({
-			'-webkit-transform' : 'scale(0.8)',
-			'-ms-transform' : 'scale(0.8)',
-			'transform' : 'scale(0.8)'
-		});
-
 		$('.color-overlay').css('background-color', color);
     // Add to the form
     $('#canvasForm input[name="color"]').val(color);

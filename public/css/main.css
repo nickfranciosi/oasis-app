@@ -1311,6 +1311,10 @@ footer .social-footer li:hover a {
       background-color: #F9D085; }
     .img-color .color:nth-child(5) {
       background-color: #6B81B2; }
+    .img-color .color:focus, .img-color .color:active {
+      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8); }
 
 #status {
   position: absolute;
