@@ -45,8 +45,10 @@
         context.restore();
 
         updateImgToUserGeneratedImage();
-
+        deleteStepsCookie();
         sendAjaxRequest($form.serialize());
+
+        
       };
 
       function flipText(){
@@ -149,6 +151,10 @@
             console.log("error data");
           }
         });
+      }
+
+      function deleteStepsCookie(){
+        $.cookie('jQu3ry_5teps_St@te_picture-steps', 0);
       }
 
     });

@@ -10015,8 +10015,10 @@ if( typeof Object.create !== 'function'){
         context.restore();
 
         updateImgToUserGeneratedImage();
-
+        deleteStepsCookie();
         sendAjaxRequest($form.serialize());
+
+        
       };
 
       function flipText(){
@@ -10119,6 +10121,10 @@ if( typeof Object.create !== 'function'){
             console.log("error data");
           }
         });
+      }
+
+      function deleteStepsCookie(){
+        $.cookie('jQu3ry_5teps_St@te_picture-steps', 0);
       }
 
     });
