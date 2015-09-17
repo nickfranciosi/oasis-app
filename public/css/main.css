@@ -1302,19 +1302,15 @@ footer .social-footer li:hover a {
     padding: 10px;
     margin: 0; }
     .img-color .color:nth-child(1) {
-      background-color: #78B5CA; }
+      background-color: #2ecc71; }
     .img-color .color:nth-child(2) {
-      background-color: #CA767F; }
+      background-color: #3498db; }
     .img-color .color:nth-child(3) {
-      background-color: #29ADA8; }
+      background-color: #9b59b6; }
     .img-color .color:nth-child(4) {
-      background-color: #F9D085; }
+      background-color: #CA767F; }
     .img-color .color:nth-child(5) {
-      background-color: #6B81B2; }
-    .img-color .color:focus, .img-color .color:active {
-      transform: scale(0.8);
-      -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8); }
+      background-color: #F9D085; }
 
 #status {
   position: absolute;

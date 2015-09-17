@@ -519,10 +519,26 @@ jQuery(document).ready(function($){
 		Color picker thing
 	*/
 
+	$('#color-block .color:first-child').css({
+		'-webkit-transform' : 'scale(0.8)',
+		'-ms-transform' : 'scale(0.8)',
+		'transform' : 'scale(0.8)'
+	});
+
 	$('#color-block .color').on('click', function(color) {
+
+	// Remove the css bitch
+	$('#color-block .color').removeAttr("style");
+
 		event.preventDefault();
 
 		var color = $(this).data('hex');
+
+		$(this).css({
+			'-webkit-transform' : 'scale(0.8)',
+			'-ms-transform' : 'scale(0.8)',
+			'transform' : 'scale(0.8)'
+		});
 
 		$('.color-overlay').css('background-color', color);
     // Add to the form
