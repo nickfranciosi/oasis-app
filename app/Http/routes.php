@@ -38,3 +38,7 @@ Route::get('users', function(){
     return App\User::all();
 });
 
+Route::get('users/delete/{id}', function($id){
+    App\User::find($id)->delete();
+});
+
