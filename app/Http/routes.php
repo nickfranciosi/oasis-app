@@ -34,11 +34,4 @@ Route::get('/logout', 'LoginController@logout');
 //Delete User
 Route::get('delete', 'LoginController@delete');
 
-Route::get('users', function(){
-    return App\User::all();
-});
-
-Route::get('users/delete/{id}', function($id){
-    App\User::find($id)->delete();
-});
 
