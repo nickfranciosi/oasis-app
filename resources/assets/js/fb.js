@@ -216,6 +216,14 @@ $(function(){
 	  checkLoginState();
 	 });
 
+  $(document).delegate('#delete-user', 'click', function(e){
+    var route = $(this).attr('href');
+    console.log(route);
+    FB.logout(function(response){
+      window.location(route);
+    });
+  });
+
   // Facebook logout event
   $(document).delegate('#fbLogout','click', function(e){
    e.preventDefault();

@@ -28,7 +28,7 @@ class PagesController extends Controller
 
     public function showIndex()
     {
-        $allUsers = User::take(6)->get();
+        $allUsers = User::whereNotNull('image_path')->take(6)->get();
         return view('index')->with(compact('allUsers'));
     }
 
@@ -41,13 +41,13 @@ class PagesController extends Controller
     public function showProfile($fbID)
     {
         $user = User::where('facebook_user_id', $fbID)->first();
-        $allUsers = User::where('facebook_user_id', '!=', $user->facebook_user_id)->take(3)->get();
+        $allUsers = User::where('facebook_user_id', '!=', $user->facebook_user_id)->whereNotNull('image_path')->take(3)->get();
         return view('profile')->with(compact('user'))->with(compact('allUsers'));
     }
 
     public function showGallery()
     {
-        $allUsers = User::all();
+        $allUsers = User::whereNotNull('image_path')->get();
 
         return view('gallery')->with(compact('allUsers'));
     }

@@ -35,10 +35,16 @@ class LoginController extends Controller
 
     public function delete()
     {
-       if (Auth::check()) {
-         Auth::user()->delete();
-       }
 
-       return redirect('/');
+       $user = Auth::user();
+       $user = User::find(Auth::user()->id);
+
+       Auth::logout();
+
+       if ($user->delete()) {
+
+            return redirect('/');
+       }
+       
     }
 }
