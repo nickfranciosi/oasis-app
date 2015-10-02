@@ -121,6 +121,9 @@ $z-index-max-bottom:  -1000;
 	padding: 2% 0 0;
 
 	@include screen-sm { padding-top: 8%; }
+	@media (max-height: 750px) {
+		padding-top: 2%;
+	}
 
 	opacity: 1;
 
@@ -398,6 +401,9 @@ $z-index-max-bottom:  -1000;
 	display: none;
 	@include screen-sm { display: block; }
 
+	// Weight height media queries
+	@media (max-height: 750px) { display: none; }
+
 	position: absolute;
 	top: -30px;
 	left: 0;
@@ -501,7 +507,7 @@ $overlay-height: 25%;
 
 	@include screen-sm {
 		max-width: 350px;
-		margin: 4em auto;
+		margin: 1em auto;
 	}
 
 	img {
@@ -550,6 +556,10 @@ $overlay-height: 25%;
 		@include screen-sms {
 			top: initial;
 			bottom: -25%;
+		}
+
+		@media (max-height: 550px) {
+			top: 0;
 		}
 
 		opacity: 0.9;

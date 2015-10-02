@@ -12,7 +12,7 @@ function checkLoginState() {
   // });
   $.cookie('first_word', $('#canvasForm input[name="first"]').val());
   $.cookie('second_word', $('#canvasForm input[name="second"]').val());
-  if( navigator.userAgent.match('CriOS') ){    
+  if( navigator.userAgent.match('CriOS') ){
       window.open('https://www.facebook.com/dialog/oauth?client_id='+ _globalObj._facebook_app_id +'&redirect_uri='+ document.location.href + '&scope=email', '', null);
   }else{
     FB.login(function(response) {
@@ -36,7 +36,7 @@ function statusChecker(response){
     buttonLogout.show();
     // Set status
     _globalObj._login_status  = true;
-    
+
 
     // logInToBackend(response.authResponse.userID);
   } else if (response.status === 'not_authorized') {
@@ -96,7 +96,7 @@ FB.getLoginStatus(function(response) {
 // successful.  See statusChangeCallback() for when this call is made.
 function loginEvents() {
   FB.api('/me', function(response) {
-    console.log('response', response);
+    // console.log('response', response);
     logInToBackend(response);
     updateResponseText(response);
   });
@@ -105,12 +105,12 @@ function loginEvents() {
 function loadImage(response){
   var profileImageURL = 'https://graph.facebook.com/'+ response +'/picture?width=720&height=720';
   downloadImageForCanvas(profileImageURL);
-  $('.img-color img').attr('src',profileImageURL);  
+  $('.img-color img').attr('src',profileImageURL);
   $("#hiddenToken").val(_globalObj._token);
 }
 
 function downloadImageForCanvas(url){
-  console.log('Download the image ');
+  // console.log('Download the image ');
   var data = {
       "_token" : _globalObj._token,
       "url" : url
@@ -122,7 +122,7 @@ function downloadImageForCanvas(url){
     data: data,
     dataType: 'text',
     success:function(data){
-      console.log(data);
+      // console.log(data);
      $('#profileImage').val(data);
 
      if($('#picture-steps').length){
@@ -147,7 +147,7 @@ function updateResponseText(response){
 }
 
 function logInToBackend(response){
-  console.log('log in user with fbID: ' + response.id)
+  // console.log('log in user with fbID: ' + response.id)
   var data = {
     "_token" : _globalObj._token,
     "facebook_user_id" : response.id,
@@ -159,7 +159,7 @@ function logInToBackend(response){
 }
 
 function logOutOfBackend(){
-  console.log('log out user with fbID');
+  // console.log('log out user with fbID');
   var data = {
     "_token" : _globalObj._token
   }
@@ -174,13 +174,13 @@ function sendAjaxLogInRequest(data){
     data: data,
     dataType: 'text',
     success:function(data){
-      console.log('You are logged in');
-      console.log('data:', data);
+      // console.log('You are logged in');
+      // console.log('data:', data);
       loadImage(data);
     },
     error:function(){
         // failed request; give feedback to user
-        console.log("error data");
+        // console.log("error data");
       }
     });
 
@@ -192,12 +192,12 @@ function sendAjaxLogOutRequest(data){
     url: '/logout',
     dataType: 'text',
     success:function(data){
-      console.log('You are logged out');
-      console.log('data:', data);
+      // console.log('You are logged out');
+      // console.log('data:', data);
     },
     error:function(){
         // failed request; give feedback to user
-        console.log("error data");
+        // console.log("error with data");
       }
     });
 
@@ -219,7 +219,7 @@ $(function(){
   // Facebook logout event
   $(document).delegate('#fbLogout','click', function(e){
    e.preventDefault();
-   console.log('you clicked the fb logout');
+   // console.log('you clicked the fb logout');
    FB.logout(function(response) {
     var buttonLogin = $('.btn-main.login');
     var buttonLogout = $('.btn-main.logout');

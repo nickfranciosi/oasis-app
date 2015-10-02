@@ -144,14 +144,14 @@ jQuery(document).ready(function($){
 
   $('#positive-list  li > a').on('click', function(e){
       e.preventDefault();
-      console.log($(this).text());
+      // console.log($(this).text());
       $('#canvasForm input[name="first"]').val($(this).text());
       $.cookie('first_word', $(this).text());
   });
 
   $('#negative-list  li > a').on('click', function(e){
       e.preventDefault();
-      console.log($(this).text());
+      // console.log($(this).text());
       $('#canvasForm input[name="second"]').val($(this).text());
       $.cookie('second_word', $(this).text());
   });
@@ -233,7 +233,7 @@ jQuery(document).ready(function($){
 		Return user to color screen when they come back from login
 	*/
 	if($.cookie('first_word') != undefined){
-    console.log('we have a cookie set');
+    // console.log('we have a cookie set');
     if($('#picture-steps').length){
           if($('#picture-steps').steps('getCurrentIndex') == 1){
                 setTimeout(function(){
@@ -304,9 +304,6 @@ jQuery(document).ready(function($){
 		$('.color-overlay').css('background-color', color);
     // Add to the form
     $('#canvasForm input[name="color"]').val(color);
-
-    // Wjay color was it man?
-    console.log(color);
 
 	});
 

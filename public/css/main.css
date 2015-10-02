@@ -518,6 +518,7 @@ nav.navbar {
   max-width: 100%;
   color: white;
   height: 100%;
+  min-height: 750px;
   max-height: 800px; }
   #intro:before {
     display: block;
@@ -615,7 +616,7 @@ nav.navbar {
     z-index: 123456789;
     margin-top: 10px;
     font-size: 14px;
-    padding: 10px 20px; }
+    padding: 12px 27px; }
     @media (min-width: 768px) {
       #intro .header-text .learn-more {
         margin-top: 30px;
@@ -1031,6 +1032,9 @@ footer .social-footer li:hover a {
   @media (min-width: 768px) {
     .step header {
       padding-top: 8%; } }
+  @media (max-height: 750px) {
+    .step header {
+      padding-top: 2%; } }
   .step header .selected-word {
     color: #78B5CA; }
   .step header h2:after {
@@ -1195,6 +1199,9 @@ footer .social-footer li:hover a {
   @media (min-width: 768px) {
     .persons img {
       display: block; } }
+  @media (max-height: 750px) {
+    .persons img {
+      display: none; } }
   @media (min-width: 768px) {
     .persons img {
       top: -8em;
@@ -1271,7 +1278,7 @@ footer .social-footer li:hover a {
   @media (min-width: 768px) {
     .img-color {
       max-width: 350px;
-      margin: 4em auto; } }
+      margin: 1em auto; } }
   .img-color img {
     max-width: 100%;
     -webkit-filter: grayscale(100%);
@@ -1312,6 +1319,9 @@ footer .social-footer li:hover a {
       .img-color #color-block {
         top: initial;
         bottom: -25%; } }
+    @media (max-height: 550px) {
+      .img-color #color-block {
+        top: 0; } }
     .img-color #color-block ul {
       margin: 0;
       padding: 0;
