@@ -200,7 +200,7 @@
         <div class="step-half step-bottom">
           <div class="container">
             <header>
-              <h2 class="header">But actually I <br/> was <span class="selected-word">Choose a flip word</span> <span class="caret"></span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
+              <h2 class="header">But in reality I <br/> was <span class="selected-word">Choose a flip word</span> <span class="caret"></span></h2><i class="fa fa-times close"></i><a href="#" class="link-area">Please choose a word</a>
             </header>
             <div class="step-content">
               <div id="negative-list" class="step-list">
@@ -318,21 +318,14 @@
           <div class="col-sm-8">
             <p>2015 All Rights Reserves | <a href="http://oasescenter.org">Oasis Center </a> More to Youth</p>
           </div>
-          <div class="col-sm-4 text-center">
-            <ul class="social-footer">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-            </ul>
-          </div>
+          <div class="col-sm-4"></div>
         </div>
       </div>
     </footer>
     <script src="/js/libs.js"></script>
     <script src="/js/app.js"></script><script type="text/javascript">
 
-   
+
     $(function(){
         $('#fb-profile-share').on('click', function(e){
           e.preventDefault();
@@ -357,7 +350,7 @@
                 picture: _globalObj._root_url + userImagePath
             }, function(response){});
           }
-          
+
         });
     });
 
@@ -366,7 +359,16 @@
 
     //Twitter Share
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-    
+
 </script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   </body>
 </html>

@@ -164,24 +164,30 @@
       </section>
       <!-- Instagram feed-->
       <section class="gallery-grid">
-        <h2 class="header text-center">The others</h2>
+        <h2 class="header text-center">Photo Gallery</h2>
         <div class="row">@foreach ($allUsers as $currentUser)
           <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
         </div>
         <div class="view-more"><a href="/gallery" class="btn btn-main">View More Pictures</a><a href="/picture" class="btn btn-main">Create Your Own</a></div>
       </section>
-      <!-- Social band-->
-      <section class="social-band">
-        <div class="container">
-          <p>Share <span class="hashtag">#MoreToYouth</span> with &amp; your friends</p>
-          <ul class="social-links">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-          </ul>
-        </div>
-      </section>
+      <!-- Social band--><section class="social-band">
+	<div class="container">
+		<p>Share <span class="hashtag">#MoreToYouth</span> with your friends</p>
+		<ul class="social-links">
+			<li>
+				<div data-href="https://www.oasiscenter.org/" data-layout="button" class="fb-share-button fb_iframe_widget" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1477990922522983&amp;container_width=1140&amp;href=https%3A%2F%2Fwww.oasiscenter.org%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey"><span style="vertical-align: bottom; width: 56px; height: 20px;"><iframe name="f3fd28f16" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="http://www.facebook.com/v2.2/plugins/share_button.php?app_id=1477990922522983&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FR_qmi4A5CC2.js%3Fversion%3D41%23cb%3Df3fb389e68%26domain%3Doasis.app%26origin%3Dhttp%253A%252F%252Foasis.app%253A8000%252Ff2fed3fcd4%26relation%3Dparent.parent&amp;container_width=1140&amp;href=https%3A%2F%2Fwww.oasiscenter.org%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey" style="border: none; visibility: visible; width: 56px; height: 20px;" class="DRAGDIS_iframe"></iframe></span></div>
+			</li>
+			<li>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.oasiscenter.org/" data-count="none">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</li>
+			<li>
+				<a class="tumblr-share-button" href="https://www.tumblr.com/share"></a>
+				<script id="tumblr-js" async src="https://assets.tumblr.com/share-button.js"></script>
+			</li>
+		</ul>
+	</div>
+</section>
       <!-- How you can help-->
       <section class="help">
         <div class="container">
@@ -210,21 +216,14 @@
           <div class="col-sm-8">
             <p>2015 All Rights Reserves | <a href="http://oasescenter.org">Oasis Center </a> More to Youth</p>
           </div>
-          <div class="col-sm-4 text-center">
-            <ul class="social-footer">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-            </ul>
-          </div>
+          <div class="col-sm-4"></div>
         </div>
       </div>
     </footer>
     <script src="/js/libs.js"></script>
     <script src="/js/app.js"></script><script type="text/javascript">
 
-   
+
     $(function(){
         $('#fb-profile-share').on('click', function(e){
           e.preventDefault();
@@ -249,7 +248,7 @@
                 picture: _globalObj._root_url + userImagePath
             }, function(response){});
           }
-          
+
         });
     });
 
@@ -258,7 +257,16 @@
 
     //Twitter Share
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-    
+
 </script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   </body>
 </html>

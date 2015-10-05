@@ -84,10 +84,10 @@ section {
 
 .modal-footer {
   padding: 10px 15px 40px;
-  border: none; }
+  border: none;
+  text-align: center; }
 
 .modal-content .btn {
-  display: block;
   margin: 0 auto; }
 
 @-webkit-keyframes slide-down {
@@ -260,7 +260,6 @@ a {
     background-color: #50E3C2;
     color: #fff; }
   .btn-main.cta {
-    display: inline-block;
     background-color: #50E3C2;
     color: #fff;
     border: none; }
@@ -612,6 +611,7 @@ nav.navbar {
         max-width: 420px;
         margin: 0 auto; } }
   #intro .header-text .learn-more {
+    display: inline-block;
     position: relative;
     z-index: 123456789;
     margin-top: 10px;
@@ -880,7 +880,10 @@ nav.navbar {
     margin: 20px 0 0 0;
     padding: 0; }
     .social-band .social-links > li {
-      display: inline; }
+      display: inline-block;
+      padding: 15px; }
+    .social-band .social-links > li span {
+      vertical-align: initial !important; }
     .social-band .social-links > li > a {
       font-size: 30px;
       padding: 20px; }
