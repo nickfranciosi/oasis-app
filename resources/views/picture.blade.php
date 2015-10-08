@@ -148,7 +148,6 @@
               <div id="positive-list" class="step-list">
                 <p>Choose a word that best describes how people wrongfully percieved you</p>
                 <ul>
-                  <li><a href="#">Bitch</a></li>
                   <li><a href="#">Nerd</a></li>
                   <li><a href="#">Freak</a></li>
                   <li><a href="#">Dork</a></li>
