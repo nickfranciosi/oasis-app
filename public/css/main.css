@@ -517,8 +517,10 @@ nav.navbar {
   max-width: 100%;
   color: white;
   height: 100%;
-  min-height: 750px;
   max-height: 800px; }
+  @media (min-width: 768px) {
+    #intro {
+      min-height: 750px; } }
   #intro:before {
     display: block;
     content: '';

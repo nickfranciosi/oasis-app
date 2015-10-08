@@ -6,8 +6,9 @@
 	max-width: 100%;
 	color: white;
 	height: 100%;
-	min-height: 750px;
 	max-height: 800px;
+
+	@include screen-sm { min-height: 750px; }
 
 	&:before {
 		display: block;
