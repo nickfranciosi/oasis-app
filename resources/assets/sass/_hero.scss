@@ -33,10 +33,10 @@
     bottom: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.6;
+    opacity: 0.75;
     background-color:	$brand-color1;
 
-    // Not sure why, but need all keyframe declarations seperate for sarafi to work right
+    // Not sure why, but need all keyframe declarations seperate for sarafi to work correctly
     -webkit-animation-name: color;
 		-webkit-animation-duration: 20s;
 		-webkit-animation-timing-function: ease-in-out;
@@ -116,7 +116,7 @@
 		display: none;
 		@include screen-sm {
 			display: block;
-			max-width: 420px;
+			max-width: 440px;
 			margin: 0 auto;
 		}
 	}
@@ -130,7 +130,7 @@
 		font-size: 14px;
 		padding: 12px 27px;
 		@include screen-sm {
-			margin-top: 30px;
+			margin-top: 15px;
 			font-size: 16px;
 			padding: 15px 30px;
 		}

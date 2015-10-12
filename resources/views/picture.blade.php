@@ -63,7 +63,7 @@
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 </style>
-<g>
+<!-- <g>
 	<path class="st0" d="M79.6,11.1H77V9h7.6v2.1H82v6.6h-2.4V11.1z"/>
 	<path class="st0" d="M87,9h2.4v3.3h3.1V9h2.4v8.7h-2.4v-3.3h-3.1v3.3H87V9z"/>
 	<path class="st0" d="M97.4,9h7v2.1h-4.6v1.3h4.2v1.9h-4.2v1.4h4.7v2.1h-7.1V9z"/>
@@ -93,7 +93,7 @@
 		S237.1,16.6,237.1,13.8z"/>
 	<path class="st0" d="M250,11.1h-2.6V9h7.6v2.1h-2.6v6.6H250V11.1z"/>
 	<path class="st0" d="M257.3,9h2.4v3.3h3.1V9h2.4v8.7h-2.4v-3.3h-3.1v3.3h-2.4V9z"/>
-</g>
+</g> -->
 <g>
 	<path class="st0" d="M100.3-3.5C86.3-3.5,76-13.8,76-26.8V-27c0-12.9,10.4-23.5,24.5-23.5c14,0,24.3,10.3,24.3,23.3v0.2
 		C124.8-14,114.4-3.5,100.3-3.5z M112.2-27c0-6.6-4.8-12.4-11.9-12.4c-7.3,0-11.7,5.6-11.7,12.3v0.2c0,6.6,4.8,12.4,11.9,12.4
@@ -112,7 +112,7 @@
 		c-4.5-2.6-8.9-4.2-12.2-4.2c-3.1,0-4.7,1.3-4.7,3.1v0.2c0,2.5,4.3,3.7,9.2,5.4c6.3,2.1,13.6,5.1,13.6,13.4v0.2
 		C265-8.2,257.5-3.7,247.8-3.7z"/>
 </g>
-</svg></a><a href="#" data-toggle="modal" data-target="#modal1" class="btn-donate pull-right"><?xml version="1.0" encoding="utf-8"?>
+</svg></a><a href="#" data-toggle="modal" data-target="#modal1" class="btn-donate pull-right">Donate<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
@@ -148,48 +148,57 @@
               <div id="positive-list" class="step-list">
                 <p>Choose a word that best describes how people wrongfully percieved you</p>
                 <ul>
-                  <li><a href="#">Nerd</a></li>
-                  <li><a href="#">Freak</a></li>
-                  <li><a href="#">Dork</a></li>
-                  <li><a href="#">Bully</a></li>
-                  <li><a href="#">Weirdo</a></li>
-                  <li><a href="#">Troubled</a></li>
-                  <li><a href="#">Depressed</a></li>
-                  <li><a href="#">Angry</a></li>
-                  <li><a href="#">Privileged</a></li>
-                  <li><a href="#">stuck-up</a></li>
-                  <li><a href="#">priss</a></li>
+                  <li><a href="#">aggressive</a></li>
+                  <li><a href="#">airhead</a></li>
                   <li><a href="#">aloof</a></li>
                   <li><a href="#">angry</a></li>
-                  <li><a href="#">loudmouth</a></li>
-                  <li><a href="#">drunk</a></li>
-                  <li><a href="#">thief</a></li>
-                  <li><a href="#">misfit</a></li>
-                  <li><a href="#">outcast</a></li>
-                  <li><a href="#">desperate</a></li>
-                  <li><a href="#">thug</a></li>
-                  <li><a href="#">junkie</a></li>
-                  <li><a href="#">stoner</a></li>
-                  <li><a href="#">tramp</a></li>
-                  <li><a href="#">spaz</a></li>
+                  <li><a href="#">athlete</a></li>
+                  <li><a href="#">bad attitude</a></li>
+                  <li><a href="#">bitch</a></li>
+                  <li><a href="#">bully</a></li>
+                  <li><a href="#">cocky</a></li>
                   <li><a href="#">creep</a></li>
-                  <li><a href="#">slut</a></li>
-                  <li><a href="#">wannabe</a></li>
-                  <li><a href="#">brainiac</a></li>
-                  <li><a href="#">hater</a></li>
-                  <li><a href="#">runaway</a></li>
-                  <li><a href="#">reject</a></li>
-                  <li><a href="#">wallflower</a></li>
-                  <li><a href="#">airhead</a></li>
-                  <li><a href="#">redneck</a></li>
-                  <li><a href="#">jock</a></li>
-                  <li><a href="#">spoiled</a></li>
-                  <li><a href="#">goody-two-shoes</a></li>
+                  <li><a href="#">depressed</a></li>
+                  <li><a href="#">desperate</a></li>
+                  <li><a href="#">dork</a></li>
+                  <li><a href="#">drunk</a></li>
+                  <li><a href="#">freak</a></li>
                   <li><a href="#">geek</a></li>
-                  <li><a href="#">wild</a></li>
-                  <li><a href="#">aggressive</a></li>
-                  <li><a href="#">meathead</a></li>
+                  <li><a href="#">goody-two-shoes</a></li>
+                  <li><a href="#">hater</a></li>
+                  <li><a href="#">hyper</a></li>
+                  <li><a href="#">jock</a></li>
+                  <li><a href="#">junkie</a></li>
                   <li><a href="#">loner</a></li>
+                  <li><a href="#">loser</a></li>
+                  <li><a href="#">loudmouth</a></li>
+                  <li><a href="#">meathead</a></li>
+                  <li><a href="#">misfit</a></li>
+                  <li><a href="#">nerd</a></li>
+                  <li><a href="#">outcast</a></li>
+                  <li><a href="#">player</a></li>
+                  <li><a href="#">preppy</a></li>
+                  <li><a href="#">prissy</a></li>
+                  <li><a href="#">privileged</a></li>
+                  <li><a href="#">punk</a></li>
+                  <li><a href="#">reckless</a></li>
+                  <li><a href="#">redneck</a></li>
+                  <li><a href="#">reject</a></li>
+                  <li><a href="#">runaway</a></li>
+                  <li><a href="#">selfish</a></li>
+                  <li><a href="#">snitch</a></li>
+                  <li><a href="#">snob</a></li>
+                  <li><a href="#">spoiled</a></li>
+                  <li><a href="#">stoner</a></li>
+                  <li><a href="#">stuck-up</a></li>
+                  <li><a href="#">thief</a></li>
+                  <li><a href="#">thug</a></li>
+                  <li><a href="#">thug</a></li>
+                  <li><a href="#">troubled</a></li>
+                  <li><a href="#">wallflower</a></li>
+                  <li><a href="#">wannabe</a></li>
+                  <li><a href="#">weirdo</a></li>
+                  <li><a href="#">wild</a></li>
                 </ul>
               </div>
             </div>
@@ -205,42 +214,49 @@
               <div id="negative-list" class="step-list">
                 <p>Choose a word that best describes how you actually thought of yourself</p>
                 <ul>
-                  <li><a href="#">Thoughtful</a></li>
-                  <li><a href="#">Alienated</a></li>
-                  <li><a href="#">Passionate</a></li>
-                  <li><a href="#">Shy</a></li>
-                  <li><a href="#">Fragile</a></li>
-                  <li><a href="#">Driven</a></li>
-                  <li><a href="#">Conflicted</a></li>
-                  <li><a href="#">Hungry</a></li>
-                  <li><a href="#">Misunderstood</a></li>
-                  <li><a href="#">Distracted</a></li>
-                  <li><a href="#">Ambitious</a></li>
-                  <li><a href="#">Talented</a></li>
-                  <li><a href="#">Spirited</a></li>
-                  <li><a href="#">Misguided</a></li>
-                  <li><a href="#">Distraught</a></li>
-                  <li><a href="#">Overwhelmed</a></li>
-                  <li><a href="#">well-meaning</a></li>
-                  <li><a href="#">scattered</a></li>
-                  <li><a href="#">determined</a></li>
-                  <li><a href="#">insecure</a></li>
-                  <li><a href="#">directionless</a></li>
-                  <li><a href="#">immature</a></li>
-                  <li><a href="#">survivor</a></li>
-                  <li><a href="#">resilient</a></li>
-                  <li><a href="#">introverted</a></li>
+                  <li><a href="#">adventuresome</a></li>
+                  <li><a href="#">alienated</a></li>
+                  <li><a href="#">ambitious</a></li>
                   <li><a href="#">bored</a></li>
-                  <li><a href="#">naïve</a></li>
-                  <li><a href="#">enthusiastic</a></li>
-                  <li><a href="#">intense</a></li>
-                  <li><a href="#">expressive</a></li>
-                  <li><a href="#">sensitive</a></li>
-                  <li><a href="#">idealistic</a></li>
                   <li><a href="#">brave</a></li>
-                  <li><a href="#">persistent</a></li>
+                  <li><a href="#">conflicted</a></li>
+                  <li><a href="#">creative</a></li>
+                  <li><a href="#">curious</a></li>
+                  <li><a href="#">determined</a></li>
+                  <li><a href="#">distracted</a></li>
+                  <li><a href="#">distraught</a></li>
+                  <li><a href="#">dreamer</a></li>
+                  <li><a href="#">driven</a></li>
+                  <li><a href="#">enthusiastic</a></li>
+                  <li><a href="#">entrepreneur</a></li>
+                  <li><a href="#">expressive</a></li>
+                  <li><a href="#">fragile</a></li>
                   <li><a href="#">gifted</a></li>
+                  <li><a href="#">hungry</a></li>
+                  <li><a href="#">idealistic</a></li>
+                  <li><a href="#">immature</a></li>
+                  <li><a href="#">insecure</a></li>
+                  <li><a href="#">intense</a></li>
+                  <li><a href="#">introverted</a></li>
+                  <li><a href="#">lucky</a></li>
+                  <li><a href="#">misunderstood</a></li>
+                  <li><a href="#">naïve</a></li>
+                  <li><a href="#">needing acceptance</a></li>
+                  <li><a href="#">overwhelmed</a></li>
+                  <li><a href="#">passionate</a></li>
+                  <li><a href="#">persistent</a></li>
                   <li><a href="#">positive</a></li>
+                  <li><a href="#">resilient</a></li>
+                  <li><a href="#">scared</a></li>
+                  <li><a href="#">sensitive</a></li>
+                  <li><a href="#">shy</a></li>
+                  <li><a href="#">spirited</a></li>
+                  <li><a href="#">survivor</a></li>
+                  <li><a href="#">talented</a></li>
+                  <li><a href="#">thoughtful</a></li>
+                  <li><a href="#">unchallenged</a></li>
+                  <li><a href="#">well-meaning</a></li>
+                  <li><a href="#">young</a></li>
                 </ul>
               </div>
             </div>
@@ -248,13 +264,13 @@
         </div>
       </section>
       <!-- Second step-->
-      <h2 class="sr-only">Choose a photo</h2>
+      <h2 class="sr-only">Upload Photo</h2>
       <section class="step">
         <div class="step-half step-top">
           <div class="container">
             <header>
-              <h2 class="header">Choose a Photo</h2>
-              <p>We would like to use your Facebook profile picture.</p>
+              <h2 class="header">Upload Photo</h2>
+              <p>Connect with Facebook to generate your own customized photo<br class="hidden-xs">using your current Facebook profile picture.</p>
             </header>
           </div>
         </div>

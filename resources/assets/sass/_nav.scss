@@ -15,9 +15,6 @@ nav.navbar {
 
 	border-radius: 0;
 
-	// @include screen-sm { top: 25px; }
-	// @include screen-md { top: 50px;	}
-
 	.navbar-header { width: 100%; }
 
 }
@@ -25,8 +22,8 @@ nav.navbar {
 
 // Logo
 .navbar-brand {
-	width: 70px;
-  padding: 15px 0;
+	width: 100px;
+  padding: 15px 0 0;
   // Bootstrap override
   margin: 0 !important;
 	&:hover,&:focus,&:active {
@@ -42,23 +39,40 @@ nav.navbar {
 
 // Donate
 .navbar .btn-donate {
-	width: 28px;
-	height: 28px;
-	margin-top: 16px;
+	margin-top: 15px;
+
+	// Text
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: $font-family-sans-serif;
+	font-size: 30px;
+
 	@include transition(0.2s);
 
 	&:hover,&:focus,&:active {
-		@include scale(1.1);
-		.st0 { fill: darken($brand-accent, 15%); }
+		@include scale(1.05);
+		color: darken($brand-accent, 0%);
+		text-decoration: none;
+		.st0 { fill: darken($brand-accent, 0%); }
 	}
 
-	svg .st0 {
-		@include transition(0.3s);
+	svg {
+		width: 28px;
+		height: 28px;
+		margin-left: 5px;
+		padding-top: 3px;
 		fill: #ffffff;
+	  vertical-align: initial;
+		.st0 { @include transition(0.2s); }
+
 	}
 }
 
+
+
 .nav-trans { background: transparent; }
+
+
 
 .nav-bg {
 	background: $brand-color1;

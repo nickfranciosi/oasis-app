@@ -7,9 +7,9 @@
         <h3 class="header modal-title text-center">There's More to Youth</h3>
       </div>
       <div class="modal-body text-center">
-        <p>Help us make a stand against teen stereotypes by creating your own customized profile photo.</p>
+        <p>Connect with Facebook to turn your existing Facebook profile picture into your own customized campaign photo.</p>
       </div>
-      <div class="modal-footer text-center"><a href="/picture" class="btn btn-main cta">Make your #moretoyouth Picture</a></div>
+      <div class="modal-footer text-center"><a href="/picture" class="btn btn-main cta">Make Your Picture</a></div>
     </div>
   </div>
 </div>

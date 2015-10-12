@@ -228,7 +228,7 @@ ul.white-list li:before {
 
 .hashtag {
   font-family: "League Gothic", "league-gothic", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -431,8 +431,8 @@ nav.navbar {
     width: 100%; }
 
 .navbar-brand {
-  width: 70px;
-  padding: 15px 0;
+  width: 100px;
+  padding: 15px 0 0;
   margin: 0 !important; }
   .navbar-brand:hover .st0, .navbar-brand:focus .st0, .navbar-brand:active .st0 {
     fill: #20c7a1; }
@@ -441,18 +441,28 @@ nav.navbar {
     fill: #ffffff; }
 
 .navbar .btn-donate {
-  width: 28px;
-  height: 28px;
-  margin-top: 16px;
+  margin-top: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "League Gothic", "league-gothic", Helvetica, Arial, sans-serif;
+  font-size: 30px;
   transition: all 0.2s ease-in-out; }
   .navbar .btn-donate:hover, .navbar .btn-donate:focus, .navbar .btn-donate:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    color: #50e3c2;
+    text-decoration: none; }
     .navbar .btn-donate:hover .st0, .navbar .btn-donate:focus .st0, .navbar .btn-donate:active .st0 {
-      fill: #20c7a1; }
-  .navbar .btn-donate svg .st0 {
-    transition: all 0.3s ease-in-out;
-    fill: #ffffff; }
+      fill: #50e3c2; }
+  .navbar .btn-donate svg {
+    width: 28px;
+    height: 28px;
+    margin-left: 5px;
+    padding-top: 3px;
+    fill: #ffffff;
+    vertical-align: initial; }
+    .navbar .btn-donate svg .st0 {
+      transition: all 0.2s ease-in-out; }
 
 .nav-trans {
   background: transparent; }
@@ -541,7 +551,7 @@ nav.navbar {
     bottom: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.6;
+    opacity: 0.75;
     background-color: #78B5CA;
     -webkit-animation-name: color;
     -webkit-animation-duration: 20s;
@@ -610,7 +620,7 @@ nav.navbar {
     @media (min-width: 768px) {
       #intro .header-text .tagline-text {
         display: block;
-        max-width: 420px;
+        max-width: 440px;
         margin: 0 auto; } }
   #intro .header-text .learn-more {
     display: inline-block;
@@ -621,7 +631,7 @@ nav.navbar {
     padding: 12px 27px; }
     @media (min-width: 768px) {
       #intro .header-text .learn-more {
-        margin-top: 30px;
+        margin-top: 15px;
         font-size: 16px;
         padding: 15px 30px; } }
     #intro .header-text .learn-more i {
@@ -1032,7 +1042,7 @@ footer .social-footer li:hover a {
     font-size: 14px; }
 
 .step header {
-  padding: 2% 0 0;
+  padding: 5% 0 0;
   opacity: 1; }
   @media (min-width: 768px) {
     .step header {

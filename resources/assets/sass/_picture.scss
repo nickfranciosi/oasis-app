@@ -118,7 +118,7 @@ $z-index-max-bottom:  -1000;
 
 // Header style
 .step header {
-	padding: 2% 0 0;
+	padding: 5% 0 0;
 
 	@include screen-sm { padding-top: 8%; }
 	@media (max-height: 750px) {

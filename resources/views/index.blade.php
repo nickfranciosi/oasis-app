@@ -63,7 +63,7 @@
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 </style>
-<g>
+<!-- <g>
 	<path class="st0" d="M79.6,11.1H77V9h7.6v2.1H82v6.6h-2.4V11.1z"/>
 	<path class="st0" d="M87,9h2.4v3.3h3.1V9h2.4v8.7h-2.4v-3.3h-3.1v3.3H87V9z"/>
 	<path class="st0" d="M97.4,9h7v2.1h-4.6v1.3h4.2v1.9h-4.2v1.4h4.7v2.1h-7.1V9z"/>
@@ -93,7 +93,7 @@
 		S237.1,16.6,237.1,13.8z"/>
 	<path class="st0" d="M250,11.1h-2.6V9h7.6v2.1h-2.6v6.6H250V11.1z"/>
 	<path class="st0" d="M257.3,9h2.4v3.3h3.1V9h2.4v8.7h-2.4v-3.3h-3.1v3.3h-2.4V9z"/>
-</g>
+</g> -->
 <g>
 	<path class="st0" d="M100.3-3.5C86.3-3.5,76-13.8,76-26.8V-27c0-12.9,10.4-23.5,24.5-23.5c14,0,24.3,10.3,24.3,23.3v0.2
 		C124.8-14,114.4-3.5,100.3-3.5z M112.2-27c0-6.6-4.8-12.4-11.9-12.4c-7.3,0-11.7,5.6-11.7,12.3v0.2c0,6.6,4.8,12.4,11.9,12.4
@@ -112,7 +112,7 @@
 		c-4.5-2.6-8.9-4.2-12.2-4.2c-3.1,0-4.7,1.3-4.7,3.1v0.2c0,2.5,4.3,3.7,9.2,5.4c6.3,2.1,13.6,5.1,13.6,13.4v0.2
 		C265-8.2,257.5-3.7,247.8-3.7z"/>
 </g>
-</svg></a><a href="#" data-toggle="modal" data-target="#modal1" class="btn-donate pull-right"><?xml version="1.0" encoding="utf-8"?>
+</svg></a><a href="#" data-toggle="modal" data-target="#modal1" class="btn-donate pull-right">Donate<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
@@ -142,7 +142,7 @@
             <div class="row">
               <div class="col-md-12 text-center">
                 <h1 class="tagline">There's more to youth</h1>
-                <p class="tagline-text">Our current campaign encourages people to make a statement against teen stereotypes. Help us make a stand by creating your own customized profile photo.</p><a href="/picture" class="btn-main cta learn-more">Make Your <span class="hashtag">#MoreToYouth</span> Picture<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
+                <p class="tagline-text">Our current marketing campaign encourages people to show their disapproval for teen stereotypes. Help us take a stand by turning your existing Facebook profile picture into your own customized campaign photo.</p><a href="/picture" class="btn-main cta learn-more">Make Your <span class="hashtag">#MoreToYouth</span> Picture<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
@@ -185,7 +185,7 @@
         </header>
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3 text-center">
-            <p>Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential, turning them into happy, well-adjusted adults.</p><a href="https://www.oasiscenter.org/#programs" target="_blank" class="btn-link">Learn More at oasiscenter.org<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
+            <p>Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.</p><a href="https://www.oasiscenter.org/#programs" target="_blank" class="btn-link">Learn More at oasiscenter.org<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
@@ -251,7 +251,7 @@
         <div class="row">
           <div class="col-sm-offset-6 col-sm-6">
             <h2 class="header">How you can help</h2>
-            <p>You have the power to make a difference in a teen’s life. At Oasis, we value each relationship we have with every supporter and count on you to help us get the job done. To find out how you can donate click on the button below.</p><a href="https://www.oasiscenter.org/donate.html" target="_blank" class="btn btn-main space-top">Make a Donation</a>
+            <p>You have the power to make a difference in a teen’s life. At Oasis, we value each relationship we have with every supporter and count on you to help us get the job done. To donate click on the button below.</p><a href="https://www.oasiscenter.org/donate.html" target="_blank" class="btn btn-main space-top">Donate Now</a>
           </div>
         </div>
       </div>
@@ -265,9 +265,9 @@
             <h3 class="header modal-title text-center">There's More to Youth</h3>
           </div>
           <div class="modal-body text-center">
-            <p>Help us make a stand against teen stereotypes by creating your own customized profile photo.</p>
+            <p>Connect with Facebook to turn your existing Facebook profile picture into your own customized campaign photo.</p>
           </div>
-          <div class="modal-footer text-center"><a href="/picture" class="btn btn-main cta">Make your #moretoyouth Picture</a></div>
+          <div class="modal-footer text-center"><a href="/picture" class="btn btn-main cta">Make Your Picture</a></div>
         </div>
       </div>
     </div>
