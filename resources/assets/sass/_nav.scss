@@ -22,7 +22,7 @@ nav.navbar {
 
 // Logo
 .navbar-brand {
-	width: 100px;
+	width: 80px;
   padding: 15px 0 0;
   // Bootstrap override
   margin: 0 !important;
@@ -45,7 +45,9 @@ nav.navbar {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-family: $font-family-sans-serif;
-	font-size: 30px;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	font-size: 27px;
 	line-height: 1;
 
 	@include transition(0.2s);
@@ -58,8 +60,8 @@ nav.navbar {
 	}
 
 	svg {
-		width: 28px;
-		height: 28px;
+		width: 26px;
+		height: 26px;
 		margin-left: 5px;
 		padding-top: 3px;
 		fill: #ffffff;

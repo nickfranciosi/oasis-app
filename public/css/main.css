@@ -431,7 +431,7 @@ nav.navbar {
     width: 100%; }
 
 .navbar-brand {
-  width: 100px;
+  width: 80px;
   padding: 15px 0 0;
   margin: 0 !important; }
   .navbar-brand:hover .st0, .navbar-brand:focus .st0, .navbar-brand:active .st0 {
@@ -445,7 +445,9 @@ nav.navbar {
   color: #ffffff;
   text-transform: uppercase;
   font-family: "League Gothic", "league-gothic", Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 27px;
   line-height: 1;
   transition: all 0.2s ease-in-out; }
   .navbar .btn-donate:hover, .navbar .btn-donate:focus, .navbar .btn-donate:active {
@@ -456,8 +458,8 @@ nav.navbar {
     .navbar .btn-donate:hover .st0, .navbar .btn-donate:focus .st0, .navbar .btn-donate:active .st0 {
       fill: #50e3c2; }
   .navbar .btn-donate svg {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     margin-left: 5px;
     padding-top: 3px;
     fill: #ffffff;
@@ -630,9 +632,11 @@ nav.navbar {
     z-index: 123456789;
     margin-top: 10px;
     font-size: 14px;
-    padding: 14px 24px; }
+    padding: 14px 0;
+    width: 100%; }
     @media (min-width: 768px) {
       #intro .header-text .learn-more {
+        width: auto;
         margin-top: 15px;
         font-size: 16px;
         padding: 15px 30px; } }
