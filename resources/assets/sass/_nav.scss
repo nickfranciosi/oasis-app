@@ -46,6 +46,7 @@ nav.navbar {
 	text-transform: uppercase;
 	font-family: $font-family-sans-serif;
 	font-size: 30px;
+	line-height: 1;
 
 	@include transition(0.2s);
 

@@ -446,6 +446,7 @@ nav.navbar {
   text-transform: uppercase;
   font-family: "League Gothic", "league-gothic", Helvetica, Arial, sans-serif;
   font-size: 30px;
+  line-height: 1;
   transition: all 0.2s ease-in-out; }
   .navbar .btn-donate:hover, .navbar .btn-donate:focus, .navbar .btn-donate:active {
     -webkit-transform: scale(1.05);
@@ -527,7 +528,8 @@ nav.navbar {
   max-width: 100%;
   color: white;
   height: 100%;
-  max-height: 800px; }
+  max-height: 800px;
+  min-height: 460px; }
   @media (min-width: 768px) {
     #intro {
       min-height: 750px; } }
@@ -628,7 +630,7 @@ nav.navbar {
     z-index: 123456789;
     margin-top: 10px;
     font-size: 14px;
-    padding: 12px 27px; }
+    padding: 14px 24px; }
     @media (min-width: 768px) {
       #intro .header-text .learn-more {
         margin-top: 15px;

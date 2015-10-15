@@ -142,7 +142,7 @@
             <div class="row">
               <div class="col-md-12 text-center">
                 <h1 class="tagline">There's more to youth</h1>
-                <p class="tagline-text">Our current marketing campaign encourages people to show their disapproval for teen stereotypes. Help us take a stand by turning your existing Facebook profile picture into your own customized campaign photo.</p><a href="/picture" class="btn-main cta learn-more">Make Your <span class="hashtag">#MoreToYouth</span> Picture<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
+                <p class="tagline-text">Our current marketing campaign encourages people to challenge teen stereotypes. Help us take a stand by turning your existing Facebook profile picture into your own customized campaign photo.</p><a href="/picture" class="btn-main cta learn-more">Make Your <span class="hashtag">#MoreToYouth</span> Picture<i class="icon-arrow"><?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="-269 191 100 100" style="enable-background:new -269 191 100 100;" xml:space="preserve">
@@ -265,7 +265,7 @@
             <h3 class="header modal-title text-center">There's More to Youth</h3>
           </div>
           <div class="modal-body text-center">
-            <p>Connect with Facebook to turn your existing Facebook profile picture into your own customized campaign photo.</p>
+            <p>Help us challenge teen stereotypes by turning your existing Facebook profile picture into your own customized campaign photo.</p>
           </div>
           <div class="modal-footer text-center"><a href="/picture" class="btn btn-main cta">Make Your Picture</a></div>
         </div>
