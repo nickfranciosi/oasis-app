@@ -434,6 +434,9 @@ nav.navbar {
   width: 80px;
   padding: 15px 0 0;
   margin: 0 !important; }
+  @media (min-width: 768px) {
+    .navbar-brand {
+      width: 100px; } }
   .navbar-brand:hover .st0, .navbar-brand:focus .st0, .navbar-brand:active .st0 {
     fill: #20c7a1; }
   .navbar-brand svg .st0 {
@@ -441,7 +444,7 @@ nav.navbar {
     fill: #ffffff; }
 
 .navbar .btn-donate {
-  margin-top: 15px;
+  margin-top: 17px;
   color: #ffffff;
   text-transform: uppercase;
   font-family: "League Gothic", "league-gothic", Helvetica, Arial, sans-serif;
