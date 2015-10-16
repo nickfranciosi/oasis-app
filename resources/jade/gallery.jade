@@ -28,6 +28,9 @@ block content
           @endforeach
         div.text-center
           a.btn.btn-main(href="/picture") Create Your Own
+          @if (Auth::check())
+          a.btn.btn-main(href="/profile/{{$user['facebook_user_id']}}") View Your Profile
+          @endif
 
     // Social band
     include ./layouts/partials/section-social-band.html

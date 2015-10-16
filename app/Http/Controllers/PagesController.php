@@ -28,8 +28,9 @@ class PagesController extends Controller
 
     public function showIndex()
     {
+        $user = Auth::user();
         $allUsers = User::whereNotNull('image_path')->take(6)->get();
-        return view('index')->with(compact('allUsers'));
+        return view('index')->with(compact('allUsers'))->with(compact('user'));
     }
 
     public function showPictureCreator()
@@ -46,10 +47,10 @@ class PagesController extends Controller
     }
 
     public function showGallery()
-    {
+    {   $user = Auth::user();
         $allUsers = User::whereNotNull('image_path')->get();
 
-        return view('gallery')->with(compact('allUsers'));
+        return view('gallery')->with(compact('allUsers'))->with(compact('user'));
     }
 
     public function showStory($id)
