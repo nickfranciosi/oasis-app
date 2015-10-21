@@ -26,7 +26,7 @@
 @endif
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Oasis - Theres More to Youth">
-    <meta property="og:description" content="Oasis Center #moretoyouth is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential.">
+    <meta property="og:description" content="Oasis encourages people to show their disapproval for teen stereotypes. Help us take a stand by turning your existing Facebook profile picture into your own customized campaign photo.">
     <meta property="og:locale" content="en_US">
     <!-- Favicons (created with http://realfavicongenerator.net/)-->
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
@@ -171,9 +171,9 @@
         <section class="gallery-grid">
           <h2 class="header text-center">Photo Gallery</h2>
           <div class="row">@foreach ($allUsers as $currentUser)
-            <div class="col-xs-6 col-sm-4"><a href="/profile/{{$currentUser['facebook_user_id']}}"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></a></div>@endforeach
+            <div class="col-xs-6 col-sm-4"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></div>@endforeach
           </div>
-          <div class="view-more"><a href="/gallery" class="btn btn-main">View More Pictures</a><a href="/picture" class="btn btn-main">Create Your Own</a></div>
+          <div class="view-more"><a href="/gallery" class="btn btn-main">View More Pictures</a><a href="/picture" class="btn btn-main">Create Your Own</a>@if (Auth::check())<a href="/profile/{{$user['facebook_user_id']}}" class="btn btn-main">View Your Profile</a>@endif</div>
         </section>
       </div>
     </section>

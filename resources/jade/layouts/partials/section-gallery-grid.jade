@@ -4,10 +4,12 @@ section.gallery-grid
   .row
     @foreach ($allUsers as $currentUser)
     .col-xs-6.col-sm-4
-      a(href="/profile/{{$currentUser['facebook_user_id']}}")
-        img.img-max(src="/{{ $currentUser['image_path'] }}")
+      img.img-max(src="/{{ $currentUser['image_path'] }}")
     @endforeach
 
   .view-more
     a.btn.btn-main(href="/gallery") View More Pictures
     a.btn.btn-main(href="/picture") Create Your Own
+    @if (Auth::check())
+    a.btn.btn-main(href="/profile/{{$user['facebook_user_id']}}") View Your Profile
+    @endif
