@@ -193,7 +193,6 @@
                   <li><a href="#">stuck-up</a></li>
                   <li><a href="#">thief</a></li>
                   <li><a href="#">thug</a></li>
-                  <li><a href="#">thug</a></li>
                   <li><a href="#">troubled</a></li>
                   <li><a href="#">wallflower</a></li>
                   <li><a href="#">wannabe</a></li>
