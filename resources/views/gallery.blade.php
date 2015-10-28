@@ -18,11 +18,11 @@
     <meta name="twitter:image" content="http://placehold.it/1600x640">
     <!-- Opengraph-->
     <meta property="og:title" content="Oasis - Theres More to Youth">@if(isset($user))
-    <meta property='og:url' content='http://oasis-app.xyz/profile/{!! $user->facebook_user_id !!}' >
-    <meta property='og:image' content='http://oasis-app.xyz/{!! $user->image_path !!}'>
+    <meta property='og:url' content='http://moretoyouth.com/profile/{!! $user->facebook_user_id !!}' >
+    <meta property='og:image' content='http://moretoyouth.com/{!! $user->image_path !!}'>
 @else
-    <meta property='og:url' content='http://oasis-app.xyz' >
-    <meta property='og:image' content='http://oasis-app.xyz'>
+    <meta property='og:url' content='http://moretoyouth.com' >
+    <meta property='og:image' content='http://moretoyouth.com'>
 @endif
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Oasis - Theres More to Youth">
