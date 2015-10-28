@@ -538,7 +538,7 @@ jQuery(document).ready(function($){
 	// Remove the css bitch
 	$('#color-block .color').removeAttr("style");
 
-		event.preventDefault();
+		// event.preventDefault();
 
 		var color = $(this).data('hex');
 
