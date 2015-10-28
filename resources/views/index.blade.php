@@ -168,7 +168,7 @@
       <div class="cut cut-top"></div>
       <div class="container">
         <!-- Gallery feed-->
-        <section class="gallery-grid">
+        <section class="gallery-grid container-fluid">
           <h2 class="header text-center">Photo Gallery</h2>
           <div class="row">@foreach ($allUsers as $currentUser)
             <div class="col-xs-6 col-sm-4"><img src="/{{ $currentUser['image_path'] }}" class="img-max"></div>@endforeach
