@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential."/>
+  <meta name="description" content="Oasis Center is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential."/>
   <meta itemprop="name" content="Theres more to youth"/>
-  <meta itemprop="description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential."/>
+  <meta itemprop="description" content="Oasis Center is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential."/>
   <!-- Twitter-->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@moretoyouth"/>
@@ -15,7 +15,7 @@
   <meta name="twitter:description" content="Oasis is here to help at-risk youths navigate tricky waters of the teenage years with a wide range of programs that are designed to empower them and make them aware of their potential."/>
   <meta name="twitter:image" content="http://placehold.it/1600x640"/>
   <!-- Opengraph-->
-  <meta property="og:title" content="Oasis - Theres More to Youth"/>@if(isset($user))
+  <meta property="og:title" content="Oasis Center - Theres More to Youth"/>@if(isset($user))
     <meta property='og:url' content='http://moretoyouth.com/profile/{!! $user->facebook_user_id !!}' >
     <meta property='og:image' content='http://moretoyouth.com/{!! $user->image_path !!}'>
 @else
@@ -23,7 +23,7 @@
     <meta property='og:image' content='http://moretoyouth.com'>
 @endif
   <meta property="og:type" content="website"/>
-  <meta property="og:site_name" content="Oasis - Theres More to Youth"/>
+  <meta property="og:site_name" content="Oasis Center - Theres More to Youth"/>
   <meta property="og:description" content="Oasis encourages people to show their disapproval for teen stereotypes. Help us take a stand by turning your existing Facebook profile picture into your own customized campaign photo."/>
   <meta property="og:locale" content="en_US"/>
   <!-- Favicons (created with http://realfavicongenerator.net/)-->
