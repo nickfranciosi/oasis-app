@@ -146,7 +146,7 @@
             </header>
             <div class="step-content">
               <div id="positive-list" class="step-list">
-                <p>Choose a word that best describes how people wrongfully percieved you</p>
+                <p>Choose a word that best describes how people wrongfully perceived you</p>
                 <ul>
                   <li><a href="#">aggressive</a></li>
                   <li><a href="#">airhead</a></li>
@@ -269,7 +269,7 @@
           <div class="container">
             <header>
               <h2 class="header">Upload Photo</h2>
-              <p>Connect with Facebook to generate your own customized photo<br class="hidden-xs">using your current Facebook profile picture.</p>
+              <p>Connect with Facebook to generate your own customized photo<br class="hidden-xs"> using your current Facebook profile picture.</p>
             </header>
           </div>
         </div>
