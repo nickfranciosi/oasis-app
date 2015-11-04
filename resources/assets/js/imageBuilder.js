@@ -163,11 +163,14 @@
       }
 
       function validateWord(word){
-        if(validWords.indexOf(word) !== -1 ){
-          return word;
-        }
+        // if(validWords.indexOf(word) !== -1 ){
+        //   return word;
+        // }
 
-        return "Dork";
+        // return "Dork";
+        // 
+        return word;
+        
       }
 
     });
