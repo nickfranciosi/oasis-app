@@ -1,5 +1,7 @@
   $(function() {
 
+    var validWords = ['aggressive','airhead','aloof','angry','athlete','bad attitude','bitch','bully','cocky','creep','depressed','desperate','dork','drunk','freak','geek','goody-two-shoes','hater','hyper','jock','junkie','loner','loser','loudmouth','meathead','misfit','nerd','outcast','player','preppy','prissy','privileged','punk','reckless','redneck','reject','runaway','selfish','snitch','snob','spoiled','stoner','stuck-up','thief','thug','troubled','wallflower','wannabe','weirdo','wild','adventuresome','alienated','ambitious','bored','brave','conflicted','creative','curious','determined','distracted','distraught','dreamer','driven','enthusiastic','entrepreneur','expressive','fragile','gifted','hungry','idealistic','immature','insecure','intense','introverted','lucky','misunderstood','naïve','needing acceptance','overwhelmed','passionate','persistent','positive','resilient','scared','sensitive','shy','spirited','survivor','talented','thoughtful','unchallenged','well-meaning','young'];
+
     $('#canvasForm').on('submit',function(e){
       e.preventDefault();
 
@@ -18,6 +20,9 @@
       var boxColor      = this.color.value;
       var $updatedImage = $('#updated-image');
       var fontSettings  = '95px league-gothic';
+
+      firstWord = validateWord(firstWord);
+      secondWord = validateWord(secondWord);
 
       //determines how far down the image/canvas to place the words and colorbox
       var overlayPlacementModifier = 3.9;
@@ -155,6 +160,14 @@
 
       function deleteStepsCookie(){
         $.cookie('jQu3ry_5teps_St@te_picture-steps', 0);
+      }
+
+      function validateWord(word){
+        if(validWords.indexOf(word) !== -1 ){
+          return word;
+        }
+
+        return "Dork";
       }
 
     });
