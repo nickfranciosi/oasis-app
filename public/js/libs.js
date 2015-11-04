@@ -10133,14 +10133,12 @@ if( typeof Object.create !== 'function'){
       }
 
       function validateWord(word){
-        // if(validWords.indexOf(word) !== -1 ){
-        //   return word;
-        // }
+        if(validWords.indexOf(word.toLowerCase()) !== -1 ){
+          console.log('good');
+          return word;
+        }
 
-        // return "Dork";
-        // 
-        return word;
-        
+        return "Dork";
       }
 
     });
