@@ -458,9 +458,9 @@ $overlay-height: 25%;
 		font-size: 30px;
 
 		// height of iphone5 available height
-		@media (min-height: 450px) { font-size: 44px; }
-		@include screen-sms { font-size: 50px; }
-		@include screen-sm { font-size: 64px; }
+		@media (min-height: 450px) { font-size: 41px; }
+		@include screen-sms { font-size: 47px; }
+		@include screen-sm { font-size: 58px; }
 
 		line-height: 1em;
 		margin: 0;
@@ -469,15 +469,15 @@ $overlay-height: 25%;
 
 	span:first-child {
 		top: -3px;
-		@media (min-height: 450px) { top: -4px; }
-		@include screen-sm { top: -8px; }
+		@media (min-height: 450px) { top: -3px; }
+		@include screen-sm { top: -4px; }
 		color: #333;
 	}
 
 	span:last-child {
 		top: -12px;
-		@media (min-height: 450px) { top: -19px; }
-		@include screen-sm { top: -30px; }
+		@media (min-height: 450px) { top: -15px; }
+		@include screen-sm { top: -21px; }
 
 		// @include screen-sm { top: -28px; }
 		transform: rotate(180deg);

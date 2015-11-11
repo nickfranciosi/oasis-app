@@ -9989,7 +9989,7 @@ if( typeof Object.create !== 'function'){
       var secondWord    = this.second.value.toUpperCase();
       var boxColor      = this.color.value;
       var $updatedImage = $('#updated-image');
-      var fontSettings  = '95px league-gothic';
+      var fontSettings  = '82px league-gothic';
 
       firstWord = validateWord(firstWord);
       secondWord = validateWord(secondWord);
