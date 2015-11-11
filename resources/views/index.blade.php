@@ -28,7 +28,7 @@
     <meta property="og:image:height" content="300">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Oasis Center - There's More to Youth">
-    <meta property="og:description" content="Oasis encourages people to show their disapproval for teen stereotypes. Help us take a stand by turning your existing Facebook profile picture into your own customized campaign photo.">
+    <meta property="og:description" content="Oasis encourages people to show their disapproval for teen stereotypes. Help us take a stand by turning your existing Facebook profile picture into your own customized campaign photo. ">
     <meta property="og:locale" content="en_US">
     <!-- Favicons (created with http://realfavicongenerator.net/)-->
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
