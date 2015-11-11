@@ -22,6 +22,8 @@
     <meta property='og:url' content='http://moretoyouth.com' >
     <meta property='og:image' content='http://moretoyouth.com'>
 @endif
+  <meta property="og:image:width" content="300"/>
+  <meta property="og:image:height" content="300"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Oasis Center - There's More to Youth"/>
   <meta property="og:description" content="Oasis encourages people to show their disapproval for teen stereotypes. Help us take a stand by turning your existing Facebook profile picture into your own customized campaign photo."/>
